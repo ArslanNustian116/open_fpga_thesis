@@ -1,0 +1,3012 @@
+#Timing report of worst 100 path(s)
+# Unit scale: 1e-09 seconds
+# Output precision: 3
+
+#Path 1
+Startpoint: a_2_.inpad[0] (.input clocked by clk)
+Endpoint  : a_st0[2].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+a_2_.inpad[0] (.input)                                           0.000     0.000
+a_st0[2].D[0] (.latch)                                           0.142     0.142
+data arrival time                                                          0.142
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+a_st0[2].clk[0] (.latch)                                         0.562     0.562
+clock uncertainty                                                0.000     0.562
+cell hold time                                                   0.066     0.628
+data required time                                                         0.628
+--------------------------------------------------------------------------------
+data required time                                                        -0.628
+data arrival time                                                          0.142
+--------------------------------------------------------------------------------
+slack (VIOLATED)                                                          -0.486
+
+
+#Path 2
+Startpoint: b_2_.inpad[0] (.input clocked by clk)
+Endpoint  : b_st0[2].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+b_2_.inpad[0] (.input)                                           0.000     0.000
+b_st0[2].D[0] (.latch)                                           0.143     0.143
+data arrival time                                                          0.143
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+b_st0[2].clk[0] (.latch)                                         0.562     0.562
+clock uncertainty                                                0.000     0.562
+cell hold time                                                   0.066     0.628
+data required time                                                         0.628
+--------------------------------------------------------------------------------
+data required time                                                        -0.628
+data arrival time                                                          0.143
+--------------------------------------------------------------------------------
+slack (VIOLATED)                                                          -0.485
+
+
+#Path 3
+Startpoint: a_0_.inpad[0] (.input clocked by clk)
+Endpoint  : a_st0[0].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+a_0_.inpad[0] (.input)                                           0.000     0.000
+a_st0[0].D[0] (.latch)                                           0.147     0.147
+data arrival time                                                          0.147
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+a_st0[0].clk[0] (.latch)                                         0.516     0.516
+clock uncertainty                                                0.000     0.516
+cell hold time                                                   0.066     0.582
+data required time                                                         0.582
+--------------------------------------------------------------------------------
+data required time                                                        -0.582
+data arrival time                                                          0.147
+--------------------------------------------------------------------------------
+slack (VIOLATED)                                                          -0.435
+
+
+#Path 4
+Startpoint: a_1_.inpad[0] (.input clocked by clk)
+Endpoint  : a_st0[1].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+a_1_.inpad[0] (.input)                                           0.000     0.000
+a_st0[1].D[0] (.latch)                                           0.152     0.152
+data arrival time                                                          0.152
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+a_st0[1].clk[0] (.latch)                                         0.512     0.512
+clock uncertainty                                                0.000     0.512
+cell hold time                                                   0.066     0.578
+data required time                                                         0.578
+--------------------------------------------------------------------------------
+data required time                                                        -0.578
+data arrival time                                                          0.152
+--------------------------------------------------------------------------------
+slack (VIOLATED)                                                          -0.426
+
+
+#Path 5
+Startpoint: waddr_4_.inpad[0] (.input clocked by clk)
+Endpoint  : waddr_st0[4].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+waddr_4_.inpad[0] (.input)                                       0.000     0.000
+waddr_st0[4].D[0] (.latch)                                       0.209     0.209
+data arrival time                                                          0.209
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+waddr_st0[4].clk[0] (.latch)                                     0.521     0.521
+clock uncertainty                                                0.000     0.521
+cell hold time                                                   0.066     0.587
+data required time                                                         0.587
+--------------------------------------------------------------------------------
+data required time                                                        -0.587
+data arrival time                                                          0.209
+--------------------------------------------------------------------------------
+slack (VIOLATED)                                                          -0.378
+
+
+#Path 6
+Startpoint: a_4_.inpad[0] (.input clocked by clk)
+Endpoint  : a_st0[4].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+a_4_.inpad[0] (.input)                                           0.000     0.000
+a_st0[4].D[0] (.latch)                                           0.138     0.138
+data arrival time                                                          0.138
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+a_st0[4].clk[0] (.latch)                                         0.436     0.436
+clock uncertainty                                                0.000     0.436
+cell hold time                                                   0.066     0.502
+data required time                                                         0.502
+--------------------------------------------------------------------------------
+data required time                                                        -0.502
+data arrival time                                                          0.138
+--------------------------------------------------------------------------------
+slack (VIOLATED)                                                          -0.364
+
+
+#Path 7
+Startpoint: a_5_.inpad[0] (.input clocked by clk)
+Endpoint  : a_st0[5].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+a_5_.inpad[0] (.input)                                           0.000     0.000
+a_st0[5].D[0] (.latch)                                           0.151     0.151
+data arrival time                                                          0.151
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+a_st0[5].clk[0] (.latch)                                         0.436     0.436
+clock uncertainty                                                0.000     0.436
+cell hold time                                                   0.066     0.502
+data required time                                                         0.502
+--------------------------------------------------------------------------------
+data required time                                                        -0.502
+data arrival time                                                          0.151
+--------------------------------------------------------------------------------
+slack (VIOLATED)                                                          -0.350
+
+
+#Path 8
+Startpoint: a_3_.inpad[0] (.input clocked by clk)
+Endpoint  : a_st0[3].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+a_3_.inpad[0] (.input)                                           0.000     0.000
+a_st0[3].D[0] (.latch)                                           0.151     0.151
+data arrival time                                                          0.151
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+a_st0[3].clk[0] (.latch)                                         0.436     0.436
+clock uncertainty                                                0.000     0.436
+cell hold time                                                   0.066     0.502
+data required time                                                         0.502
+--------------------------------------------------------------------------------
+data required time                                                        -0.502
+data arrival time                                                          0.151
+--------------------------------------------------------------------------------
+slack (VIOLATED)                                                          -0.350
+
+
+#Path 9
+Startpoint: waddr_2_.inpad[0] (.input clocked by clk)
+Endpoint  : waddr_st0[2].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+waddr_2_.inpad[0] (.input)                                       0.000     0.000
+waddr_st0[2].D[0] (.latch)                                       0.136     0.136
+data arrival time                                                          0.136
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+waddr_st0[2].clk[0] (.latch)                                     0.365     0.365
+clock uncertainty                                                0.000     0.365
+cell hold time                                                   0.066     0.431
+data required time                                                         0.431
+--------------------------------------------------------------------------------
+data required time                                                        -0.431
+data arrival time                                                          0.136
+--------------------------------------------------------------------------------
+slack (VIOLATED)                                                          -0.295
+
+
+#Path 10
+Startpoint: b_0_.inpad[0] (.input clocked by clk)
+Endpoint  : b_st0[0].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+b_0_.inpad[0] (.input)                                           0.000     0.000
+b_st0[0].D[0] (.latch)                                           0.212     0.212
+data arrival time                                                          0.212
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+b_st0[0].clk[0] (.latch)                                         0.437     0.437
+clock uncertainty                                                0.000     0.437
+cell hold time                                                   0.066     0.503
+data required time                                                         0.503
+--------------------------------------------------------------------------------
+data required time                                                        -0.503
+data arrival time                                                          0.212
+--------------------------------------------------------------------------------
+slack (VIOLATED)                                                          -0.290
+
+
+#Path 11
+Startpoint: waddr_1_.inpad[0] (.input clocked by clk)
+Endpoint  : waddr_st0[1].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+waddr_1_.inpad[0] (.input)                                       0.000     0.000
+waddr_st0[1].D[0] (.latch)                                       0.147     0.147
+data arrival time                                                          0.147
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+waddr_st0[1].clk[0] (.latch)                                     0.368     0.368
+clock uncertainty                                                0.000     0.368
+cell hold time                                                   0.066     0.434
+data required time                                                         0.434
+--------------------------------------------------------------------------------
+data required time                                                        -0.434
+data arrival time                                                          0.147
+--------------------------------------------------------------------------------
+slack (VIOLATED)                                                          -0.287
+
+
+#Path 12
+Startpoint: waddr_0_.inpad[0] (.input clocked by clk)
+Endpoint  : waddr_st0[0].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+waddr_0_.inpad[0] (.input)                                       0.000     0.000
+waddr_st0[0].D[0] (.latch)                                       0.146     0.146
+data arrival time                                                          0.146
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+waddr_st0[0].clk[0] (.latch)                                     0.365     0.365
+clock uncertainty                                                0.000     0.365
+cell hold time                                                   0.066     0.431
+data required time                                                         0.431
+--------------------------------------------------------------------------------
+data required time                                                        -0.431
+data arrival time                                                          0.146
+--------------------------------------------------------------------------------
+slack (VIOLATED)                                                          -0.285
+
+
+#Path 13
+Startpoint: wen.inpad[0] (.input clocked by clk)
+Endpoint  : wen_st0.D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+wen.inpad[0] (.input)                                            0.000     0.000
+wen_st0.D[0] (.latch)                                            0.204     0.204
+data arrival time                                                          0.204
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+wen_st0.clk[0] (.latch)                                          0.413     0.413
+clock uncertainty                                                0.000     0.413
+cell hold time                                                   0.066     0.479
+data required time                                                         0.479
+--------------------------------------------------------------------------------
+data required time                                                        -0.479
+data arrival time                                                          0.204
+--------------------------------------------------------------------------------
+slack (VIOLATED)                                                          -0.275
+
+
+#Path 14
+Startpoint: waddr_3_.inpad[0] (.input clocked by clk)
+Endpoint  : waddr_st0[3].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+waddr_3_.inpad[0] (.input)                                       0.000     0.000
+waddr_st0[3].D[0] (.latch)                                       0.137     0.137
+data arrival time                                                          0.137
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+waddr_st0[3].clk[0] (.latch)                                     0.302     0.302
+clock uncertainty                                                0.000     0.302
+cell hold time                                                   0.066     0.368
+data required time                                                         0.368
+--------------------------------------------------------------------------------
+data required time                                                        -0.368
+data arrival time                                                          0.137
+--------------------------------------------------------------------------------
+slack (VIOLATED)                                                          -0.231
+
+
+#Path 15
+Startpoint: b_3_.inpad[0] (.input clocked by clk)
+Endpoint  : b_st0[3].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+b_3_.inpad[0] (.input)                                           0.000     0.000
+b_st0[3].D[0] (.latch)                                           0.285     0.285
+data arrival time                                                          0.285
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+b_st0[3].clk[0] (.latch)                                         0.423     0.423
+clock uncertainty                                                0.000     0.423
+cell hold time                                                   0.066     0.489
+data required time                                                         0.489
+--------------------------------------------------------------------------------
+data required time                                                        -0.489
+data arrival time                                                          0.285
+--------------------------------------------------------------------------------
+slack (VIOLATED)                                                          -0.204
+
+
+#Path 16
+Startpoint: waddr_5_.inpad[0] (.input clocked by clk)
+Endpoint  : waddr_st0[5].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+waddr_5_.inpad[0] (.input)                                       0.000     0.000
+waddr_st0[5].D[0] (.latch)                                       0.137     0.137
+data arrival time                                                          0.137
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+waddr_st0[5].clk[0] (.latch)                                     0.274     0.274
+clock uncertainty                                                0.000     0.274
+cell hold time                                                   0.066     0.340
+data required time                                                         0.340
+--------------------------------------------------------------------------------
+data required time                                                        -0.340
+data arrival time                                                          0.137
+--------------------------------------------------------------------------------
+slack (VIOLATED)                                                          -0.203
+
+
+#Path 17
+Startpoint: b_6_.inpad[0] (.input clocked by clk)
+Endpoint  : b_st0[6].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+b_6_.inpad[0] (.input)                                           0.000     0.000
+b_st0[6].D[0] (.latch)                                           0.294     0.294
+data arrival time                                                          0.294
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+b_st0[6].clk[0] (.latch)                                         0.423     0.423
+clock uncertainty                                                0.000     0.423
+cell hold time                                                   0.066     0.489
+data required time                                                         0.489
+--------------------------------------------------------------------------------
+data required time                                                        -0.489
+data arrival time                                                          0.294
+--------------------------------------------------------------------------------
+slack (VIOLATED)                                                          -0.195
+
+
+#Path 18
+Startpoint: b_5_.inpad[0] (.input clocked by clk)
+Endpoint  : b_st0[5].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+b_5_.inpad[0] (.input)                                           0.000     0.000
+b_st0[5].D[0] (.latch)                                           0.347     0.347
+data arrival time                                                          0.347
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+b_st0[5].clk[0] (.latch)                                         0.423     0.423
+clock uncertainty                                                0.000     0.423
+cell hold time                                                   0.066     0.489
+data required time                                                         0.489
+--------------------------------------------------------------------------------
+data required time                                                        -0.489
+data arrival time                                                          0.347
+--------------------------------------------------------------------------------
+slack (VIOLATED)                                                          -0.142
+
+
+#Path 19
+Startpoint: b_1_.inpad[0] (.input clocked by clk)
+Endpoint  : b_st0[1].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+b_1_.inpad[0] (.input)                                           0.000     0.000
+b_st0[1].D[0] (.latch)                                           0.207     0.207
+data arrival time                                                          0.207
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+b_st0[1].clk[0] (.latch)                                         0.280     0.280
+clock uncertainty                                                0.000     0.280
+cell hold time                                                   0.066     0.346
+data required time                                                         0.346
+--------------------------------------------------------------------------------
+data required time                                                        -0.346
+data arrival time                                                          0.207
+--------------------------------------------------------------------------------
+slack (VIOLATED)                                                          -0.140
+
+
+#Path 20
+Startpoint: b_4_.inpad[0] (.input clocked by clk)
+Endpoint  : b_st0[4].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+b_4_.inpad[0] (.input)                                           0.000     0.000
+b_st0[4].D[0] (.latch)                                           0.350     0.350
+data arrival time                                                          0.350
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+b_st0[4].clk[0] (.latch)                                         0.423     0.423
+clock uncertainty                                                0.000     0.423
+cell hold time                                                   0.066     0.489
+data required time                                                         0.489
+--------------------------------------------------------------------------------
+data required time                                                        -0.489
+data arrival time                                                          0.350
+--------------------------------------------------------------------------------
+slack (VIOLATED)                                                          -0.140
+
+
+#Path 21
+Startpoint: ren.inpad[0] (.input clocked by clk)
+Endpoint  : q_1_.D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+ren.inpad[0] (.input)                                            0.000     0.000
+n248.in[5] (.names)                                              0.284     0.284
+n248.out[0] (.names)                                             0.261     0.545
+q_1_.D[0] (.latch)                                               0.000     0.545
+data arrival time                                                          0.545
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+q_1_.clk[0] (.latch)                                             0.424     0.424
+clock uncertainty                                                0.000     0.424
+cell hold time                                                   0.066     0.490
+data required time                                                         0.490
+--------------------------------------------------------------------------------
+data required time                                                        -0.490
+data arrival time                                                          0.545
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.055
+
+
+#Path 22
+Startpoint: b_st0[5].Q[0] (.latch clocked by clk)
+Endpoint  : b_st1[5].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+b_st0[5].clk[0] (.latch)                                         0.423     0.423
+b_st0[5].Q[0] (.latch) [clock-to-output]                         0.124     0.547
+b_st1[5].D[0] (.latch)                                           0.000     0.547
+data arrival time                                                          0.547
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+b_st1[5].clk[0] (.latch)                                         0.423     0.423
+clock uncertainty                                                0.000     0.423
+cell hold time                                                   0.066     0.489
+data required time                                                         0.489
+--------------------------------------------------------------------------------
+data required time                                                        -0.489
+data arrival time                                                          0.547
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.058
+
+
+#Path 23
+Startpoint: b_st0[3].Q[0] (.latch clocked by clk)
+Endpoint  : b_st1[3].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+b_st0[3].clk[0] (.latch)                                         0.423     0.423
+b_st0[3].Q[0] (.latch) [clock-to-output]                         0.124     0.547
+b_st1[3].D[0] (.latch)                                           0.000     0.547
+data arrival time                                                          0.547
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+b_st1[3].clk[0] (.latch)                                         0.423     0.423
+clock uncertainty                                                0.000     0.423
+cell hold time                                                   0.066     0.489
+data required time                                                         0.489
+--------------------------------------------------------------------------------
+data required time                                                        -0.489
+data arrival time                                                          0.547
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.058
+
+
+#Path 24
+Startpoint: b_st0[6].Q[0] (.latch clocked by clk)
+Endpoint  : b_st1[6].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+b_st0[6].clk[0] (.latch)                                         0.423     0.423
+b_st0[6].Q[0] (.latch) [clock-to-output]                         0.124     0.547
+b_st1[6].D[0] (.latch)                                           0.000     0.547
+data arrival time                                                          0.547
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+b_st1[6].clk[0] (.latch)                                         0.423     0.423
+clock uncertainty                                                0.000     0.423
+cell hold time                                                   0.066     0.489
+data required time                                                         0.489
+--------------------------------------------------------------------------------
+data required time                                                        -0.489
+data arrival time                                                          0.547
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.058
+
+
+#Path 25
+Startpoint: b_st0[0].Q[0] (.latch clocked by clk)
+Endpoint  : b_st1[0].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+b_st0[0].clk[0] (.latch)                                         0.437     0.437
+b_st0[0].Q[0] (.latch) [clock-to-output]                         0.124     0.561
+b_st1[0].D[0] (.latch)                                           0.000     0.561
+data arrival time                                                          0.561
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+b_st1[0].clk[0] (.latch)                                         0.437     0.437
+clock uncertainty                                                0.000     0.437
+cell hold time                                                   0.066     0.503
+data required time                                                         0.503
+--------------------------------------------------------------------------------
+data required time                                                        -0.503
+data arrival time                                                          0.561
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.058
+
+
+#Path 26
+Startpoint: a_st0[6].Q[0] (.latch clocked by clk)
+Endpoint  : a_st1[6].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+a_st0[6].clk[0] (.latch)                                         0.423     0.423
+a_st0[6].Q[0] (.latch) [clock-to-output]                         0.124     0.547
+a_st1[6].D[0] (.latch)                                           0.000     0.547
+data arrival time                                                          0.547
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+a_st1[6].clk[0] (.latch)                                         0.423     0.423
+clock uncertainty                                                0.000     0.423
+cell hold time                                                   0.066     0.489
+data required time                                                         0.489
+--------------------------------------------------------------------------------
+data required time                                                        -0.489
+data arrival time                                                          0.547
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.058
+
+
+#Path 27
+Startpoint: a_st0[5].Q[0] (.latch clocked by clk)
+Endpoint  : a_st1[5].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+a_st0[5].clk[0] (.latch)                                         0.436     0.436
+a_st0[5].Q[0] (.latch) [clock-to-output]                         0.124     0.560
+a_st1[5].D[0] (.latch)                                           0.000     0.560
+data arrival time                                                          0.560
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+a_st1[5].clk[0] (.latch)                                         0.436     0.436
+clock uncertainty                                                0.000     0.436
+cell hold time                                                   0.066     0.502
+data required time                                                         0.502
+--------------------------------------------------------------------------------
+data required time                                                        -0.502
+data arrival time                                                          0.560
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.058
+
+
+#Path 28
+Startpoint: waddr_st0[5].Q[0] (.latch clocked by clk)
+Endpoint  : waddr_st1[5].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+waddr_st0[5].clk[0] (.latch)                                     0.274     0.274
+waddr_st0[5].Q[0] (.latch) [clock-to-output]                     0.124     0.398
+waddr_st1[5].D[0] (.latch)                                       0.000     0.398
+data arrival time                                                          0.398
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+waddr_st1[5].clk[0] (.latch)                                     0.274     0.274
+clock uncertainty                                                0.000     0.274
+cell hold time                                                   0.066     0.340
+data required time                                                         0.340
+--------------------------------------------------------------------------------
+data required time                                                        -0.340
+data arrival time                                                          0.398
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.058
+
+
+#Path 29
+Startpoint: waddr_st0[3].Q[0] (.latch clocked by clk)
+Endpoint  : waddr_st1[3].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+waddr_st0[3].clk[0] (.latch)                                     0.302     0.302
+waddr_st0[3].Q[0] (.latch) [clock-to-output]                     0.124     0.426
+waddr_st1[3].D[0] (.latch)                                       0.000     0.426
+data arrival time                                                          0.426
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+waddr_st1[3].clk[0] (.latch)                                     0.302     0.302
+clock uncertainty                                                0.000     0.302
+cell hold time                                                   0.066     0.368
+data required time                                                         0.368
+--------------------------------------------------------------------------------
+data required time                                                        -0.368
+data arrival time                                                          0.426
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.058
+
+
+#Path 30
+Startpoint: b_st0[1].Q[0] (.latch clocked by clk)
+Endpoint  : b_st1[1].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+b_st0[1].clk[0] (.latch)                                         0.280     0.280
+b_st0[1].Q[0] (.latch) [clock-to-output]                         0.124     0.404
+b_st1[1].D[0] (.latch)                                           0.000     0.404
+data arrival time                                                          0.404
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+b_st1[1].clk[0] (.latch)                                         0.280     0.280
+clock uncertainty                                                0.000     0.280
+cell hold time                                                   0.066     0.346
+data required time                                                         0.346
+--------------------------------------------------------------------------------
+data required time                                                        -0.346
+data arrival time                                                          0.404
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.058
+
+
+#Path 31
+Startpoint: a_st0[0].Q[0] (.latch clocked by clk)
+Endpoint  : a_st1[0].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+a_st0[0].clk[0] (.latch)                                         0.516     0.516
+a_st0[0].Q[0] (.latch) [clock-to-output]                         0.124     0.640
+a_st1[0].D[0] (.latch)                                           0.000     0.640
+data arrival time                                                          0.640
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+a_st1[0].clk[0] (.latch)                                         0.516     0.516
+clock uncertainty                                                0.000     0.516
+cell hold time                                                   0.066     0.582
+data required time                                                         0.582
+--------------------------------------------------------------------------------
+data required time                                                        -0.582
+data arrival time                                                          0.640
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.058
+
+
+#Path 32
+Startpoint: a_st0[1].Q[0] (.latch clocked by clk)
+Endpoint  : a_st1[1].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+a_st0[1].clk[0] (.latch)                                         0.512     0.512
+a_st0[1].Q[0] (.latch) [clock-to-output]                         0.124     0.636
+a_st1[1].D[0] (.latch)                                           0.000     0.636
+data arrival time                                                          0.636
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+a_st1[1].clk[0] (.latch)                                         0.512     0.512
+clock uncertainty                                                0.000     0.512
+cell hold time                                                   0.066     0.578
+data required time                                                         0.578
+--------------------------------------------------------------------------------
+data required time                                                        -0.578
+data arrival time                                                          0.636
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.058
+
+
+#Path 33
+Startpoint: waddr_st0[4].Q[0] (.latch clocked by clk)
+Endpoint  : waddr_st1[4].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+waddr_st0[4].clk[0] (.latch)                                     0.521     0.521
+waddr_st0[4].Q[0] (.latch) [clock-to-output]                     0.124     0.645
+waddr_st1[4].D[0] (.latch)                                       0.000     0.645
+data arrival time                                                          0.645
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+waddr_st1[4].clk[0] (.latch)                                     0.521     0.521
+clock uncertainty                                                0.000     0.521
+cell hold time                                                   0.066     0.587
+data required time                                                         0.587
+--------------------------------------------------------------------------------
+data required time                                                        -0.587
+data arrival time                                                          0.645
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.058
+
+
+#Path 34
+Startpoint: a_6_.inpad[0] (.input clocked by clk)
+Endpoint  : a_st0[6].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+a_6_.inpad[0] (.input)                                           0.000     0.000
+a_st0[6].D[0] (.latch)                                           0.561     0.561
+data arrival time                                                          0.561
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+a_st0[6].clk[0] (.latch)                                         0.423     0.423
+clock uncertainty                                                0.000     0.423
+cell hold time                                                   0.066     0.489
+data required time                                                         0.489
+--------------------------------------------------------------------------------
+data required time                                                        -0.489
+data arrival time                                                          0.561
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.071
+
+
+#Path 35
+Startpoint: ren.inpad[0] (.input clocked by clk)
+Endpoint  : q_0_.D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+ren.inpad[0] (.input)                                            0.000     0.000
+n244.in[5] (.names)                                              0.284     0.284
+n244.out[0] (.names)                                             0.261     0.545
+q_0_.D[0] (.latch)                                               0.000     0.545
+data arrival time                                                          0.545
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+q_0_.clk[0] (.latch)                                             0.365     0.365
+clock uncertainty                                                0.000     0.365
+cell hold time                                                   0.066     0.431
+data required time                                                         0.431
+--------------------------------------------------------------------------------
+data required time                                                        -0.431
+data arrival time                                                          0.545
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.115
+
+
+#Path 36
+Startpoint: ren.inpad[0] (.input clocked by clk)
+Endpoint  : q_4_.D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+ren.inpad[0] (.input)                                            0.000     0.000
+n260.in[5] (.names)                                              0.363     0.363
+n260.out[0] (.names)                                             0.261     0.624
+q_4_.D[0] (.latch)                                               0.000     0.624
+data arrival time                                                          0.624
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+q_4_.clk[0] (.latch)                                             0.412     0.412
+clock uncertainty                                                0.000     0.412
+cell hold time                                                   0.066     0.478
+data required time                                                         0.478
+--------------------------------------------------------------------------------
+data required time                                                        -0.478
+data arrival time                                                          0.624
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.146
+
+
+#Path 37
+Startpoint: raddr_3_.inpad[0] (.input clocked by clk)
+Endpoint  : q_2_.D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+raddr_3_.inpad[0] (.input)                                       0.000     0.000
+n252.in[1] (.names)                                              0.504     0.504
+n252.out[0] (.names)                                             0.261     0.765
+q_2_.D[0] (.latch)                                               0.000     0.765
+data arrival time                                                          0.765
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+q_2_.clk[0] (.latch)                                             0.496     0.496
+clock uncertainty                                                0.000     0.496
+cell hold time                                                   0.066     0.562
+data required time                                                         0.562
+--------------------------------------------------------------------------------
+data required time                                                        -0.562
+data arrival time                                                          0.765
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.203
+
+
+#Path 38
+Startpoint: ren.inpad[0] (.input clocked by clk)
+Endpoint  : q_3_.D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+ren.inpad[0] (.input)                                            0.000     0.000
+n256.in[5] (.names)                                              0.570     0.570
+n256.out[0] (.names)                                             0.261     0.831
+q_3_.D[0] (.latch)                                               0.000     0.831
+data arrival time                                                          0.831
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+q_3_.clk[0] (.latch)                                             0.524     0.524
+clock uncertainty                                                0.000     0.524
+cell hold time                                                   0.066     0.590
+data required time                                                         0.590
+--------------------------------------------------------------------------------
+data required time                                                        -0.590
+data arrival time                                                          0.831
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.242
+
+
+#Path 39
+Startpoint: ren.inpad[0] (.input clocked by clk)
+Endpoint  : q_7_.D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+ren.inpad[0] (.input)                                            0.000     0.000
+n272.in[2] (.names)                                              0.437     0.437
+n272.out[0] (.names)                                             0.261     0.698
+q_7_.D[0] (.latch)                                               0.000     0.698
+data arrival time                                                          0.698
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+q_7_.clk[0] (.latch)                                             0.378     0.378
+clock uncertainty                                                0.000     0.378
+cell hold time                                                   0.066     0.444
+data required time                                                         0.444
+--------------------------------------------------------------------------------
+data required time                                                        -0.444
+data arrival time                                                          0.698
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.254
+
+
+#Path 40
+Startpoint: ram[34][6].Q[0] (.latch clocked by clk)
+Endpoint  : ram[34][6].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[34][6].clk[0] (.latch)                                       0.454     0.454
+ram[34][6].Q[0] (.latch) [clock-to-output]                       0.124     0.578
+n1386.in[0] (.names)                                             0.000     0.578
+n1386.out[0] (.names)                                            0.261     0.839
+ram[34][6].D[0] (.latch)                                         0.000     0.839
+data arrival time                                                          0.839
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[34][6].clk[0] (.latch)                                       0.454     0.454
+clock uncertainty                                                0.000     0.454
+cell hold time                                                   0.066     0.520
+data required time                                                         0.520
+--------------------------------------------------------------------------------
+data required time                                                        -0.520
+data arrival time                                                          0.839
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 41
+Startpoint: ram[28][6].Q[0] (.latch clocked by clk)
+Endpoint  : ram[28][6].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[28][6].clk[0] (.latch)                                       0.416     0.416
+ram[28][6].Q[0] (.latch) [clock-to-output]                       0.124     0.540
+n1106.in[0] (.names)                                             0.000     0.540
+n1106.out[0] (.names)                                            0.261     0.801
+ram[28][6].D[0] (.latch)                                         0.000     0.801
+data arrival time                                                          0.801
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[28][6].clk[0] (.latch)                                       0.416     0.416
+clock uncertainty                                                0.000     0.416
+cell hold time                                                   0.066     0.482
+data required time                                                         0.482
+--------------------------------------------------------------------------------
+data required time                                                        -0.482
+data arrival time                                                          0.801
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 42
+Startpoint: ram[38][4].Q[0] (.latch clocked by clk)
+Endpoint  : ram[38][4].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[38][4].clk[0] (.latch)                                       0.449     0.449
+ram[38][4].Q[0] (.latch) [clock-to-output]                       0.124     0.573
+n1536.in[0] (.names)                                             0.000     0.573
+n1536.out[0] (.names)                                            0.261     0.834
+ram[38][4].D[0] (.latch)                                         0.000     0.834
+data arrival time                                                          0.834
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[38][4].clk[0] (.latch)                                       0.449     0.449
+clock uncertainty                                                0.000     0.449
+cell hold time                                                   0.066     0.515
+data required time                                                         0.515
+--------------------------------------------------------------------------------
+data required time                                                        -0.515
+data arrival time                                                          0.834
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 43
+Startpoint: ram[29][6].Q[0] (.latch clocked by clk)
+Endpoint  : ram[29][6].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[29][6].clk[0] (.latch)                                       0.417     0.417
+ram[29][6].Q[0] (.latch) [clock-to-output]                       0.124     0.541
+n1146.in[0] (.names)                                             0.000     0.541
+n1146.out[0] (.names)                                            0.261     0.802
+ram[29][6].D[0] (.latch)                                         0.000     0.802
+data arrival time                                                          0.802
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[29][6].clk[0] (.latch)                                       0.417     0.417
+clock uncertainty                                                0.000     0.417
+cell hold time                                                   0.066     0.483
+data required time                                                         0.483
+--------------------------------------------------------------------------------
+data required time                                                        -0.483
+data arrival time                                                          0.802
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 44
+Startpoint: ram[38][1].Q[0] (.latch clocked by clk)
+Endpoint  : ram[38][1].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[38][1].clk[0] (.latch)                                       0.378     0.378
+ram[38][1].Q[0] (.latch) [clock-to-output]                       0.124     0.502
+n1521.in[0] (.names)                                             0.000     0.502
+n1521.out[0] (.names)                                            0.261     0.763
+ram[38][1].D[0] (.latch)                                         0.000     0.763
+data arrival time                                                          0.763
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[38][1].clk[0] (.latch)                                       0.378     0.378
+clock uncertainty                                                0.000     0.378
+cell hold time                                                   0.066     0.444
+data required time                                                         0.444
+--------------------------------------------------------------------------------
+data required time                                                        -0.444
+data arrival time                                                          0.763
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 45
+Startpoint: ram[38][0].Q[0] (.latch clocked by clk)
+Endpoint  : ram[38][0].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[38][0].clk[0] (.latch)                                       0.430     0.430
+ram[38][0].Q[0] (.latch) [clock-to-output]                       0.124     0.554
+n1516.in[0] (.names)                                             0.000     0.554
+n1516.out[0] (.names)                                            0.261     0.815
+ram[38][0].D[0] (.latch)                                         0.000     0.815
+data arrival time                                                          0.815
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[38][0].clk[0] (.latch)                                       0.430     0.430
+clock uncertainty                                                0.000     0.430
+cell hold time                                                   0.066     0.496
+data required time                                                         0.496
+--------------------------------------------------------------------------------
+data required time                                                        -0.496
+data arrival time                                                          0.815
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 46
+Startpoint: ram[30][4].Q[0] (.latch clocked by clk)
+Endpoint  : ram[30][4].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[30][4].clk[0] (.latch)                                       0.454     0.454
+ram[30][4].Q[0] (.latch) [clock-to-output]                       0.124     0.578
+n1216.in[0] (.names)                                             0.000     0.578
+n1216.out[0] (.names)                                            0.261     0.839
+ram[30][4].D[0] (.latch)                                         0.000     0.839
+data arrival time                                                          0.839
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[30][4].clk[0] (.latch)                                       0.454     0.454
+clock uncertainty                                                0.000     0.454
+cell hold time                                                   0.066     0.520
+data required time                                                         0.520
+--------------------------------------------------------------------------------
+data required time                                                        -0.520
+data arrival time                                                          0.839
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 47
+Startpoint: ram[30][6].Q[0] (.latch clocked by clk)
+Endpoint  : ram[30][6].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[30][6].clk[0] (.latch)                                       0.454     0.454
+ram[30][6].Q[0] (.latch) [clock-to-output]                       0.124     0.578
+n1226.in[0] (.names)                                             0.000     0.578
+n1226.out[0] (.names)                                            0.261     0.839
+ram[30][6].D[0] (.latch)                                         0.000     0.839
+data arrival time                                                          0.839
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[30][6].clk[0] (.latch)                                       0.454     0.454
+clock uncertainty                                                0.000     0.454
+cell hold time                                                   0.066     0.520
+data required time                                                         0.520
+--------------------------------------------------------------------------------
+data required time                                                        -0.520
+data arrival time                                                          0.839
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 48
+Startpoint: ram[30][2].Q[0] (.latch clocked by clk)
+Endpoint  : ram[30][2].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[30][2].clk[0] (.latch)                                       0.413     0.413
+ram[30][2].Q[0] (.latch) [clock-to-output]                       0.124     0.537
+n1206.in[0] (.names)                                             0.000     0.537
+n1206.out[0] (.names)                                            0.261     0.798
+ram[30][2].D[0] (.latch)                                         0.000     0.798
+data arrival time                                                          0.798
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[30][2].clk[0] (.latch)                                       0.413     0.413
+clock uncertainty                                                0.000     0.413
+cell hold time                                                   0.066     0.479
+data required time                                                         0.479
+--------------------------------------------------------------------------------
+data required time                                                        -0.479
+data arrival time                                                          0.798
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 49
+Startpoint: ram[32][6].Q[0] (.latch clocked by clk)
+Endpoint  : ram[32][6].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[32][6].clk[0] (.latch)                                       0.281     0.281
+ram[32][6].Q[0] (.latch) [clock-to-output]                       0.124     0.405
+n1306.in[0] (.names)                                             0.000     0.405
+n1306.out[0] (.names)                                            0.261     0.666
+ram[32][6].D[0] (.latch)                                         0.000     0.666
+data arrival time                                                          0.666
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[32][6].clk[0] (.latch)                                       0.281     0.281
+clock uncertainty                                                0.000     0.281
+cell hold time                                                   0.066     0.347
+data required time                                                         0.347
+--------------------------------------------------------------------------------
+data required time                                                        -0.347
+data arrival time                                                          0.666
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 50
+Startpoint: ram[33][6].Q[0] (.latch clocked by clk)
+Endpoint  : ram[33][6].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[33][6].clk[0] (.latch)                                       0.350     0.350
+ram[33][6].Q[0] (.latch) [clock-to-output]                       0.124     0.474
+n1346.in[0] (.names)                                             0.000     0.474
+n1346.out[0] (.names)                                            0.261     0.735
+ram[33][6].D[0] (.latch)                                         0.000     0.735
+data arrival time                                                          0.735
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[33][6].clk[0] (.latch)                                       0.350     0.350
+clock uncertainty                                                0.000     0.350
+cell hold time                                                   0.066     0.416
+data required time                                                         0.416
+--------------------------------------------------------------------------------
+data required time                                                        -0.416
+data arrival time                                                          0.735
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 51
+Startpoint: ram[46][2].Q[0] (.latch clocked by clk)
+Endpoint  : ram[46][2].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[46][2].clk[0] (.latch)                                       0.417     0.417
+ram[46][2].Q[0] (.latch) [clock-to-output]                       0.124     0.541
+n1886.in[0] (.names)                                             0.000     0.541
+n1886.out[0] (.names)                                            0.261     0.802
+ram[46][2].D[0] (.latch)                                         0.000     0.802
+data arrival time                                                          0.802
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[46][2].clk[0] (.latch)                                       0.417     0.417
+clock uncertainty                                                0.000     0.417
+cell hold time                                                   0.066     0.483
+data required time                                                         0.483
+--------------------------------------------------------------------------------
+data required time                                                        -0.483
+data arrival time                                                          0.802
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 52
+Startpoint: ram[35][6].Q[0] (.latch clocked by clk)
+Endpoint  : ram[35][6].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[35][6].clk[0] (.latch)                                       0.454     0.454
+ram[35][6].Q[0] (.latch) [clock-to-output]                       0.124     0.578
+n1426.in[0] (.names)                                             0.000     0.578
+n1426.out[0] (.names)                                            0.261     0.839
+ram[35][6].D[0] (.latch)                                         0.000     0.839
+data arrival time                                                          0.839
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[35][6].clk[0] (.latch)                                       0.454     0.454
+clock uncertainty                                                0.000     0.454
+cell hold time                                                   0.066     0.520
+data required time                                                         0.520
+--------------------------------------------------------------------------------
+data required time                                                        -0.520
+data arrival time                                                          0.839
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 53
+Startpoint: ram[22][1].Q[0] (.latch clocked by clk)
+Endpoint  : ram[22][1].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[22][1].clk[0] (.latch)                                       0.439     0.439
+ram[22][1].Q[0] (.latch) [clock-to-output]                       0.124     0.563
+n841.in[0] (.names)                                              0.000     0.563
+n841.out[0] (.names)                                             0.261     0.824
+ram[22][1].D[0] (.latch)                                         0.000     0.824
+data arrival time                                                          0.824
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[22][1].clk[0] (.latch)                                       0.439     0.439
+clock uncertainty                                                0.000     0.439
+cell hold time                                                   0.066     0.505
+data required time                                                         0.505
+--------------------------------------------------------------------------------
+data required time                                                        -0.505
+data arrival time                                                          0.824
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 54
+Startpoint: ram[22][0].Q[0] (.latch clocked by clk)
+Endpoint  : ram[22][0].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[22][0].clk[0] (.latch)                                       0.435     0.435
+ram[22][0].Q[0] (.latch) [clock-to-output]                       0.124     0.559
+n836.in[0] (.names)                                              0.000     0.559
+n836.out[0] (.names)                                             0.261     0.820
+ram[22][0].D[0] (.latch)                                         0.000     0.820
+data arrival time                                                          0.820
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[22][0].clk[0] (.latch)                                       0.435     0.435
+clock uncertainty                                                0.000     0.435
+cell hold time                                                   0.066     0.501
+data required time                                                         0.501
+--------------------------------------------------------------------------------
+data required time                                                        -0.501
+data arrival time                                                          0.820
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 55
+Startpoint: ram[14][4].Q[0] (.latch clocked by clk)
+Endpoint  : ram[14][4].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[14][4].clk[0] (.latch)                                       0.373     0.373
+ram[14][4].Q[0] (.latch) [clock-to-output]                       0.124     0.497
+n496.in[0] (.names)                                              0.000     0.497
+n496.out[0] (.names)                                             0.261     0.758
+ram[14][4].D[0] (.latch)                                         0.000     0.758
+data arrival time                                                          0.758
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[14][4].clk[0] (.latch)                                       0.373     0.373
+clock uncertainty                                                0.000     0.373
+cell hold time                                                   0.066     0.439
+data required time                                                         0.439
+--------------------------------------------------------------------------------
+data required time                                                        -0.439
+data arrival time                                                          0.758
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 56
+Startpoint: ram[36][6].Q[0] (.latch clocked by clk)
+Endpoint  : ram[36][6].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[36][6].clk[0] (.latch)                                       0.350     0.350
+ram[36][6].Q[0] (.latch) [clock-to-output]                       0.124     0.474
+n1466.in[0] (.names)                                             0.000     0.474
+n1466.out[0] (.names)                                            0.261     0.735
+ram[36][6].D[0] (.latch)                                         0.000     0.735
+data arrival time                                                          0.735
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[36][6].clk[0] (.latch)                                       0.350     0.350
+clock uncertainty                                                0.000     0.350
+cell hold time                                                   0.066     0.416
+data required time                                                         0.416
+--------------------------------------------------------------------------------
+data required time                                                        -0.416
+data arrival time                                                          0.735
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 57
+Startpoint: ram[14][2].Q[0] (.latch clocked by clk)
+Endpoint  : ram[14][2].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[14][2].clk[0] (.latch)                                       0.373     0.373
+ram[14][2].Q[0] (.latch) [clock-to-output]                       0.124     0.497
+n486.in[0] (.names)                                              0.000     0.497
+n486.out[0] (.names)                                             0.261     0.758
+ram[14][2].D[0] (.latch)                                         0.000     0.758
+data arrival time                                                          0.758
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[14][2].clk[0] (.latch)                                       0.373     0.373
+clock uncertainty                                                0.000     0.373
+cell hold time                                                   0.066     0.439
+data required time                                                         0.439
+--------------------------------------------------------------------------------
+data required time                                                        -0.439
+data arrival time                                                          0.758
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 58
+Startpoint: ram[14][1].Q[0] (.latch clocked by clk)
+Endpoint  : ram[14][1].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[14][1].clk[0] (.latch)                                       0.346     0.346
+ram[14][1].Q[0] (.latch) [clock-to-output]                       0.124     0.470
+n481.in[0] (.names)                                              0.000     0.470
+n481.out[0] (.names)                                             0.261     0.731
+ram[14][1].D[0] (.latch)                                         0.000     0.731
+data arrival time                                                          0.731
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[14][1].clk[0] (.latch)                                       0.346     0.346
+clock uncertainty                                                0.000     0.346
+cell hold time                                                   0.066     0.412
+data required time                                                         0.412
+--------------------------------------------------------------------------------
+data required time                                                        -0.412
+data arrival time                                                          0.731
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 59
+Startpoint: ram[37][6].Q[0] (.latch clocked by clk)
+Endpoint  : ram[37][6].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[37][6].clk[0] (.latch)                                       0.355     0.355
+ram[37][6].Q[0] (.latch) [clock-to-output]                       0.124     0.479
+n1506.in[0] (.names)                                             0.000     0.479
+n1506.out[0] (.names)                                            0.261     0.740
+ram[37][6].D[0] (.latch)                                         0.000     0.740
+data arrival time                                                          0.740
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[37][6].clk[0] (.latch)                                       0.355     0.355
+clock uncertainty                                                0.000     0.355
+cell hold time                                                   0.066     0.421
+data required time                                                         0.421
+--------------------------------------------------------------------------------
+data required time                                                        -0.421
+data arrival time                                                          0.740
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 60
+Startpoint: ram[38][6].Q[0] (.latch clocked by clk)
+Endpoint  : ram[38][6].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[38][6].clk[0] (.latch)                                       0.454     0.454
+ram[38][6].Q[0] (.latch) [clock-to-output]                       0.124     0.578
+n1546.in[0] (.names)                                             0.000     0.578
+n1546.out[0] (.names)                                            0.261     0.839
+ram[38][6].D[0] (.latch)                                         0.000     0.839
+data arrival time                                                          0.839
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[38][6].clk[0] (.latch)                                       0.454     0.454
+clock uncertainty                                                0.000     0.454
+cell hold time                                                   0.066     0.520
+data required time                                                         0.520
+--------------------------------------------------------------------------------
+data required time                                                        -0.520
+data arrival time                                                          0.839
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 61
+Startpoint: ram[62][4].Q[0] (.latch clocked by clk)
+Endpoint  : ram[62][4].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[62][4].clk[0] (.latch)                                       0.449     0.449
+ram[62][4].Q[0] (.latch) [clock-to-output]                       0.124     0.573
+n2616.in[0] (.names)                                             0.000     0.573
+n2616.out[0] (.names)                                            0.261     0.834
+ram[62][4].D[0] (.latch)                                         0.000     0.834
+data arrival time                                                          0.834
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[62][4].clk[0] (.latch)                                       0.449     0.449
+clock uncertainty                                                0.000     0.449
+cell hold time                                                   0.066     0.515
+data required time                                                         0.515
+--------------------------------------------------------------------------------
+data required time                                                        -0.515
+data arrival time                                                          0.834
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 62
+Startpoint: ram[13][6].Q[0] (.latch clocked by clk)
+Endpoint  : ram[13][6].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[13][6].clk[0] (.latch)                                       0.292     0.292
+ram[13][6].Q[0] (.latch) [clock-to-output]                       0.124     0.416
+n466.in[0] (.names)                                              0.000     0.416
+n466.out[0] (.names)                                             0.261     0.677
+ram[13][6].D[0] (.latch)                                         0.000     0.677
+data arrival time                                                          0.677
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[13][6].clk[0] (.latch)                                       0.292     0.292
+clock uncertainty                                                0.000     0.292
+cell hold time                                                   0.066     0.358
+data required time                                                         0.358
+--------------------------------------------------------------------------------
+data required time                                                        -0.358
+data arrival time                                                          0.677
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 63
+Startpoint: ram[14][6].Q[0] (.latch clocked by clk)
+Endpoint  : ram[14][6].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[14][6].clk[0] (.latch)                                       0.292     0.292
+ram[14][6].Q[0] (.latch) [clock-to-output]                       0.124     0.416
+n506.in[0] (.names)                                              0.000     0.416
+n506.out[0] (.names)                                             0.261     0.677
+ram[14][6].D[0] (.latch)                                         0.000     0.677
+data arrival time                                                          0.677
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[14][6].clk[0] (.latch)                                       0.292     0.292
+clock uncertainty                                                0.000     0.292
+cell hold time                                                   0.066     0.358
+data required time                                                         0.358
+--------------------------------------------------------------------------------
+data required time                                                        -0.358
+data arrival time                                                          0.677
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 64
+Startpoint: ram[15][6].Q[0] (.latch clocked by clk)
+Endpoint  : ram[15][6].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[15][6].clk[0] (.latch)                                       0.292     0.292
+ram[15][6].Q[0] (.latch) [clock-to-output]                       0.124     0.416
+n546.in[0] (.names)                                              0.000     0.416
+n546.out[0] (.names)                                             0.261     0.677
+ram[15][6].D[0] (.latch)                                         0.000     0.677
+data arrival time                                                          0.677
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[15][6].clk[0] (.latch)                                       0.292     0.292
+clock uncertainty                                                0.000     0.292
+cell hold time                                                   0.066     0.358
+data required time                                                         0.358
+--------------------------------------------------------------------------------
+data required time                                                        -0.358
+data arrival time                                                          0.677
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 65
+Startpoint: ram[23][1].Q[0] (.latch clocked by clk)
+Endpoint  : ram[23][1].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[23][1].clk[0] (.latch)                                       0.439     0.439
+ram[23][1].Q[0] (.latch) [clock-to-output]                       0.124     0.563
+n881.in[0] (.names)                                              0.000     0.563
+n881.out[0] (.names)                                             0.261     0.824
+ram[23][1].D[0] (.latch)                                         0.000     0.824
+data arrival time                                                          0.824
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[23][1].clk[0] (.latch)                                       0.439     0.439
+clock uncertainty                                                0.000     0.439
+cell hold time                                                   0.066     0.505
+data required time                                                         0.505
+--------------------------------------------------------------------------------
+data required time                                                        -0.505
+data arrival time                                                          0.824
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 66
+Startpoint: ram[23][0].Q[0] (.latch clocked by clk)
+Endpoint  : ram[23][0].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[23][0].clk[0] (.latch)                                       0.435     0.435
+ram[23][0].Q[0] (.latch) [clock-to-output]                       0.124     0.559
+n876.in[0] (.names)                                              0.000     0.559
+n876.out[0] (.names)                                             0.261     0.820
+ram[23][0].D[0] (.latch)                                         0.000     0.820
+data arrival time                                                          0.820
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[23][0].clk[0] (.latch)                                       0.435     0.435
+clock uncertainty                                                0.000     0.435
+cell hold time                                                   0.066     0.501
+data required time                                                         0.501
+--------------------------------------------------------------------------------
+data required time                                                        -0.501
+data arrival time                                                          0.820
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 67
+Startpoint: ram[15][4].Q[0] (.latch clocked by clk)
+Endpoint  : ram[15][4].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[15][4].clk[0] (.latch)                                       0.373     0.373
+ram[15][4].Q[0] (.latch) [clock-to-output]                       0.124     0.497
+n536.in[0] (.names)                                              0.000     0.497
+n536.out[0] (.names)                                             0.261     0.758
+ram[15][4].D[0] (.latch)                                         0.000     0.758
+data arrival time                                                          0.758
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[15][4].clk[0] (.latch)                                       0.373     0.373
+clock uncertainty                                                0.000     0.373
+cell hold time                                                   0.066     0.439
+data required time                                                         0.439
+--------------------------------------------------------------------------------
+data required time                                                        -0.439
+data arrival time                                                          0.758
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 68
+Startpoint: ram[15][2].Q[0] (.latch clocked by clk)
+Endpoint  : ram[15][2].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[15][2].clk[0] (.latch)                                       0.373     0.373
+ram[15][2].Q[0] (.latch) [clock-to-output]                       0.124     0.497
+n526.in[0] (.names)                                              0.000     0.497
+n526.out[0] (.names)                                             0.261     0.758
+ram[15][2].D[0] (.latch)                                         0.000     0.758
+data arrival time                                                          0.758
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[15][2].clk[0] (.latch)                                       0.373     0.373
+clock uncertainty                                                0.000     0.373
+cell hold time                                                   0.066     0.439
+data required time                                                         0.439
+--------------------------------------------------------------------------------
+data required time                                                        -0.439
+data arrival time                                                          0.758
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 69
+Startpoint: ram[15][1].Q[0] (.latch clocked by clk)
+Endpoint  : ram[15][1].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[15][1].clk[0] (.latch)                                       0.346     0.346
+ram[15][1].Q[0] (.latch) [clock-to-output]                       0.124     0.470
+n521.in[0] (.names)                                              0.000     0.470
+n521.out[0] (.names)                                             0.261     0.731
+ram[15][1].D[0] (.latch)                                         0.000     0.731
+data arrival time                                                          0.731
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[15][1].clk[0] (.latch)                                       0.346     0.346
+clock uncertainty                                                0.000     0.346
+cell hold time                                                   0.066     0.412
+data required time                                                         0.412
+--------------------------------------------------------------------------------
+data required time                                                        -0.412
+data arrival time                                                          0.731
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 70
+Startpoint: ram[6][0].Q[0] (.latch clocked by clk)
+Endpoint  : ram[6][0].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[6][0].clk[0] (.latch)                                        0.437     0.437
+ram[6][0].Q[0] (.latch) [clock-to-output]                        0.124     0.561
+n2676.in[0] (.names)                                             0.000     0.561
+n2676.out[0] (.names)                                            0.261     0.822
+ram[6][0].D[0] (.latch)                                          0.000     0.822
+data arrival time                                                          0.822
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[6][0].clk[0] (.latch)                                        0.437     0.437
+clock uncertainty                                                0.000     0.437
+cell hold time                                                   0.066     0.503
+data required time                                                         0.503
+--------------------------------------------------------------------------------
+data required time                                                        -0.503
+data arrival time                                                          0.822
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 71
+Startpoint: ram[39][6].Q[0] (.latch clocked by clk)
+Endpoint  : ram[39][6].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[39][6].clk[0] (.latch)                                       0.454     0.454
+ram[39][6].Q[0] (.latch) [clock-to-output]                       0.124     0.578
+n1586.in[0] (.names)                                             0.000     0.578
+n1586.out[0] (.names)                                            0.261     0.839
+ram[39][6].D[0] (.latch)                                         0.000     0.839
+data arrival time                                                          0.839
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[39][6].clk[0] (.latch)                                       0.454     0.454
+clock uncertainty                                                0.000     0.454
+cell hold time                                                   0.066     0.520
+data required time                                                         0.520
+--------------------------------------------------------------------------------
+data required time                                                        -0.520
+data arrival time                                                          0.839
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 72
+Startpoint: ram[62][3].Q[0] (.latch clocked by clk)
+Endpoint  : ram[62][3].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[62][3].clk[0] (.latch)                                       0.449     0.449
+ram[62][3].Q[0] (.latch) [clock-to-output]                       0.124     0.573
+n2611.in[0] (.names)                                             0.000     0.573
+n2611.out[0] (.names)                                            0.261     0.834
+ram[62][3].D[0] (.latch)                                         0.000     0.834
+data arrival time                                                          0.834
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[62][3].clk[0] (.latch)                                       0.449     0.449
+clock uncertainty                                                0.000     0.449
+cell hold time                                                   0.066     0.515
+data required time                                                         0.515
+--------------------------------------------------------------------------------
+data required time                                                        -0.515
+data arrival time                                                          0.834
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 73
+Startpoint: ram[62][2].Q[0] (.latch clocked by clk)
+Endpoint  : ram[62][2].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[62][2].clk[0] (.latch)                                       0.418     0.418
+ram[62][2].Q[0] (.latch) [clock-to-output]                       0.124     0.542
+n2606.in[0] (.names)                                             0.000     0.542
+n2606.out[0] (.names)                                            0.261     0.803
+ram[62][2].D[0] (.latch)                                         0.000     0.803
+data arrival time                                                          0.803
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[62][2].clk[0] (.latch)                                       0.418     0.418
+clock uncertainty                                                0.000     0.418
+cell hold time                                                   0.066     0.484
+data required time                                                         0.484
+--------------------------------------------------------------------------------
+data required time                                                        -0.484
+data arrival time                                                          0.803
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 74
+Startpoint: ram[24][6].Q[0] (.latch clocked by clk)
+Endpoint  : ram[24][6].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[24][6].clk[0] (.latch)                                       0.416     0.416
+ram[24][6].Q[0] (.latch) [clock-to-output]                       0.124     0.540
+n946.in[0] (.names)                                              0.000     0.540
+n946.out[0] (.names)                                             0.261     0.801
+ram[24][6].D[0] (.latch)                                         0.000     0.801
+data arrival time                                                          0.801
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[24][6].clk[0] (.latch)                                       0.416     0.416
+clock uncertainty                                                0.000     0.416
+cell hold time                                                   0.066     0.482
+data required time                                                         0.482
+--------------------------------------------------------------------------------
+data required time                                                        -0.482
+data arrival time                                                          0.801
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 75
+Startpoint: ram[54][4].Q[0] (.latch clocked by clk)
+Endpoint  : ram[54][4].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[54][4].clk[0] (.latch)                                       0.521     0.521
+ram[54][4].Q[0] (.latch) [clock-to-output]                       0.124     0.645
+n2256.in[0] (.names)                                             0.000     0.645
+n2256.out[0] (.names)                                            0.261     0.906
+ram[54][4].D[0] (.latch)                                         0.000     0.906
+data arrival time                                                          0.906
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[54][4].clk[0] (.latch)                                       0.521     0.521
+clock uncertainty                                                0.000     0.521
+cell hold time                                                   0.066     0.587
+data required time                                                         0.587
+--------------------------------------------------------------------------------
+data required time                                                        -0.587
+data arrival time                                                          0.906
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 76
+Startpoint: ram[25][6].Q[0] (.latch clocked by clk)
+Endpoint  : ram[25][6].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[25][6].clk[0] (.latch)                                       0.483     0.483
+ram[25][6].Q[0] (.latch) [clock-to-output]                       0.124     0.607
+n986.in[0] (.names)                                              0.000     0.607
+n986.out[0] (.names)                                             0.261     0.868
+ram[25][6].D[0] (.latch)                                         0.000     0.868
+data arrival time                                                          0.868
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[25][6].clk[0] (.latch)                                       0.483     0.483
+clock uncertainty                                                0.000     0.483
+cell hold time                                                   0.066     0.549
+data required time                                                         0.549
+--------------------------------------------------------------------------------
+data required time                                                        -0.549
+data arrival time                                                          0.868
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 77
+Startpoint: ram[54][2].Q[0] (.latch clocked by clk)
+Endpoint  : ram[54][2].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[54][2].clk[0] (.latch)                                       0.446     0.446
+ram[54][2].Q[0] (.latch) [clock-to-output]                       0.124     0.570
+n2246.in[0] (.names)                                             0.000     0.570
+n2246.out[0] (.names)                                            0.261     0.831
+ram[54][2].D[0] (.latch)                                         0.000     0.831
+data arrival time                                                          0.831
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[54][2].clk[0] (.latch)                                       0.446     0.446
+clock uncertainty                                                0.000     0.446
+cell hold time                                                   0.066     0.512
+data required time                                                         0.512
+--------------------------------------------------------------------------------
+data required time                                                        -0.512
+data arrival time                                                          0.831
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 78
+Startpoint: ram[54][1].Q[0] (.latch clocked by clk)
+Endpoint  : ram[54][1].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[54][1].clk[0] (.latch)                                       0.448     0.448
+ram[54][1].Q[0] (.latch) [clock-to-output]                       0.124     0.572
+n2241.in[0] (.names)                                             0.000     0.572
+n2241.out[0] (.names)                                            0.261     0.833
+ram[54][1].D[0] (.latch)                                         0.000     0.833
+data arrival time                                                          0.833
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[54][1].clk[0] (.latch)                                       0.448     0.448
+clock uncertainty                                                0.000     0.448
+cell hold time                                                   0.066     0.514
+data required time                                                         0.514
+--------------------------------------------------------------------------------
+data required time                                                        -0.514
+data arrival time                                                          0.833
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 79
+Startpoint: ram[54][0].Q[0] (.latch clocked by clk)
+Endpoint  : ram[54][0].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[54][0].clk[0] (.latch)                                       0.500     0.500
+ram[54][0].Q[0] (.latch) [clock-to-output]                       0.124     0.624
+n2236.in[0] (.names)                                             0.000     0.624
+n2236.out[0] (.names)                                            0.261     0.885
+ram[54][0].D[0] (.latch)                                         0.000     0.885
+data arrival time                                                          0.885
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[54][0].clk[0] (.latch)                                       0.500     0.500
+clock uncertainty                                                0.000     0.500
+cell hold time                                                   0.066     0.566
+data required time                                                         0.566
+--------------------------------------------------------------------------------
+data required time                                                        -0.566
+data arrival time                                                          0.885
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 80
+Startpoint: ram[46][3].Q[0] (.latch clocked by clk)
+Endpoint  : ram[46][3].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[46][3].clk[0] (.latch)                                       0.416     0.416
+ram[46][3].Q[0] (.latch) [clock-to-output]                       0.124     0.540
+n1891.in[0] (.names)                                             0.000     0.540
+n1891.out[0] (.names)                                            0.261     0.801
+ram[46][3].D[0] (.latch)                                         0.000     0.801
+data arrival time                                                          0.801
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[46][3].clk[0] (.latch)                                       0.416     0.416
+clock uncertainty                                                0.000     0.416
+cell hold time                                                   0.066     0.482
+data required time                                                         0.482
+--------------------------------------------------------------------------------
+data required time                                                        -0.482
+data arrival time                                                          0.801
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 81
+Startpoint: ram[46][6].Q[0] (.latch clocked by clk)
+Endpoint  : ram[46][6].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[46][6].clk[0] (.latch)                                       0.417     0.417
+ram[46][6].Q[0] (.latch) [clock-to-output]                       0.124     0.541
+n1906.in[0] (.names)                                             0.000     0.541
+n1906.out[0] (.names)                                            0.261     0.802
+ram[46][6].D[0] (.latch)                                         0.000     0.802
+data arrival time                                                          0.802
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[46][6].clk[0] (.latch)                                       0.417     0.417
+clock uncertainty                                                0.000     0.417
+cell hold time                                                   0.066     0.483
+data required time                                                         0.483
+--------------------------------------------------------------------------------
+data required time                                                        -0.483
+data arrival time                                                          0.802
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 82
+Startpoint: ram[37][0].Q[0] (.latch clocked by clk)
+Endpoint  : ram[37][0].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[37][0].clk[0] (.latch)                                       0.365     0.365
+ram[37][0].Q[0] (.latch) [clock-to-output]                       0.124     0.489
+n1476.in[0] (.names)                                             0.000     0.489
+n1476.out[0] (.names)                                            0.261     0.750
+ram[37][0].D[0] (.latch)                                         0.000     0.750
+data arrival time                                                          0.750
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[37][0].clk[0] (.latch)                                       0.365     0.365
+clock uncertainty                                                0.000     0.365
+cell hold time                                                   0.066     0.431
+data required time                                                         0.431
+--------------------------------------------------------------------------------
+data required time                                                        -0.431
+data arrival time                                                          0.750
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 83
+Startpoint: ram[29][4].Q[0] (.latch clocked by clk)
+Endpoint  : ram[29][4].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[29][4].clk[0] (.latch)                                       0.483     0.483
+ram[29][4].Q[0] (.latch) [clock-to-output]                       0.124     0.607
+n1136.in[0] (.names)                                             0.000     0.607
+n1136.out[0] (.names)                                            0.261     0.868
+ram[29][4].D[0] (.latch)                                         0.000     0.868
+data arrival time                                                          0.868
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[29][4].clk[0] (.latch)                                       0.483     0.483
+clock uncertainty                                                0.000     0.483
+cell hold time                                                   0.066     0.549
+data required time                                                         0.549
+--------------------------------------------------------------------------------
+data required time                                                        -0.549
+data arrival time                                                          0.868
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 84
+Startpoint: ram[29][3].Q[0] (.latch clocked by clk)
+Endpoint  : ram[29][3].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[29][3].clk[0] (.latch)                                       0.417     0.417
+ram[29][3].Q[0] (.latch) [clock-to-output]                       0.124     0.541
+n1131.in[0] (.names)                                             0.000     0.541
+n1131.out[0] (.names)                                            0.261     0.802
+ram[29][3].D[0] (.latch)                                         0.000     0.802
+data arrival time                                                          0.802
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[29][3].clk[0] (.latch)                                       0.417     0.417
+clock uncertainty                                                0.000     0.417
+cell hold time                                                   0.066     0.483
+data required time                                                         0.483
+--------------------------------------------------------------------------------
+data required time                                                        -0.483
+data arrival time                                                          0.802
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 85
+Startpoint: ram[29][2].Q[0] (.latch clocked by clk)
+Endpoint  : ram[29][2].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[29][2].clk[0] (.latch)                                       0.417     0.417
+ram[29][2].Q[0] (.latch) [clock-to-output]                       0.124     0.541
+n1126.in[0] (.names)                                             0.000     0.541
+n1126.out[0] (.names)                                            0.261     0.802
+ram[29][2].D[0] (.latch)                                         0.000     0.802
+data arrival time                                                          0.802
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[29][2].clk[0] (.latch)                                       0.417     0.417
+clock uncertainty                                                0.000     0.417
+cell hold time                                                   0.066     0.483
+data required time                                                         0.483
+--------------------------------------------------------------------------------
+data required time                                                        -0.483
+data arrival time                                                          0.802
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 86
+Startpoint: ram[29][1].Q[0] (.latch clocked by clk)
+Endpoint  : ram[29][1].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[29][1].clk[0] (.latch)                                       0.347     0.347
+ram[29][1].Q[0] (.latch) [clock-to-output]                       0.124     0.471
+n1121.in[0] (.names)                                             0.000     0.471
+n1121.out[0] (.names)                                            0.261     0.732
+ram[29][1].D[0] (.latch)                                         0.000     0.732
+data arrival time                                                          0.732
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[29][1].clk[0] (.latch)                                       0.347     0.347
+clock uncertainty                                                0.000     0.347
+cell hold time                                                   0.066     0.413
+data required time                                                         0.413
+--------------------------------------------------------------------------------
+data required time                                                        -0.413
+data arrival time                                                          0.732
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 87
+Startpoint: ram[29][0].Q[0] (.latch clocked by clk)
+Endpoint  : ram[29][0].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[29][0].clk[0] (.latch)                                       0.437     0.437
+ram[29][0].Q[0] (.latch) [clock-to-output]                       0.124     0.561
+n1116.in[0] (.names)                                             0.000     0.561
+n1116.out[0] (.names)                                            0.261     0.822
+ram[29][0].D[0] (.latch)                                         0.000     0.822
+data arrival time                                                          0.822
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[29][0].clk[0] (.latch)                                       0.437     0.437
+clock uncertainty                                                0.000     0.437
+cell hold time                                                   0.066     0.503
+data required time                                                         0.503
+--------------------------------------------------------------------------------
+data required time                                                        -0.503
+data arrival time                                                          0.822
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 88
+Startpoint: ram[21][4].Q[0] (.latch clocked by clk)
+Endpoint  : ram[21][4].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[21][4].clk[0] (.latch)                                       0.435     0.435
+ram[21][4].Q[0] (.latch) [clock-to-output]                       0.124     0.559
+n816.in[0] (.names)                                              0.000     0.559
+n816.out[0] (.names)                                             0.261     0.820
+ram[21][4].D[0] (.latch)                                         0.000     0.820
+data arrival time                                                          0.820
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[21][4].clk[0] (.latch)                                       0.435     0.435
+clock uncertainty                                                0.000     0.435
+cell hold time                                                   0.066     0.501
+data required time                                                         0.501
+--------------------------------------------------------------------------------
+data required time                                                        -0.501
+data arrival time                                                          0.820
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 89
+Startpoint: ram[21][2].Q[0] (.latch clocked by clk)
+Endpoint  : ram[21][2].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[21][2].clk[0] (.latch)                                       0.435     0.435
+ram[21][2].Q[0] (.latch) [clock-to-output]                       0.124     0.559
+n806.in[0] (.names)                                              0.000     0.559
+n806.out[0] (.names)                                             0.261     0.820
+ram[21][2].D[0] (.latch)                                         0.000     0.820
+data arrival time                                                          0.820
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[21][2].clk[0] (.latch)                                       0.435     0.435
+clock uncertainty                                                0.000     0.435
+cell hold time                                                   0.066     0.501
+data required time                                                         0.501
+--------------------------------------------------------------------------------
+data required time                                                        -0.501
+data arrival time                                                          0.820
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 90
+Startpoint: ram[21][1].Q[0] (.latch clocked by clk)
+Endpoint  : ram[21][1].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[21][1].clk[0] (.latch)                                       0.435     0.435
+ram[21][1].Q[0] (.latch) [clock-to-output]                       0.124     0.559
+n801.in[0] (.names)                                              0.000     0.559
+n801.out[0] (.names)                                             0.261     0.820
+ram[21][1].D[0] (.latch)                                         0.000     0.820
+data arrival time                                                          0.820
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[21][1].clk[0] (.latch)                                       0.435     0.435
+clock uncertainty                                                0.000     0.435
+cell hold time                                                   0.066     0.501
+data required time                                                         0.501
+--------------------------------------------------------------------------------
+data required time                                                        -0.501
+data arrival time                                                          0.820
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 91
+Startpoint: ram[45][6].Q[0] (.latch clocked by clk)
+Endpoint  : ram[45][6].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[45][6].clk[0] (.latch)                                       0.352     0.352
+ram[45][6].Q[0] (.latch) [clock-to-output]                       0.124     0.476
+n1866.in[0] (.names)                                             0.000     0.476
+n1866.out[0] (.names)                                            0.261     0.737
+ram[45][6].D[0] (.latch)                                         0.000     0.737
+data arrival time                                                          0.737
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[45][6].clk[0] (.latch)                                       0.352     0.352
+clock uncertainty                                                0.000     0.352
+cell hold time                                                   0.066     0.418
+data required time                                                         0.418
+--------------------------------------------------------------------------------
+data required time                                                        -0.418
+data arrival time                                                          0.737
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 92
+Startpoint: ram[37][1].Q[0] (.latch clocked by clk)
+Endpoint  : ram[37][1].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[37][1].clk[0] (.latch)                                       0.349     0.349
+ram[37][1].Q[0] (.latch) [clock-to-output]                       0.124     0.473
+n1481.in[0] (.names)                                             0.000     0.473
+n1481.out[0] (.names)                                            0.261     0.734
+ram[37][1].D[0] (.latch)                                         0.000     0.734
+data arrival time                                                          0.734
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[37][1].clk[0] (.latch)                                       0.349     0.349
+clock uncertainty                                                0.000     0.349
+cell hold time                                                   0.066     0.415
+data required time                                                         0.415
+--------------------------------------------------------------------------------
+data required time                                                        -0.415
+data arrival time                                                          0.734
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 93
+Startpoint: ram[13][2].Q[0] (.latch clocked by clk)
+Endpoint  : ram[13][2].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[13][2].clk[0] (.latch)                                       0.217     0.217
+ram[13][2].Q[0] (.latch) [clock-to-output]                       0.124     0.341
+n446.in[0] (.names)                                              0.000     0.341
+n446.out[0] (.names)                                             0.261     0.602
+ram[13][2].D[0] (.latch)                                         0.000     0.602
+data arrival time                                                          0.602
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[13][2].clk[0] (.latch)                                       0.217     0.217
+clock uncertainty                                                0.000     0.217
+cell hold time                                                   0.066     0.283
+data required time                                                         0.283
+--------------------------------------------------------------------------------
+data required time                                                        -0.283
+data arrival time                                                          0.602
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 94
+Startpoint: ram[13][0].Q[0] (.latch clocked by clk)
+Endpoint  : ram[13][0].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[13][0].clk[0] (.latch)                                       0.339     0.339
+ram[13][0].Q[0] (.latch) [clock-to-output]                       0.124     0.463
+n436.in[0] (.names)                                              0.000     0.463
+n436.out[0] (.names)                                             0.261     0.724
+ram[13][0].D[0] (.latch)                                         0.000     0.724
+data arrival time                                                          0.724
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[13][0].clk[0] (.latch)                                       0.339     0.339
+clock uncertainty                                                0.000     0.339
+cell hold time                                                   0.066     0.405
+data required time                                                         0.405
+--------------------------------------------------------------------------------
+data required time                                                        -0.405
+data arrival time                                                          0.724
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 95
+Startpoint: ram[49][6].Q[0] (.latch clocked by clk)
+Endpoint  : ram[49][6].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[49][6].clk[0] (.latch)                                       0.431     0.431
+ram[49][6].Q[0] (.latch) [clock-to-output]                       0.124     0.555
+n2026.in[0] (.names)                                             0.000     0.555
+n2026.out[0] (.names)                                            0.261     0.816
+ram[49][6].D[0] (.latch)                                         0.000     0.816
+data arrival time                                                          0.816
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[49][6].clk[0] (.latch)                                       0.431     0.431
+clock uncertainty                                                0.000     0.431
+cell hold time                                                   0.066     0.497
+data required time                                                         0.497
+--------------------------------------------------------------------------------
+data required time                                                        -0.497
+data arrival time                                                          0.816
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 96
+Startpoint: ram[4][6].Q[0] (.latch clocked by clk)
+Endpoint  : ram[4][6].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[4][6].clk[0] (.latch)                                        0.352     0.352
+ram[4][6].Q[0] (.latch) [clock-to-output]                        0.124     0.476
+n2066.in[0] (.names)                                             0.000     0.476
+n2066.out[0] (.names)                                            0.261     0.737
+ram[4][6].D[0] (.latch)                                          0.000     0.737
+data arrival time                                                          0.737
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[4][6].clk[0] (.latch)                                        0.352     0.352
+clock uncertainty                                                0.000     0.352
+cell hold time                                                   0.066     0.418
+data required time                                                         0.418
+--------------------------------------------------------------------------------
+data required time                                                        -0.418
+data arrival time                                                          0.737
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 97
+Startpoint: ram[50][6].Q[0] (.latch clocked by clk)
+Endpoint  : ram[50][6].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[50][6].clk[0] (.latch)                                       0.521     0.521
+ram[50][6].Q[0] (.latch) [clock-to-output]                       0.124     0.645
+n2106.in[0] (.names)                                             0.000     0.645
+n2106.out[0] (.names)                                            0.261     0.906
+ram[50][6].D[0] (.latch)                                         0.000     0.906
+data arrival time                                                          0.906
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[50][6].clk[0] (.latch)                                       0.521     0.521
+clock uncertainty                                                0.000     0.521
+cell hold time                                                   0.066     0.587
+data required time                                                         0.587
+--------------------------------------------------------------------------------
+data required time                                                        -0.587
+data arrival time                                                          0.906
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 98
+Startpoint: ram[60][1].Q[0] (.latch clocked by clk)
+Endpoint  : ram[60][1].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[60][1].clk[0] (.latch)                                       0.416     0.416
+ram[60][1].Q[0] (.latch) [clock-to-output]                       0.124     0.540
+n2521.in[0] (.names)                                             0.000     0.540
+n2521.out[0] (.names)                                            0.261     0.801
+ram[60][1].D[0] (.latch)                                         0.000     0.801
+data arrival time                                                          0.801
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[60][1].clk[0] (.latch)                                       0.416     0.416
+clock uncertainty                                                0.000     0.416
+cell hold time                                                   0.066     0.482
+data required time                                                         0.482
+--------------------------------------------------------------------------------
+data required time                                                        -0.482
+data arrival time                                                          0.801
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 99
+Startpoint: ram[51][6].Q[0] (.latch clocked by clk)
+Endpoint  : ram[51][6].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[51][6].clk[0] (.latch)                                       0.448     0.448
+ram[51][6].Q[0] (.latch) [clock-to-output]                       0.124     0.572
+n2146.in[0] (.names)                                             0.000     0.572
+n2146.out[0] (.names)                                            0.261     0.833
+ram[51][6].D[0] (.latch)                                         0.000     0.833
+data arrival time                                                          0.833
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[51][6].clk[0] (.latch)                                       0.448     0.448
+clock uncertainty                                                0.000     0.448
+cell hold time                                                   0.066     0.514
+data required time                                                         0.514
+--------------------------------------------------------------------------------
+data required time                                                        -0.514
+data arrival time                                                          0.833
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#Path 100
+Startpoint: ram[52][6].Q[0] (.latch clocked by clk)
+Endpoint  : ram[52][6].D[0] (.latch clocked by clk)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[52][6].clk[0] (.latch)                                       0.431     0.431
+ram[52][6].Q[0] (.latch) [clock-to-output]                       0.124     0.555
+n2186.in[0] (.names)                                             0.000     0.555
+n2186.out[0] (.names)                                            0.261     0.816
+ram[52][6].D[0] (.latch)                                         0.000     0.816
+data arrival time                                                          0.816
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+ram[52][6].clk[0] (.latch)                                       0.431     0.431
+clock uncertainty                                                0.000     0.431
+cell hold time                                                   0.066     0.497
+data required time                                                         0.497
+--------------------------------------------------------------------------------
+data required time                                                        -0.497
+data arrival time                                                          0.816
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.319
+
+
+#End of timing report

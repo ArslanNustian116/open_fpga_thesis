@@ -1,9 +1,0 @@
-Netlist_File: top.net Netlist_ID: SHA256:430ab24b046d2eca6c41c5744157ae587c2384c0988b9cf94a7024f53ccf0b1b
-Array size: 3 x 3 logic blocks
-
-#block name	x	y	subblk	block number
-#----------	--	--	------	------------
-out		1	1	0	#0
-out:out		1	0	2	#1
-clock		0	1	7	#2
-in		1	0	7	#3

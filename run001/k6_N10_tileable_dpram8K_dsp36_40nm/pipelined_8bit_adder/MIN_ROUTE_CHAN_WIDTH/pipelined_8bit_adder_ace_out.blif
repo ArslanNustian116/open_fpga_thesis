@@ -1,0 +1,3983 @@
+# Benchmark "pipelined_8bit_adder" written by ABC on Fri Sep  5 14:36:53 2025
+.model pipelined_8bit_adder
+.inputs clk ren wen raddr_0_ raddr_1_ raddr_2_ raddr_3_ raddr_4_ raddr_5_ \
+ waddr_0_ waddr_1_ waddr_2_ waddr_3_ waddr_4_ waddr_5_ a_0_ a_1_ a_2_ a_3_ \
+ a_4_ a_5_ a_6_ b_0_ b_1_ b_2_ b_3_ b_4_ b_5_ b_6_
+.outputs q_0_ q_1_ q_2_ q_3_ q_4_ q_5_ q_6_ q_7_
+
+.latch        n75 waddr_st0[0]  2
+.latch        n79 waddr_st0[1]  2
+.latch        n83 waddr_st0[2]  2
+.latch        n87 waddr_st0[3]  2
+.latch        n91 waddr_st0[4]  2
+.latch        n95 waddr_st0[5]  2
+.latch        n99   a_st0[0]  2
+.latch       n103   a_st0[1]  2
+.latch       n107   a_st0[2]  2
+.latch       n111   a_st0[3]  2
+.latch       n115   a_st0[4]  2
+.latch       n119   a_st0[5]  2
+.latch       n123   a_st0[6]  2
+.latch       n127   a_st1[0]  2
+.latch       n131   a_st1[1]  2
+.latch       n135   a_st1[2]  2
+.latch       n139   a_st1[3]  2
+.latch       n143   a_st1[4]  2
+.latch       n147   a_st1[5]  2
+.latch       n151   a_st1[6]  2
+.latch       n155   b_st0[0]  2
+.latch       n159   b_st0[1]  2
+.latch       n163   b_st0[2]  2
+.latch       n167   b_st0[3]  2
+.latch       n171   b_st0[4]  2
+.latch       n175   b_st0[5]  2
+.latch       n179   b_st0[6]  2
+.latch       n183   b_st1[0]  2
+.latch       n187   b_st1[1]  2
+.latch       n191   b_st1[2]  2
+.latch       n195   b_st1[3]  2
+.latch       n199   b_st1[4]  2
+.latch       n203   b_st1[5]  2
+.latch       n207   b_st1[6]  2
+.latch       n211 waddr_st1[0]  2
+.latch       n215 waddr_st1[1]  2
+.latch       n219 waddr_st1[2]  2
+.latch       n223 waddr_st1[3]  2
+.latch       n227 waddr_st1[4]  2
+.latch       n231 waddr_st1[5]  2
+.latch       n235    wen_st0  2
+.latch       n239    wen_st1  2
+.latch       n244       q_0_  2
+.latch       n248       q_1_  2
+.latch       n252       q_2_  2
+.latch       n256       q_3_  2
+.latch       n260       q_4_  2
+.latch       n264       q_5_  2
+.latch       n268       q_6_  2
+.latch       n272       q_7_  2
+.latch       n276  ram[0][0]  2
+.latch       n281  ram[0][1]  2
+.latch       n286  ram[0][2]  2
+.latch       n291  ram[0][3]  2
+.latch       n296  ram[0][4]  2
+.latch       n301  ram[0][5]  2
+.latch       n306  ram[0][6]  2
+.latch       n311  ram[0][7]  2
+.latch       n316 ram[10][0]  2
+.latch       n321 ram[10][1]  2
+.latch       n326 ram[10][2]  2
+.latch       n331 ram[10][3]  2
+.latch       n336 ram[10][4]  2
+.latch       n341 ram[10][5]  2
+.latch       n346 ram[10][6]  2
+.latch       n351 ram[10][7]  2
+.latch       n356 ram[11][0]  2
+.latch       n361 ram[11][1]  2
+.latch       n366 ram[11][2]  2
+.latch       n371 ram[11][3]  2
+.latch       n376 ram[11][4]  2
+.latch       n381 ram[11][5]  2
+.latch       n386 ram[11][6]  2
+.latch       n391 ram[11][7]  2
+.latch       n396 ram[12][0]  2
+.latch       n401 ram[12][1]  2
+.latch       n406 ram[12][2]  2
+.latch       n411 ram[12][3]  2
+.latch       n416 ram[12][4]  2
+.latch       n421 ram[12][5]  2
+.latch       n426 ram[12][6]  2
+.latch       n431 ram[12][7]  2
+.latch       n436 ram[13][0]  2
+.latch       n441 ram[13][1]  2
+.latch       n446 ram[13][2]  2
+.latch       n451 ram[13][3]  2
+.latch       n456 ram[13][4]  2
+.latch       n461 ram[13][5]  2
+.latch       n466 ram[13][6]  2
+.latch       n471 ram[13][7]  2
+.latch       n476 ram[14][0]  2
+.latch       n481 ram[14][1]  2
+.latch       n486 ram[14][2]  2
+.latch       n491 ram[14][3]  2
+.latch       n496 ram[14][4]  2
+.latch       n501 ram[14][5]  2
+.latch       n506 ram[14][6]  2
+.latch       n511 ram[14][7]  2
+.latch       n516 ram[15][0]  2
+.latch       n521 ram[15][1]  2
+.latch       n526 ram[15][2]  2
+.latch       n531 ram[15][3]  2
+.latch       n536 ram[15][4]  2
+.latch       n541 ram[15][5]  2
+.latch       n546 ram[15][6]  2
+.latch       n551 ram[15][7]  2
+.latch       n556 ram[16][0]  2
+.latch       n561 ram[16][1]  2
+.latch       n566 ram[16][2]  2
+.latch       n571 ram[16][3]  2
+.latch       n576 ram[16][4]  2
+.latch       n581 ram[16][5]  2
+.latch       n586 ram[16][6]  2
+.latch       n591 ram[16][7]  2
+.latch       n596 ram[17][0]  2
+.latch       n601 ram[17][1]  2
+.latch       n606 ram[17][2]  2
+.latch       n611 ram[17][3]  2
+.latch       n616 ram[17][4]  2
+.latch       n621 ram[17][5]  2
+.latch       n626 ram[17][6]  2
+.latch       n631 ram[17][7]  2
+.latch       n636 ram[18][0]  2
+.latch       n641 ram[18][1]  2
+.latch       n646 ram[18][2]  2
+.latch       n651 ram[18][3]  2
+.latch       n656 ram[18][4]  2
+.latch       n661 ram[18][5]  2
+.latch       n666 ram[18][6]  2
+.latch       n671 ram[18][7]  2
+.latch       n676 ram[19][0]  2
+.latch       n681 ram[19][1]  2
+.latch       n686 ram[19][2]  2
+.latch       n691 ram[19][3]  2
+.latch       n696 ram[19][4]  2
+.latch       n701 ram[19][5]  2
+.latch       n706 ram[19][6]  2
+.latch       n711 ram[19][7]  2
+.latch       n716  ram[1][0]  2
+.latch       n721  ram[1][1]  2
+.latch       n726  ram[1][2]  2
+.latch       n731  ram[1][3]  2
+.latch       n736  ram[1][4]  2
+.latch       n741  ram[1][5]  2
+.latch       n746  ram[1][6]  2
+.latch       n751  ram[1][7]  2
+.latch       n756 ram[20][0]  2
+.latch       n761 ram[20][1]  2
+.latch       n766 ram[20][2]  2
+.latch       n771 ram[20][3]  2
+.latch       n776 ram[20][4]  2
+.latch       n781 ram[20][5]  2
+.latch       n786 ram[20][6]  2
+.latch       n791 ram[20][7]  2
+.latch       n796 ram[21][0]  2
+.latch       n801 ram[21][1]  2
+.latch       n806 ram[21][2]  2
+.latch       n811 ram[21][3]  2
+.latch       n816 ram[21][4]  2
+.latch       n821 ram[21][5]  2
+.latch       n826 ram[21][6]  2
+.latch       n831 ram[21][7]  2
+.latch       n836 ram[22][0]  2
+.latch       n841 ram[22][1]  2
+.latch       n846 ram[22][2]  2
+.latch       n851 ram[22][3]  2
+.latch       n856 ram[22][4]  2
+.latch       n861 ram[22][5]  2
+.latch       n866 ram[22][6]  2
+.latch       n871 ram[22][7]  2
+.latch       n876 ram[23][0]  2
+.latch       n881 ram[23][1]  2
+.latch       n886 ram[23][2]  2
+.latch       n891 ram[23][3]  2
+.latch       n896 ram[23][4]  2
+.latch       n901 ram[23][5]  2
+.latch       n906 ram[23][6]  2
+.latch       n911 ram[23][7]  2
+.latch       n916 ram[24][0]  2
+.latch       n921 ram[24][1]  2
+.latch       n926 ram[24][2]  2
+.latch       n931 ram[24][3]  2
+.latch       n936 ram[24][4]  2
+.latch       n941 ram[24][5]  2
+.latch       n946 ram[24][6]  2
+.latch       n951 ram[24][7]  2
+.latch       n956 ram[25][0]  2
+.latch       n961 ram[25][1]  2
+.latch       n966 ram[25][2]  2
+.latch       n971 ram[25][3]  2
+.latch       n976 ram[25][4]  2
+.latch       n981 ram[25][5]  2
+.latch       n986 ram[25][6]  2
+.latch       n991 ram[25][7]  2
+.latch       n996 ram[26][0]  2
+.latch      n1001 ram[26][1]  2
+.latch      n1006 ram[26][2]  2
+.latch      n1011 ram[26][3]  2
+.latch      n1016 ram[26][4]  2
+.latch      n1021 ram[26][5]  2
+.latch      n1026 ram[26][6]  2
+.latch      n1031 ram[26][7]  2
+.latch      n1036 ram[27][0]  2
+.latch      n1041 ram[27][1]  2
+.latch      n1046 ram[27][2]  2
+.latch      n1051 ram[27][3]  2
+.latch      n1056 ram[27][4]  2
+.latch      n1061 ram[27][5]  2
+.latch      n1066 ram[27][6]  2
+.latch      n1071 ram[27][7]  2
+.latch      n1076 ram[28][0]  2
+.latch      n1081 ram[28][1]  2
+.latch      n1086 ram[28][2]  2
+.latch      n1091 ram[28][3]  2
+.latch      n1096 ram[28][4]  2
+.latch      n1101 ram[28][5]  2
+.latch      n1106 ram[28][6]  2
+.latch      n1111 ram[28][7]  2
+.latch      n1116 ram[29][0]  2
+.latch      n1121 ram[29][1]  2
+.latch      n1126 ram[29][2]  2
+.latch      n1131 ram[29][3]  2
+.latch      n1136 ram[29][4]  2
+.latch      n1141 ram[29][5]  2
+.latch      n1146 ram[29][6]  2
+.latch      n1151 ram[29][7]  2
+.latch      n1156  ram[2][0]  2
+.latch      n1161  ram[2][1]  2
+.latch      n1166  ram[2][2]  2
+.latch      n1171  ram[2][3]  2
+.latch      n1176  ram[2][4]  2
+.latch      n1181  ram[2][5]  2
+.latch      n1186  ram[2][6]  2
+.latch      n1191  ram[2][7]  2
+.latch      n1196 ram[30][0]  2
+.latch      n1201 ram[30][1]  2
+.latch      n1206 ram[30][2]  2
+.latch      n1211 ram[30][3]  2
+.latch      n1216 ram[30][4]  2
+.latch      n1221 ram[30][5]  2
+.latch      n1226 ram[30][6]  2
+.latch      n1231 ram[30][7]  2
+.latch      n1236 ram[31][0]  2
+.latch      n1241 ram[31][1]  2
+.latch      n1246 ram[31][2]  2
+.latch      n1251 ram[31][3]  2
+.latch      n1256 ram[31][4]  2
+.latch      n1261 ram[31][5]  2
+.latch      n1266 ram[31][6]  2
+.latch      n1271 ram[31][7]  2
+.latch      n1276 ram[32][0]  2
+.latch      n1281 ram[32][1]  2
+.latch      n1286 ram[32][2]  2
+.latch      n1291 ram[32][3]  2
+.latch      n1296 ram[32][4]  2
+.latch      n1301 ram[32][5]  2
+.latch      n1306 ram[32][6]  2
+.latch      n1311 ram[32][7]  2
+.latch      n1316 ram[33][0]  2
+.latch      n1321 ram[33][1]  2
+.latch      n1326 ram[33][2]  2
+.latch      n1331 ram[33][3]  2
+.latch      n1336 ram[33][4]  2
+.latch      n1341 ram[33][5]  2
+.latch      n1346 ram[33][6]  2
+.latch      n1351 ram[33][7]  2
+.latch      n1356 ram[34][0]  2
+.latch      n1361 ram[34][1]  2
+.latch      n1366 ram[34][2]  2
+.latch      n1371 ram[34][3]  2
+.latch      n1376 ram[34][4]  2
+.latch      n1381 ram[34][5]  2
+.latch      n1386 ram[34][6]  2
+.latch      n1391 ram[34][7]  2
+.latch      n1396 ram[35][0]  2
+.latch      n1401 ram[35][1]  2
+.latch      n1406 ram[35][2]  2
+.latch      n1411 ram[35][3]  2
+.latch      n1416 ram[35][4]  2
+.latch      n1421 ram[35][5]  2
+.latch      n1426 ram[35][6]  2
+.latch      n1431 ram[35][7]  2
+.latch      n1436 ram[36][0]  2
+.latch      n1441 ram[36][1]  2
+.latch      n1446 ram[36][2]  2
+.latch      n1451 ram[36][3]  2
+.latch      n1456 ram[36][4]  2
+.latch      n1461 ram[36][5]  2
+.latch      n1466 ram[36][6]  2
+.latch      n1471 ram[36][7]  2
+.latch      n1476 ram[37][0]  2
+.latch      n1481 ram[37][1]  2
+.latch      n1486 ram[37][2]  2
+.latch      n1491 ram[37][3]  2
+.latch      n1496 ram[37][4]  2
+.latch      n1501 ram[37][5]  2
+.latch      n1506 ram[37][6]  2
+.latch      n1511 ram[37][7]  2
+.latch      n1516 ram[38][0]  2
+.latch      n1521 ram[38][1]  2
+.latch      n1526 ram[38][2]  2
+.latch      n1531 ram[38][3]  2
+.latch      n1536 ram[38][4]  2
+.latch      n1541 ram[38][5]  2
+.latch      n1546 ram[38][6]  2
+.latch      n1551 ram[38][7]  2
+.latch      n1556 ram[39][0]  2
+.latch      n1561 ram[39][1]  2
+.latch      n1566 ram[39][2]  2
+.latch      n1571 ram[39][3]  2
+.latch      n1576 ram[39][4]  2
+.latch      n1581 ram[39][5]  2
+.latch      n1586 ram[39][6]  2
+.latch      n1591 ram[39][7]  2
+.latch      n1596  ram[3][0]  2
+.latch      n1601  ram[3][1]  2
+.latch      n1606  ram[3][2]  2
+.latch      n1611  ram[3][3]  2
+.latch      n1616  ram[3][4]  2
+.latch      n1621  ram[3][5]  2
+.latch      n1626  ram[3][6]  2
+.latch      n1631  ram[3][7]  2
+.latch      n1636 ram[40][0]  2
+.latch      n1641 ram[40][1]  2
+.latch      n1646 ram[40][2]  2
+.latch      n1651 ram[40][3]  2
+.latch      n1656 ram[40][4]  2
+.latch      n1661 ram[40][5]  2
+.latch      n1666 ram[40][6]  2
+.latch      n1671 ram[40][7]  2
+.latch      n1676 ram[41][0]  2
+.latch      n1681 ram[41][1]  2
+.latch      n1686 ram[41][2]  2
+.latch      n1691 ram[41][3]  2
+.latch      n1696 ram[41][4]  2
+.latch      n1701 ram[41][5]  2
+.latch      n1706 ram[41][6]  2
+.latch      n1711 ram[41][7]  2
+.latch      n1716 ram[42][0]  2
+.latch      n1721 ram[42][1]  2
+.latch      n1726 ram[42][2]  2
+.latch      n1731 ram[42][3]  2
+.latch      n1736 ram[42][4]  2
+.latch      n1741 ram[42][5]  2
+.latch      n1746 ram[42][6]  2
+.latch      n1751 ram[42][7]  2
+.latch      n1756 ram[43][0]  2
+.latch      n1761 ram[43][1]  2
+.latch      n1766 ram[43][2]  2
+.latch      n1771 ram[43][3]  2
+.latch      n1776 ram[43][4]  2
+.latch      n1781 ram[43][5]  2
+.latch      n1786 ram[43][6]  2
+.latch      n1791 ram[43][7]  2
+.latch      n1796 ram[44][0]  2
+.latch      n1801 ram[44][1]  2
+.latch      n1806 ram[44][2]  2
+.latch      n1811 ram[44][3]  2
+.latch      n1816 ram[44][4]  2
+.latch      n1821 ram[44][5]  2
+.latch      n1826 ram[44][6]  2
+.latch      n1831 ram[44][7]  2
+.latch      n1836 ram[45][0]  2
+.latch      n1841 ram[45][1]  2
+.latch      n1846 ram[45][2]  2
+.latch      n1851 ram[45][3]  2
+.latch      n1856 ram[45][4]  2
+.latch      n1861 ram[45][5]  2
+.latch      n1866 ram[45][6]  2
+.latch      n1871 ram[45][7]  2
+.latch      n1876 ram[46][0]  2
+.latch      n1881 ram[46][1]  2
+.latch      n1886 ram[46][2]  2
+.latch      n1891 ram[46][3]  2
+.latch      n1896 ram[46][4]  2
+.latch      n1901 ram[46][5]  2
+.latch      n1906 ram[46][6]  2
+.latch      n1911 ram[46][7]  2
+.latch      n1916 ram[47][0]  2
+.latch      n1921 ram[47][1]  2
+.latch      n1926 ram[47][2]  2
+.latch      n1931 ram[47][3]  2
+.latch      n1936 ram[47][4]  2
+.latch      n1941 ram[47][5]  2
+.latch      n1946 ram[47][6]  2
+.latch      n1951 ram[47][7]  2
+.latch      n1956 ram[48][0]  2
+.latch      n1961 ram[48][1]  2
+.latch      n1966 ram[48][2]  2
+.latch      n1971 ram[48][3]  2
+.latch      n1976 ram[48][4]  2
+.latch      n1981 ram[48][5]  2
+.latch      n1986 ram[48][6]  2
+.latch      n1991 ram[48][7]  2
+.latch      n1996 ram[49][0]  2
+.latch      n2001 ram[49][1]  2
+.latch      n2006 ram[49][2]  2
+.latch      n2011 ram[49][3]  2
+.latch      n2016 ram[49][4]  2
+.latch      n2021 ram[49][5]  2
+.latch      n2026 ram[49][6]  2
+.latch      n2031 ram[49][7]  2
+.latch      n2036  ram[4][0]  2
+.latch      n2041  ram[4][1]  2
+.latch      n2046  ram[4][2]  2
+.latch      n2051  ram[4][3]  2
+.latch      n2056  ram[4][4]  2
+.latch      n2061  ram[4][5]  2
+.latch      n2066  ram[4][6]  2
+.latch      n2071  ram[4][7]  2
+.latch      n2076 ram[50][0]  2
+.latch      n2081 ram[50][1]  2
+.latch      n2086 ram[50][2]  2
+.latch      n2091 ram[50][3]  2
+.latch      n2096 ram[50][4]  2
+.latch      n2101 ram[50][5]  2
+.latch      n2106 ram[50][6]  2
+.latch      n2111 ram[50][7]  2
+.latch      n2116 ram[51][0]  2
+.latch      n2121 ram[51][1]  2
+.latch      n2126 ram[51][2]  2
+.latch      n2131 ram[51][3]  2
+.latch      n2136 ram[51][4]  2
+.latch      n2141 ram[51][5]  2
+.latch      n2146 ram[51][6]  2
+.latch      n2151 ram[51][7]  2
+.latch      n2156 ram[52][0]  2
+.latch      n2161 ram[52][1]  2
+.latch      n2166 ram[52][2]  2
+.latch      n2171 ram[52][3]  2
+.latch      n2176 ram[52][4]  2
+.latch      n2181 ram[52][5]  2
+.latch      n2186 ram[52][6]  2
+.latch      n2191 ram[52][7]  2
+.latch      n2196 ram[53][0]  2
+.latch      n2201 ram[53][1]  2
+.latch      n2206 ram[53][2]  2
+.latch      n2211 ram[53][3]  2
+.latch      n2216 ram[53][4]  2
+.latch      n2221 ram[53][5]  2
+.latch      n2226 ram[53][6]  2
+.latch      n2231 ram[53][7]  2
+.latch      n2236 ram[54][0]  2
+.latch      n2241 ram[54][1]  2
+.latch      n2246 ram[54][2]  2
+.latch      n2251 ram[54][3]  2
+.latch      n2256 ram[54][4]  2
+.latch      n2261 ram[54][5]  2
+.latch      n2266 ram[54][6]  2
+.latch      n2271 ram[54][7]  2
+.latch      n2276 ram[55][0]  2
+.latch      n2281 ram[55][1]  2
+.latch      n2286 ram[55][2]  2
+.latch      n2291 ram[55][3]  2
+.latch      n2296 ram[55][4]  2
+.latch      n2301 ram[55][5]  2
+.latch      n2306 ram[55][6]  2
+.latch      n2311 ram[55][7]  2
+.latch      n2316 ram[56][0]  2
+.latch      n2321 ram[56][1]  2
+.latch      n2326 ram[56][2]  2
+.latch      n2331 ram[56][3]  2
+.latch      n2336 ram[56][4]  2
+.latch      n2341 ram[56][5]  2
+.latch      n2346 ram[56][6]  2
+.latch      n2351 ram[56][7]  2
+.latch      n2356 ram[57][0]  2
+.latch      n2361 ram[57][1]  2
+.latch      n2366 ram[57][2]  2
+.latch      n2371 ram[57][3]  2
+.latch      n2376 ram[57][4]  2
+.latch      n2381 ram[57][5]  2
+.latch      n2386 ram[57][6]  2
+.latch      n2391 ram[57][7]  2
+.latch      n2396 ram[58][0]  2
+.latch      n2401 ram[58][1]  2
+.latch      n2406 ram[58][2]  2
+.latch      n2411 ram[58][3]  2
+.latch      n2416 ram[58][4]  2
+.latch      n2421 ram[58][5]  2
+.latch      n2426 ram[58][6]  2
+.latch      n2431 ram[58][7]  2
+.latch      n2436 ram[59][0]  2
+.latch      n2441 ram[59][1]  2
+.latch      n2446 ram[59][2]  2
+.latch      n2451 ram[59][3]  2
+.latch      n2456 ram[59][4]  2
+.latch      n2461 ram[59][5]  2
+.latch      n2466 ram[59][6]  2
+.latch      n2471 ram[59][7]  2
+.latch      n2476  ram[5][0]  2
+.latch      n2481  ram[5][1]  2
+.latch      n2486  ram[5][2]  2
+.latch      n2491  ram[5][3]  2
+.latch      n2496  ram[5][4]  2
+.latch      n2501  ram[5][5]  2
+.latch      n2506  ram[5][6]  2
+.latch      n2511  ram[5][7]  2
+.latch      n2516 ram[60][0]  2
+.latch      n2521 ram[60][1]  2
+.latch      n2526 ram[60][2]  2
+.latch      n2531 ram[60][3]  2
+.latch      n2536 ram[60][4]  2
+.latch      n2541 ram[60][5]  2
+.latch      n2546 ram[60][6]  2
+.latch      n2551 ram[60][7]  2
+.latch      n2556 ram[61][0]  2
+.latch      n2561 ram[61][1]  2
+.latch      n2566 ram[61][2]  2
+.latch      n2571 ram[61][3]  2
+.latch      n2576 ram[61][4]  2
+.latch      n2581 ram[61][5]  2
+.latch      n2586 ram[61][6]  2
+.latch      n2591 ram[61][7]  2
+.latch      n2596 ram[62][0]  2
+.latch      n2601 ram[62][1]  2
+.latch      n2606 ram[62][2]  2
+.latch      n2611 ram[62][3]  2
+.latch      n2616 ram[62][4]  2
+.latch      n2621 ram[62][5]  2
+.latch      n2626 ram[62][6]  2
+.latch      n2631 ram[62][7]  2
+.latch      n2636 ram[63][0]  2
+.latch      n2641 ram[63][1]  2
+.latch      n2646 ram[63][2]  2
+.latch      n2651 ram[63][3]  2
+.latch      n2656 ram[63][4]  2
+.latch      n2661 ram[63][5]  2
+.latch      n2666 ram[63][6]  2
+.latch      n2671 ram[63][7]  2
+.latch      n2676  ram[6][0]  2
+.latch      n2681  ram[6][1]  2
+.latch      n2686  ram[6][2]  2
+.latch      n2691  ram[6][3]  2
+.latch      n2696  ram[6][4]  2
+.latch      n2701  ram[6][5]  2
+.latch      n2706  ram[6][6]  2
+.latch      n2711  ram[6][7]  2
+.latch      n2716  ram[7][0]  2
+.latch      n2721  ram[7][1]  2
+.latch      n2726  ram[7][2]  2
+.latch      n2731  ram[7][3]  2
+.latch      n2736  ram[7][4]  2
+.latch      n2741  ram[7][5]  2
+.latch      n2746  ram[7][6]  2
+.latch      n2751  ram[7][7]  2
+.latch      n2756  ram[8][0]  2
+.latch      n2761  ram[8][1]  2
+.latch      n2766  ram[8][2]  2
+.latch      n2771  ram[8][3]  2
+.latch      n2776  ram[8][4]  2
+.latch      n2781  ram[8][5]  2
+.latch      n2786  ram[8][6]  2
+.latch      n2791  ram[8][7]  2
+.latch      n2796  ram[9][0]  2
+.latch      n2801  ram[9][1]  2
+.latch      n2806  ram[9][2]  2
+.latch      n2811  ram[9][3]  2
+.latch      n2816  ram[9][4]  2
+.latch      n2821  ram[9][5]  2
+.latch      n2826  ram[9][6]  2
+.latch      n2831  ram[9][7]  2
+
+.names ram[58][0] ram[62][0] ram[59][0] ram[63][0] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1073_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[56][0] ram[60][0] ram[57][0] ram[61][0] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1075_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[50][0] ram[54][0] ram[51][0] ram[55][0] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1077_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[48][0] ram[52][0] ram[49][0] ram[53][0] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1079_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[34][0] ram[38][0] ram[35][0] ram[39][0] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1082_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[32][0] ram[36][0] ram[33][0] ram[37][0] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1083_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[42][0] ram[46][0] ram[43][0] ram[47][0] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1084_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[40][0] ram[44][0] ram[41][0] ram[45][0] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1085_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[18][0] ram[22][0] ram[19][0] ram[23][0] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1088_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[26][0] ram[30][0] ram[27][0] ram[31][0] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1089_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[2][0] ram[6][0] ram[3][0] ram[7][0] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1091_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[10][0] ram[14][0] ram[11][0] ram[15][0] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1092_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[0][0] ram[4][0] ram[1][0] ram[5][0] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1094_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[8][0] ram[12][0] ram[9][0] ram[13][0] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1095_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[16][0] ram[20][0] ram[17][0] ram[21][0] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1097_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[32][1] ram[36][1] ram[33][1] ram[37][1] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1103_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[34][1] ram[38][1] ram[35][1] ram[39][1] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1104_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[40][1] ram[44][1] ram[41][1] ram[45][1] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1106_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[42][1] ram[46][1] ram[43][1] ram[47][1] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1107_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[56][1] ram[60][1] ram[57][1] ram[61][1] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1109_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[58][1] ram[62][1] ram[59][1] ram[63][1] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1110_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[50][1] ram[54][1] ram[51][1] ram[55][1] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1112_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[48][1] ram[52][1] ram[49][1] ram[53][1] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1113_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[24][1] ram[28][1] ram[25][1] ram[29][1] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1116_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[26][1] ram[30][1] ram[27][1] ram[31][1] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1117_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[18][1] ram[22][1] ram[19][1] ram[23][1] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1119_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[16][1] ram[20][1] ram[17][1] ram[21][1] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1120_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[10][1] ram[14][1] ram[11][1] ram[15][1] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1122_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[8][1] ram[12][1] ram[9][1] ram[13][1] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1123_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[2][1] ram[6][1] ram[3][1] ram[7][1] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1125_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[0][1] ram[4][1] ram[1][1] ram[5][1] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1126_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names $abc$2770$new_n1132_ $abc$2770$new_n1130_ $abc$2770$new_n1133_ \
+ $abc$2770$new_n1131_ raddr_1_ raddr_3_ $abc$2770$new_n1129_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[40][2] ram[44][2] ram[41][2] ram[45][2] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1130_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[42][2] ram[46][2] ram[43][2] ram[47][2] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1131_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[32][2] ram[36][2] ram[33][2] ram[37][2] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1132_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[34][2] ram[38][2] ram[35][2] ram[39][2] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1133_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[56][2] ram[60][2] ram[57][2] ram[61][2] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1135_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[58][2] ram[62][2] ram[59][2] ram[63][2] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1136_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[50][2] ram[54][2] ram[51][2] ram[55][2] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1138_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[48][2] ram[52][2] ram[49][2] ram[53][2] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1139_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[24][2] ram[28][2] ram[25][2] ram[29][2] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1142_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[26][2] ram[30][2] ram[27][2] ram[31][2] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1143_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[18][2] ram[22][2] ram[19][2] ram[23][2] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1145_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[16][2] ram[20][2] ram[17][2] ram[21][2] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1146_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[10][2] ram[14][2] ram[11][2] ram[15][2] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1148_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[8][2] ram[12][2] ram[9][2] ram[13][2] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1149_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[2][2] ram[6][2] ram[3][2] ram[7][2] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1151_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[0][2] ram[4][2] ram[1][2] ram[5][2] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1152_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names $abc$2770$new_n1159_ $abc$2770$new_n1157_ $abc$2770$new_n1158_ \
+ $abc$2770$new_n1156_ raddr_1_ raddr_3_ $abc$2770$new_n1155_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[42][3] ram[46][3] ram[43][3] ram[47][3] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1156_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[40][3] ram[44][3] ram[41][3] ram[45][3] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1157_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[34][3] ram[38][3] ram[35][3] ram[39][3] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1158_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[32][3] ram[36][3] ram[33][3] ram[37][3] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1159_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names $abc$2770$new_n1164_ $abc$2770$new_n1162_ $abc$2770$new_n1163_ \
+ $abc$2770$new_n1161_ raddr_1_ raddr_3_ $abc$2770$new_n1160_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[58][3] ram[62][3] ram[59][3] ram[63][3] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1161_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[56][3] ram[60][3] ram[57][3] ram[61][3] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1162_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[50][3] ram[54][3] ram[51][3] ram[55][3] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1163_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[48][3] ram[52][3] ram[49][3] ram[53][3] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1164_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[18][3] ram[22][3] ram[19][3] ram[23][3] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1167_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[26][3] ram[30][3] ram[27][3] ram[31][3] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1168_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[2][3] ram[6][3] ram[3][3] ram[7][3] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1170_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[10][3] ram[14][3] ram[11][3] ram[15][3] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1171_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[0][3] ram[4][3] ram[1][3] ram[5][3] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1173_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[8][3] ram[12][3] ram[9][3] ram[13][3] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1174_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[16][3] ram[20][3] ram[17][3] ram[21][3] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1176_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[48][4] ram[52][4] ram[49][4] ram[53][4] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1187_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[0][4] ram[4][4] ram[1][4] ram[5][4] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1202_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[2][4] ram[6][4] ram[3][4] ram[7][4] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1203_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[10][4] ram[14][4] ram[11][4] ram[15][4] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1204_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[8][4] ram[12][4] ram[9][4] ram[13][4] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1205_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names $abc$2770$new_n1210_ $abc$2770$new_n1208_ $abc$2770$new_n1211_ \
+ $abc$2770$new_n1209_ raddr_1_ raddr_3_ $abc$2770$new_n1207_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[24][4] ram[28][4] ram[25][4] ram[29][4] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1208_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[26][4] ram[30][4] ram[27][4] ram[31][4] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1209_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[16][4] ram[20][4] ram[17][4] ram[21][4] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1210_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[18][4] ram[22][4] ram[19][4] ram[23][4] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1211_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[56][5] ram[60][5] ram[57][5] ram[61][5] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1217_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[58][5] ram[62][5] ram[59][5] ram[63][5] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1219_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names $abc$2770$new_n1223_ $abc$2770$new_n1224_ $abc$2770$new_n1225_ \
+ $abc$2770$new_n1226_ raddr_1_ raddr_3_ $abc$2770$new_n1222_
+---111 1
+--1-10 1
+-0--01 1
+1---00 1
+.names ram[32][5] ram[36][5] ram[33][5] ram[37][5] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1223_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[40][5] ram[44][5] ram[41][5] ram[45][5] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1224_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[34][5] ram[38][5] ram[35][5] ram[39][5] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1225_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[42][5] ram[46][5] ram[43][5] ram[47][5] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1226_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names $abc$2770$new_n1230_ $abc$2770$new_n1229_ raddr_3_ \
+ $abc$2770$new_n1228_
+-11 1
+1-0 1
+.names ram[8][5] ram[12][5] ram[9][5] ram[13][5] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1229_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[0][5] ram[4][5] ram[1][5] ram[5][5] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1230_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[2][5] ram[10][5] ram[6][5] ram[14][5] raddr_2_ raddr_3_ \
+ $abc$2770$new_n1231_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[3][5] ram[11][5] ram[7][5] ram[15][5] raddr_2_ raddr_3_ \
+ $abc$2770$new_n1232_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names $abc$2770$new_n1238_ $abc$2770$new_n1237_ $abc$2770$new_n1234_ \
+ raddr_3_ raddr_1_ raddr_4_ $abc$2770$new_n1233_
+--1-01 1
+-1-111 1
+1--011 1
+.names $abc$2770$new_n1236_ $abc$2770$new_n1235_ raddr_3_ \
+ $abc$2770$new_n1234_
+-11 1
+1-0 1
+.names ram[24][5] ram[28][5] ram[25][5] ram[29][5] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1235_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[16][5] ram[20][5] ram[17][5] ram[21][5] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1236_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[26][5] ram[30][5] ram[27][5] ram[31][5] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1237_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[18][5] ram[22][5] ram[19][5] ram[23][5] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1238_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names q_6_ $abc$2770$new_n1240_ ren n268
+-11 1
+1-0 1
+.names $abc$2770$new_n1246_ $abc$2770$new_n1241_ $abc$2770$new_n1256_ \
+ $abc$2770$new_n1251_ raddr_5_ raddr_4_ $abc$2770$new_n1240_
+---111 1
+--1-10 1
+-0--01 1
+0---00 1
+.names $abc$2770$new_n1243_ $abc$2770$new_n1242_ $abc$2770$new_n1244_ \
+ $abc$2770$new_n1245_ raddr_3_ raddr_1_ $abc$2770$new_n1241_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[18][6] ram[22][6] ram[19][6] ram[23][6] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1242_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[16][6] ram[20][6] ram[17][6] ram[21][6] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1243_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[24][6] ram[28][6] ram[25][6] ram[29][6] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1244_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[26][6] ram[30][6] ram[27][6] ram[31][6] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1245_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names $abc$2770$new_n1247_ $abc$2770$new_n1248_ $abc$2770$new_n1249_ \
+ $abc$2770$new_n1250_ raddr_3_ raddr_1_ $abc$2770$new_n1246_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[0][6] ram[4][6] ram[1][6] ram[5][6] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1247_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[2][6] ram[6][6] ram[3][6] ram[7][6] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1248_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[8][6] ram[12][6] ram[9][6] ram[13][6] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1249_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[10][6] ram[14][6] ram[11][6] ram[15][6] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1250_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names $abc$2770$new_n1254_ $abc$2770$new_n1252_ $abc$2770$new_n1255_ \
+ $abc$2770$new_n1253_ raddr_3_ raddr_1_ $abc$2770$new_n1251_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[50][6] ram[54][6] ram[51][6] ram[55][6] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1252_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[58][6] ram[62][6] ram[59][6] ram[63][6] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1253_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[48][6] ram[52][6] ram[49][6] ram[53][6] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1254_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[56][6] ram[60][6] ram[57][6] ram[61][6] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1255_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names $abc$2770$new_n1257_ $abc$2770$new_n1258_ $abc$2770$new_n1259_ \
+ $abc$2770$new_n1260_ raddr_1_ raddr_3_ $abc$2770$new_n1256_
+---011 1
+--1-10 1
+-0--01 1
+1---00 1
+.names ram[32][6] ram[36][6] ram[33][6] ram[37][6] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1257_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[40][6] ram[44][6] ram[41][6] ram[45][6] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1258_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[34][6] ram[38][6] ram[35][6] ram[39][6] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1259_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[42][6] ram[46][6] ram[43][6] ram[47][6] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1260_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names q_7_ $abc$2770$new_n1262_ ren n272
+-11 1
+1-0 1
+.names $abc$2770$new_n1268_ $abc$2770$new_n1263_ $abc$2770$new_n1278_ \
+ $abc$2770$new_n1273_ raddr_5_ raddr_4_ $abc$2770$new_n1262_
+---111 1
+--1-10 1
+-0--01 1
+0---00 1
+.names $abc$2770$new_n1265_ $abc$2770$new_n1264_ $abc$2770$new_n1266_ \
+ $abc$2770$new_n1267_ raddr_3_ raddr_1_ $abc$2770$new_n1263_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[18][7] ram[22][7] ram[19][7] ram[23][7] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1264_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[16][7] ram[20][7] ram[17][7] ram[21][7] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1265_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[24][7] ram[28][7] ram[25][7] ram[29][7] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1266_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[26][7] ram[30][7] ram[27][7] ram[31][7] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1267_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names $abc$2770$new_n1269_ $abc$2770$new_n1270_ $abc$2770$new_n1271_ \
+ $abc$2770$new_n1272_ raddr_3_ raddr_1_ $abc$2770$new_n1268_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[0][7] ram[4][7] ram[1][7] ram[5][7] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1269_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[2][7] ram[6][7] ram[3][7] ram[7][7] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1270_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[8][7] ram[12][7] ram[9][7] ram[13][7] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1271_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[10][7] ram[14][7] ram[11][7] ram[15][7] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1272_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names $abc$2770$new_n1276_ $abc$2770$new_n1274_ $abc$2770$new_n1277_ \
+ $abc$2770$new_n1275_ raddr_3_ raddr_1_ $abc$2770$new_n1273_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[50][7] ram[54][7] ram[51][7] ram[55][7] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1274_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[58][7] ram[62][7] ram[59][7] ram[63][7] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1275_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[48][7] ram[52][7] ram[49][7] ram[53][7] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1276_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[56][7] ram[60][7] ram[57][7] ram[61][7] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1277_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names $abc$2770$new_n1279_ $abc$2770$new_n1280_ $abc$2770$new_n1281_ \
+ $abc$2770$new_n1282_ raddr_1_ raddr_3_ $abc$2770$new_n1278_
+---011 1
+--1-10 1
+-0--01 1
+1---00 1
+.names ram[32][7] ram[36][7] ram[33][7] ram[37][7] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1279_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[40][7] ram[44][7] ram[41][7] ram[45][7] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1280_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[34][7] ram[38][7] ram[35][7] ram[39][7] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1281_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[42][7] ram[46][7] ram[43][7] ram[47][7] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1282_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[0][0] b_st1[0] a_st1[0] $abc$2770$new_n1284_ n276
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[5] waddr_st1[4] waddr_st1[3] $abc$2770$new_n1285_ \
+ $abc$2770$new_n1284_
+0001 1
+.names waddr_st1[2] waddr_st1[1] waddr_st1[0] wen_st1 $abc$2770$new_n1285_
+0001 1
+.names ram[0][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1284_ \
+ n281
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[0][2] $abc$2770$new_n1288_ $abc$2770$new_n1284_ n286
+-11 1
+1-0 1
+.names b_st1[0] a_st1[0] b_st1[1] a_st1[1] b_st1[2] a_st1[2] \
+ $abc$2770$new_n1288_
+--0001 1
+--0010 1
+--1100 1
+--1111 1
+-0-001 1
+-0-010 1
+-00-01 1
+-00-10 1
+0--001 1
+0--010 1
+0-0-01 1
+0-0-10 1
+11-100 1
+11-111 1
+111-00 1
+111-11 1
+.names ram[0][3] $abc$2770$new_n1290_ $abc$2770$new_n1284_ n291
+-11 1
+1-0 1
+.names b_st1[3] a_st1[3] $abc$2770$new_n1291_ $abc$2770$new_n1290_
+000 1
+011 1
+101 1
+110 1
+.names b_st1[1] b_st1[2] a_st1[2] a_st1[1] a_st1[0] b_st1[0] \
+ $abc$2770$new_n1291_
+--1111 0
+-1-111 0
+-11--- 0
+1-1-11 0
+1-11-- 0
+11--11 0
+11-1-- 0
+.names ram[0][4] $abc$2770$new_n1293_ $abc$2770$new_n1284_ n296
+-11 1
+1-0 1
+.names b_st1[3] $abc$2770$new_n1291_ a_st1[3] b_st1[4] a_st1[4] \
+ $abc$2770$new_n1293_
+-0100 1
+-0111 1
+-1001 1
+-1010 1
+0-001 1
+0-010 1
+01-01 1
+01-10 1
+1-100 1
+1-111 1
+10-00 1
+10-11 1
+.names ram[0][5] $abc$2770$new_n1295_ $abc$2770$new_n1284_ n301
+-11 1
+1-0 1
+.names b_st1[5] a_st1[5] $abc$2770$new_n1296_ $abc$2770$new_n1295_
+000 1
+011 1
+101 1
+110 1
+.names b_st1[3] b_st1[4] a_st1[4] a_st1[3] $abc$2770$new_n1291_ \
+ $abc$2770$new_n1296_
+--001 1
+-0-01 1
+-00-- 1
+0-0-1 1
+0-00- 1
+00--1 1
+00-0- 1
+.names ram[0][6] $abc$2770$new_n1298_ $abc$2770$new_n1284_ n306
+-11 1
+1-0 1
+.names b_st1[5] $abc$2770$new_n1296_ a_st1[5] b_st1[6] a_st1[6] \
+ $abc$2770$new_n1298_
+-0100 1
+-0111 1
+-1001 1
+-1010 1
+0-001 1
+0-010 1
+01-01 1
+01-10 1
+1-100 1
+1-111 1
+10-00 1
+10-11 1
+.names ram[0][7] $abc$2770$new_n1300_ $abc$2770$new_n1284_ n311
+-01 1
+1-0 1
+.names b_st1[5] b_st1[6] a_st1[6] a_st1[5] $abc$2770$new_n1296_ \
+ $abc$2770$new_n1300_
+--001 1
+-0-01 1
+-00-- 1
+0-0-1 1
+0-00- 1
+00--1 1
+00-0- 1
+.names ram[10][0] b_st1[0] a_st1[0] $abc$2770$new_n1302_ n316
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[5] waddr_st1[4] waddr_st1[3] $abc$2770$new_n1303_ \
+ $abc$2770$new_n1302_
+0011 1
+.names waddr_st1[2] waddr_st1[0] wen_st1 waddr_st1[1] $abc$2770$new_n1303_
+0011 1
+.names ram[10][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1302_ \
+ n321
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[10][2] $abc$2770$new_n1288_ $abc$2770$new_n1302_ n326
+-11 1
+1-0 1
+.names ram[10][3] $abc$2770$new_n1290_ $abc$2770$new_n1302_ n331
+-11 1
+1-0 1
+.names ram[10][4] $abc$2770$new_n1293_ $abc$2770$new_n1302_ n336
+-11 1
+1-0 1
+.names ram[10][5] $abc$2770$new_n1295_ $abc$2770$new_n1302_ n341
+-11 1
+1-0 1
+.names ram[10][6] $abc$2770$new_n1298_ $abc$2770$new_n1302_ n346
+-11 1
+1-0 1
+.names ram[10][7] $abc$2770$new_n1300_ $abc$2770$new_n1302_ n351
+-01 1
+1-0 1
+.names ram[11][0] b_st1[0] a_st1[0] $abc$2770$new_n1312_ n356
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[5] waddr_st1[4] waddr_st1[3] $abc$2770$new_n1313_ \
+ $abc$2770$new_n1312_
+0011 1
+.names waddr_st1[2] waddr_st1[0] waddr_st1[1] wen_st1 $abc$2770$new_n1313_
+0111 1
+.names ram[11][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1312_ \
+ n361
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[11][2] $abc$2770$new_n1288_ $abc$2770$new_n1312_ n366
+-11 1
+1-0 1
+.names ram[11][3] $abc$2770$new_n1290_ $abc$2770$new_n1312_ n371
+-11 1
+1-0 1
+.names ram[11][4] $abc$2770$new_n1293_ $abc$2770$new_n1312_ n376
+-11 1
+1-0 1
+.names ram[11][5] $abc$2770$new_n1295_ $abc$2770$new_n1312_ n381
+-11 1
+1-0 1
+.names ram[11][6] $abc$2770$new_n1298_ $abc$2770$new_n1312_ n386
+-11 1
+1-0 1
+.names ram[11][7] $abc$2770$new_n1300_ $abc$2770$new_n1312_ n391
+-01 1
+1-0 1
+.names ram[12][0] b_st1[0] a_st1[0] $abc$2770$new_n1322_ n396
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[5] waddr_st1[4] waddr_st1[3] $abc$2770$new_n1323_ \
+ $abc$2770$new_n1322_
+0011 1
+.names waddr_st1[1] waddr_st1[0] wen_st1 waddr_st1[2] $abc$2770$new_n1323_
+0011 1
+.names ram[12][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1322_ \
+ n401
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[12][2] $abc$2770$new_n1288_ $abc$2770$new_n1322_ n406
+-11 1
+1-0 1
+.names ram[12][3] $abc$2770$new_n1290_ $abc$2770$new_n1322_ n411
+-11 1
+1-0 1
+.names ram[12][4] $abc$2770$new_n1293_ $abc$2770$new_n1322_ n416
+-11 1
+1-0 1
+.names ram[12][5] $abc$2770$new_n1295_ $abc$2770$new_n1322_ n421
+-11 1
+1-0 1
+.names ram[12][6] $abc$2770$new_n1298_ $abc$2770$new_n1322_ n426
+-11 1
+1-0 1
+.names ram[12][7] $abc$2770$new_n1300_ $abc$2770$new_n1322_ n431
+-01 1
+1-0 1
+.names ram[13][0] b_st1[0] a_st1[0] $abc$2770$new_n1332_ n436
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[5] waddr_st1[4] waddr_st1[3] $abc$2770$new_n1333_ \
+ $abc$2770$new_n1332_
+0011 1
+.names waddr_st1[1] waddr_st1[2] waddr_st1[0] wen_st1 $abc$2770$new_n1333_
+0111 1
+.names ram[13][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1332_ \
+ n441
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[13][2] $abc$2770$new_n1288_ $abc$2770$new_n1332_ n446
+-11 1
+1-0 1
+.names ram[13][3] $abc$2770$new_n1290_ $abc$2770$new_n1332_ n451
+-11 1
+1-0 1
+.names ram[13][4] $abc$2770$new_n1293_ $abc$2770$new_n1332_ n456
+-11 1
+1-0 1
+.names ram[13][5] $abc$2770$new_n1295_ $abc$2770$new_n1332_ n461
+-11 1
+1-0 1
+.names ram[13][6] $abc$2770$new_n1298_ $abc$2770$new_n1332_ n466
+-11 1
+1-0 1
+.names ram[13][7] $abc$2770$new_n1300_ $abc$2770$new_n1332_ n471
+-01 1
+1-0 1
+.names ram[14][0] b_st1[0] a_st1[0] $abc$2770$new_n1342_ n476
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[5] waddr_st1[4] waddr_st1[3] $abc$2770$new_n1343_ \
+ $abc$2770$new_n1342_
+0011 1
+.names waddr_st1[0] waddr_st1[2] waddr_st1[1] wen_st1 $abc$2770$new_n1343_
+0111 1
+.names ram[14][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1342_ \
+ n481
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[14][2] $abc$2770$new_n1288_ $abc$2770$new_n1342_ n486
+-11 1
+1-0 1
+.names ram[14][3] $abc$2770$new_n1290_ $abc$2770$new_n1342_ n491
+-11 1
+1-0 1
+.names ram[14][4] $abc$2770$new_n1293_ $abc$2770$new_n1342_ n496
+-11 1
+1-0 1
+.names ram[14][5] $abc$2770$new_n1295_ $abc$2770$new_n1342_ n501
+-11 1
+1-0 1
+.names ram[14][6] $abc$2770$new_n1298_ $abc$2770$new_n1342_ n506
+-11 1
+1-0 1
+.names ram[14][7] $abc$2770$new_n1300_ $abc$2770$new_n1342_ n511
+-01 1
+1-0 1
+.names ram[15][0] b_st1[0] a_st1[0] $abc$2770$new_n1352_ n516
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[5] waddr_st1[4] waddr_st1[3] $abc$2770$new_n1353_ \
+ $abc$2770$new_n1352_
+0011 1
+.names wen_st1 waddr_st1[2] waddr_st1[1] waddr_st1[0] $abc$2770$new_n1353_
+1111 1
+.names ram[15][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1352_ \
+ n521
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[15][2] $abc$2770$new_n1288_ $abc$2770$new_n1352_ n526
+-11 1
+1-0 1
+.names ram[15][3] $abc$2770$new_n1290_ $abc$2770$new_n1352_ n531
+-11 1
+1-0 1
+.names ram[15][4] $abc$2770$new_n1293_ $abc$2770$new_n1352_ n536
+-11 1
+1-0 1
+.names ram[15][5] $abc$2770$new_n1295_ $abc$2770$new_n1352_ n541
+-11 1
+1-0 1
+.names ram[15][6] $abc$2770$new_n1298_ $abc$2770$new_n1352_ n546
+-11 1
+1-0 1
+.names ram[15][7] $abc$2770$new_n1300_ $abc$2770$new_n1352_ n551
+-01 1
+1-0 1
+.names ram[16][0] b_st1[0] a_st1[0] $abc$2770$new_n1362_ n556
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[5] waddr_st1[3] $abc$2770$new_n1285_ waddr_st1[4] \
+ $abc$2770$new_n1362_
+0011 1
+.names ram[16][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1362_ \
+ n561
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[16][2] $abc$2770$new_n1288_ $abc$2770$new_n1362_ n566
+-11 1
+1-0 1
+.names ram[16][3] $abc$2770$new_n1290_ $abc$2770$new_n1362_ n571
+-11 1
+1-0 1
+.names ram[16][4] $abc$2770$new_n1293_ $abc$2770$new_n1362_ n576
+-11 1
+1-0 1
+.names ram[16][5] $abc$2770$new_n1295_ $abc$2770$new_n1362_ n581
+-11 1
+1-0 1
+.names ram[16][6] $abc$2770$new_n1298_ $abc$2770$new_n1362_ n586
+-11 1
+1-0 1
+.names ram[16][7] $abc$2770$new_n1300_ $abc$2770$new_n1362_ n591
+-01 1
+1-0 1
+.names ram[17][0] b_st1[0] a_st1[0] $abc$2770$new_n1371_ n596
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[5] waddr_st1[3] $abc$2770$new_n1372_ waddr_st1[4] \
+ $abc$2770$new_n1371_
+0011 1
+.names waddr_st1[2] waddr_st1[1] wen_st1 waddr_st1[0] $abc$2770$new_n1372_
+0011 1
+.names ram[17][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1371_ \
+ n601
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[17][2] $abc$2770$new_n1288_ $abc$2770$new_n1371_ n606
+-11 1
+1-0 1
+.names ram[17][3] $abc$2770$new_n1290_ $abc$2770$new_n1371_ n611
+-11 1
+1-0 1
+.names ram[17][4] $abc$2770$new_n1293_ $abc$2770$new_n1371_ n616
+-11 1
+1-0 1
+.names ram[17][5] $abc$2770$new_n1295_ $abc$2770$new_n1371_ n621
+-11 1
+1-0 1
+.names ram[17][6] $abc$2770$new_n1298_ $abc$2770$new_n1371_ n626
+-11 1
+1-0 1
+.names ram[17][7] $abc$2770$new_n1300_ $abc$2770$new_n1371_ n631
+-01 1
+1-0 1
+.names ram[18][0] b_st1[0] a_st1[0] $abc$2770$new_n1381_ n636
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[5] waddr_st1[3] $abc$2770$new_n1303_ waddr_st1[4] \
+ $abc$2770$new_n1381_
+0011 1
+.names ram[18][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1381_ \
+ n641
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[18][2] $abc$2770$new_n1288_ $abc$2770$new_n1381_ n646
+-11 1
+1-0 1
+.names ram[18][3] $abc$2770$new_n1290_ $abc$2770$new_n1381_ n651
+-11 1
+1-0 1
+.names ram[18][4] $abc$2770$new_n1293_ $abc$2770$new_n1381_ n656
+-11 1
+1-0 1
+.names ram[18][5] $abc$2770$new_n1295_ $abc$2770$new_n1381_ n661
+-11 1
+1-0 1
+.names ram[18][6] $abc$2770$new_n1298_ $abc$2770$new_n1381_ n666
+-11 1
+1-0 1
+.names ram[18][7] $abc$2770$new_n1300_ $abc$2770$new_n1381_ n671
+-01 1
+1-0 1
+.names ram[19][0] b_st1[0] a_st1[0] $abc$2770$new_n1390_ n676
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[5] waddr_st1[3] $abc$2770$new_n1313_ waddr_st1[4] \
+ $abc$2770$new_n1390_
+0011 1
+.names ram[19][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1390_ \
+ n681
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[19][2] $abc$2770$new_n1288_ $abc$2770$new_n1390_ n686
+-11 1
+1-0 1
+.names ram[19][3] $abc$2770$new_n1290_ $abc$2770$new_n1390_ n691
+-11 1
+1-0 1
+.names ram[19][4] $abc$2770$new_n1293_ $abc$2770$new_n1390_ n696
+-11 1
+1-0 1
+.names ram[19][5] $abc$2770$new_n1295_ $abc$2770$new_n1390_ n701
+-11 1
+1-0 1
+.names ram[19][6] $abc$2770$new_n1298_ $abc$2770$new_n1390_ n706
+-11 1
+1-0 1
+.names ram[19][7] $abc$2770$new_n1300_ $abc$2770$new_n1390_ n711
+-01 1
+1-0 1
+.names ram[1][0] b_st1[0] a_st1[0] $abc$2770$new_n1399_ n716
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[5] waddr_st1[4] waddr_st1[3] $abc$2770$new_n1372_ \
+ $abc$2770$new_n1399_
+0001 1
+.names ram[1][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1399_ \
+ n721
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[1][2] $abc$2770$new_n1288_ $abc$2770$new_n1399_ n726
+-11 1
+1-0 1
+.names ram[1][3] $abc$2770$new_n1290_ $abc$2770$new_n1399_ n731
+-11 1
+1-0 1
+.names ram[1][4] $abc$2770$new_n1293_ $abc$2770$new_n1399_ n736
+-11 1
+1-0 1
+.names ram[1][5] $abc$2770$new_n1295_ $abc$2770$new_n1399_ n741
+-11 1
+1-0 1
+.names ram[1][6] $abc$2770$new_n1298_ $abc$2770$new_n1399_ n746
+-11 1
+1-0 1
+.names ram[1][7] $abc$2770$new_n1300_ $abc$2770$new_n1399_ n751
+-01 1
+1-0 1
+.names ram[20][0] b_st1[0] a_st1[0] $abc$2770$new_n1408_ n756
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[5] waddr_st1[3] $abc$2770$new_n1323_ waddr_st1[4] \
+ $abc$2770$new_n1408_
+0011 1
+.names ram[20][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1408_ \
+ n761
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[20][2] $abc$2770$new_n1288_ $abc$2770$new_n1408_ n766
+-11 1
+1-0 1
+.names ram[20][3] $abc$2770$new_n1290_ $abc$2770$new_n1408_ n771
+-11 1
+1-0 1
+.names ram[20][4] $abc$2770$new_n1293_ $abc$2770$new_n1408_ n776
+-11 1
+1-0 1
+.names ram[20][5] $abc$2770$new_n1295_ $abc$2770$new_n1408_ n781
+-11 1
+1-0 1
+.names ram[20][6] $abc$2770$new_n1298_ $abc$2770$new_n1408_ n786
+-11 1
+1-0 1
+.names ram[20][7] $abc$2770$new_n1300_ $abc$2770$new_n1408_ n791
+-01 1
+1-0 1
+.names ram[21][0] b_st1[0] a_st1[0] $abc$2770$new_n1417_ n796
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[5] waddr_st1[3] $abc$2770$new_n1333_ waddr_st1[4] \
+ $abc$2770$new_n1417_
+0011 1
+.names ram[21][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1417_ \
+ n801
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[21][2] $abc$2770$new_n1288_ $abc$2770$new_n1417_ n806
+-11 1
+1-0 1
+.names ram[21][3] $abc$2770$new_n1290_ $abc$2770$new_n1417_ n811
+-11 1
+1-0 1
+.names ram[21][4] $abc$2770$new_n1293_ $abc$2770$new_n1417_ n816
+-11 1
+1-0 1
+.names ram[21][5] $abc$2770$new_n1295_ $abc$2770$new_n1417_ n821
+-11 1
+1-0 1
+.names ram[21][6] $abc$2770$new_n1298_ $abc$2770$new_n1417_ n826
+-11 1
+1-0 1
+.names ram[21][7] $abc$2770$new_n1300_ $abc$2770$new_n1417_ n831
+-01 1
+1-0 1
+.names ram[22][0] b_st1[0] a_st1[0] $abc$2770$new_n1426_ n836
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[5] waddr_st1[3] $abc$2770$new_n1343_ waddr_st1[4] \
+ $abc$2770$new_n1426_
+0011 1
+.names ram[22][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1426_ \
+ n841
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[22][2] $abc$2770$new_n1288_ $abc$2770$new_n1426_ n846
+-11 1
+1-0 1
+.names ram[22][3] $abc$2770$new_n1290_ $abc$2770$new_n1426_ n851
+-11 1
+1-0 1
+.names ram[22][4] $abc$2770$new_n1293_ $abc$2770$new_n1426_ n856
+-11 1
+1-0 1
+.names ram[22][5] $abc$2770$new_n1295_ $abc$2770$new_n1426_ n861
+-11 1
+1-0 1
+.names ram[22][6] $abc$2770$new_n1298_ $abc$2770$new_n1426_ n866
+-11 1
+1-0 1
+.names ram[22][7] $abc$2770$new_n1300_ $abc$2770$new_n1426_ n871
+-01 1
+1-0 1
+.names ram[23][0] b_st1[0] a_st1[0] $abc$2770$new_n1435_ n876
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[5] waddr_st1[3] $abc$2770$new_n1353_ waddr_st1[4] \
+ $abc$2770$new_n1435_
+0011 1
+.names ram[23][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1435_ \
+ n881
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[23][2] $abc$2770$new_n1288_ $abc$2770$new_n1435_ n886
+-11 1
+1-0 1
+.names ram[23][3] $abc$2770$new_n1290_ $abc$2770$new_n1435_ n891
+-11 1
+1-0 1
+.names ram[23][4] $abc$2770$new_n1293_ $abc$2770$new_n1435_ n896
+-11 1
+1-0 1
+.names ram[23][5] $abc$2770$new_n1295_ $abc$2770$new_n1435_ n901
+-11 1
+1-0 1
+.names ram[23][6] $abc$2770$new_n1298_ $abc$2770$new_n1435_ n906
+-11 1
+1-0 1
+.names ram[23][7] $abc$2770$new_n1300_ $abc$2770$new_n1435_ n911
+-01 1
+1-0 1
+.names ram[24][0] b_st1[0] a_st1[0] $abc$2770$new_n1444_ n916
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[5] waddr_st1[4] waddr_st1[3] $abc$2770$new_n1285_ \
+ $abc$2770$new_n1444_
+0111 1
+.names ram[24][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1444_ \
+ n921
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[24][2] $abc$2770$new_n1288_ $abc$2770$new_n1444_ n926
+-11 1
+1-0 1
+.names ram[24][3] $abc$2770$new_n1290_ $abc$2770$new_n1444_ n931
+-11 1
+1-0 1
+.names ram[24][4] $abc$2770$new_n1293_ $abc$2770$new_n1444_ n936
+-11 1
+1-0 1
+.names ram[24][5] $abc$2770$new_n1295_ $abc$2770$new_n1444_ n941
+-11 1
+1-0 1
+.names ram[24][6] $abc$2770$new_n1298_ $abc$2770$new_n1444_ n946
+-11 1
+1-0 1
+.names ram[24][7] $abc$2770$new_n1300_ $abc$2770$new_n1444_ n951
+-01 1
+1-0 1
+.names ram[25][0] b_st1[0] a_st1[0] $abc$2770$new_n1453_ n956
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[5] waddr_st1[4] waddr_st1[3] $abc$2770$new_n1372_ \
+ $abc$2770$new_n1453_
+0111 1
+.names ram[25][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1453_ \
+ n961
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[25][2] $abc$2770$new_n1288_ $abc$2770$new_n1453_ n966
+-11 1
+1-0 1
+.names ram[25][3] $abc$2770$new_n1290_ $abc$2770$new_n1453_ n971
+-11 1
+1-0 1
+.names ram[25][4] $abc$2770$new_n1293_ $abc$2770$new_n1453_ n976
+-11 1
+1-0 1
+.names ram[25][5] $abc$2770$new_n1295_ $abc$2770$new_n1453_ n981
+-11 1
+1-0 1
+.names ram[25][6] $abc$2770$new_n1298_ $abc$2770$new_n1453_ n986
+-11 1
+1-0 1
+.names ram[25][7] $abc$2770$new_n1300_ $abc$2770$new_n1453_ n991
+-01 1
+1-0 1
+.names ram[26][0] b_st1[0] a_st1[0] $abc$2770$new_n1462_ n996
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[5] waddr_st1[4] waddr_st1[3] $abc$2770$new_n1303_ \
+ $abc$2770$new_n1462_
+0111 1
+.names ram[26][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1462_ \
+ n1001
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[26][2] $abc$2770$new_n1288_ $abc$2770$new_n1462_ n1006
+-11 1
+1-0 1
+.names ram[26][3] $abc$2770$new_n1290_ $abc$2770$new_n1462_ n1011
+-11 1
+1-0 1
+.names ram[26][4] $abc$2770$new_n1293_ $abc$2770$new_n1462_ n1016
+-11 1
+1-0 1
+.names ram[26][5] $abc$2770$new_n1295_ $abc$2770$new_n1462_ n1021
+-11 1
+1-0 1
+.names ram[26][6] $abc$2770$new_n1298_ $abc$2770$new_n1462_ n1026
+-11 1
+1-0 1
+.names ram[26][7] $abc$2770$new_n1300_ $abc$2770$new_n1462_ n1031
+-01 1
+1-0 1
+.names ram[27][0] b_st1[0] a_st1[0] $abc$2770$new_n1471_ n1036
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[5] waddr_st1[4] waddr_st1[3] $abc$2770$new_n1313_ \
+ $abc$2770$new_n1471_
+0111 1
+.names ram[27][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1471_ \
+ n1041
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[27][2] $abc$2770$new_n1288_ $abc$2770$new_n1471_ n1046
+-11 1
+1-0 1
+.names ram[27][3] $abc$2770$new_n1290_ $abc$2770$new_n1471_ n1051
+-11 1
+1-0 1
+.names ram[27][4] $abc$2770$new_n1293_ $abc$2770$new_n1471_ n1056
+-11 1
+1-0 1
+.names ram[27][5] $abc$2770$new_n1295_ $abc$2770$new_n1471_ n1061
+-11 1
+1-0 1
+.names ram[27][6] $abc$2770$new_n1298_ $abc$2770$new_n1471_ n1066
+-11 1
+1-0 1
+.names ram[27][7] $abc$2770$new_n1300_ $abc$2770$new_n1471_ n1071
+-01 1
+1-0 1
+.names ram[28][0] b_st1[0] a_st1[0] $abc$2770$new_n1480_ n1076
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[5] waddr_st1[4] waddr_st1[3] $abc$2770$new_n1323_ \
+ $abc$2770$new_n1480_
+0111 1
+.names ram[28][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1480_ \
+ n1081
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[28][2] $abc$2770$new_n1288_ $abc$2770$new_n1480_ n1086
+-11 1
+1-0 1
+.names ram[28][3] $abc$2770$new_n1290_ $abc$2770$new_n1480_ n1091
+-11 1
+1-0 1
+.names ram[28][4] $abc$2770$new_n1293_ $abc$2770$new_n1480_ n1096
+-11 1
+1-0 1
+.names ram[28][5] $abc$2770$new_n1295_ $abc$2770$new_n1480_ n1101
+-11 1
+1-0 1
+.names ram[28][6] $abc$2770$new_n1298_ $abc$2770$new_n1480_ n1106
+-11 1
+1-0 1
+.names ram[28][7] $abc$2770$new_n1300_ $abc$2770$new_n1480_ n1111
+-01 1
+1-0 1
+.names ram[29][0] b_st1[0] a_st1[0] $abc$2770$new_n1489_ n1116
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[5] waddr_st1[4] waddr_st1[3] $abc$2770$new_n1333_ \
+ $abc$2770$new_n1489_
+0111 1
+.names ram[29][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1489_ \
+ n1121
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[29][2] $abc$2770$new_n1288_ $abc$2770$new_n1489_ n1126
+-11 1
+1-0 1
+.names ram[29][3] $abc$2770$new_n1290_ $abc$2770$new_n1489_ n1131
+-11 1
+1-0 1
+.names ram[29][4] $abc$2770$new_n1293_ $abc$2770$new_n1489_ n1136
+-11 1
+1-0 1
+.names ram[29][5] $abc$2770$new_n1295_ $abc$2770$new_n1489_ n1141
+-11 1
+1-0 1
+.names ram[29][6] $abc$2770$new_n1298_ $abc$2770$new_n1489_ n1146
+-11 1
+1-0 1
+.names ram[29][7] $abc$2770$new_n1300_ $abc$2770$new_n1489_ n1151
+-01 1
+1-0 1
+.names ram[2][0] b_st1[0] a_st1[0] $abc$2770$new_n1498_ n1156
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[5] waddr_st1[4] waddr_st1[3] $abc$2770$new_n1303_ \
+ $abc$2770$new_n1498_
+0001 1
+.names ram[2][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1498_ \
+ n1161
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[2][2] $abc$2770$new_n1288_ $abc$2770$new_n1498_ n1166
+-11 1
+1-0 1
+.names ram[2][3] $abc$2770$new_n1290_ $abc$2770$new_n1498_ n1171
+-11 1
+1-0 1
+.names ram[2][4] $abc$2770$new_n1293_ $abc$2770$new_n1498_ n1176
+-11 1
+1-0 1
+.names ram[2][5] $abc$2770$new_n1295_ $abc$2770$new_n1498_ n1181
+-11 1
+1-0 1
+.names ram[2][6] $abc$2770$new_n1298_ $abc$2770$new_n1498_ n1186
+-11 1
+1-0 1
+.names ram[2][7] $abc$2770$new_n1300_ $abc$2770$new_n1498_ n1191
+-01 1
+1-0 1
+.names ram[30][0] b_st1[0] a_st1[0] $abc$2770$new_n1507_ n1196
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[5] waddr_st1[4] waddr_st1[3] $abc$2770$new_n1343_ \
+ $abc$2770$new_n1507_
+0111 1
+.names ram[30][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1507_ \
+ n1201
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[30][2] $abc$2770$new_n1288_ $abc$2770$new_n1507_ n1206
+-11 1
+1-0 1
+.names ram[30][3] $abc$2770$new_n1290_ $abc$2770$new_n1507_ n1211
+-11 1
+1-0 1
+.names ram[30][4] $abc$2770$new_n1293_ $abc$2770$new_n1507_ n1216
+-11 1
+1-0 1
+.names ram[30][5] $abc$2770$new_n1295_ $abc$2770$new_n1507_ n1221
+-11 1
+1-0 1
+.names ram[30][6] $abc$2770$new_n1298_ $abc$2770$new_n1507_ n1226
+-11 1
+1-0 1
+.names ram[30][7] $abc$2770$new_n1300_ $abc$2770$new_n1507_ n1231
+-01 1
+1-0 1
+.names ram[31][0] b_st1[0] a_st1[0] $abc$2770$new_n1516_ n1236
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[5] waddr_st1[4] waddr_st1[3] $abc$2770$new_n1353_ \
+ $abc$2770$new_n1516_
+0111 1
+.names ram[31][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1516_ \
+ n1241
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[31][2] $abc$2770$new_n1288_ $abc$2770$new_n1516_ n1246
+-11 1
+1-0 1
+.names ram[31][3] $abc$2770$new_n1290_ $abc$2770$new_n1516_ n1251
+-11 1
+1-0 1
+.names ram[31][4] $abc$2770$new_n1293_ $abc$2770$new_n1516_ n1256
+-11 1
+1-0 1
+.names ram[31][5] $abc$2770$new_n1295_ $abc$2770$new_n1516_ n1261
+-11 1
+1-0 1
+.names ram[31][6] $abc$2770$new_n1298_ $abc$2770$new_n1516_ n1266
+-11 1
+1-0 1
+.names ram[31][7] $abc$2770$new_n1300_ $abc$2770$new_n1516_ n1271
+-01 1
+1-0 1
+.names ram[32][0] b_st1[0] a_st1[0] $abc$2770$new_n1525_ n1276
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[4] waddr_st1[3] waddr_st1[5] $abc$2770$new_n1285_ \
+ $abc$2770$new_n1525_
+0011 1
+.names ram[32][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1525_ \
+ n1281
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[32][2] $abc$2770$new_n1288_ $abc$2770$new_n1525_ n1286
+-11 1
+1-0 1
+.names ram[32][3] $abc$2770$new_n1290_ $abc$2770$new_n1525_ n1291
+-11 1
+1-0 1
+.names ram[32][4] $abc$2770$new_n1293_ $abc$2770$new_n1525_ n1296
+-11 1
+1-0 1
+.names ram[32][5] $abc$2770$new_n1295_ $abc$2770$new_n1525_ n1301
+-11 1
+1-0 1
+.names ram[32][6] $abc$2770$new_n1298_ $abc$2770$new_n1525_ n1306
+-11 1
+1-0 1
+.names ram[32][7] $abc$2770$new_n1300_ $abc$2770$new_n1525_ n1311
+-01 1
+1-0 1
+.names ram[33][0] b_st1[0] a_st1[0] $abc$2770$new_n1534_ n1316
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[4] waddr_st1[3] waddr_st1[5] $abc$2770$new_n1372_ \
+ $abc$2770$new_n1534_
+0011 1
+.names ram[33][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1534_ \
+ n1321
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[33][2] $abc$2770$new_n1288_ $abc$2770$new_n1534_ n1326
+-11 1
+1-0 1
+.names ram[33][3] $abc$2770$new_n1290_ $abc$2770$new_n1534_ n1331
+-11 1
+1-0 1
+.names ram[33][4] $abc$2770$new_n1293_ $abc$2770$new_n1534_ n1336
+-11 1
+1-0 1
+.names ram[33][5] $abc$2770$new_n1295_ $abc$2770$new_n1534_ n1341
+-11 1
+1-0 1
+.names ram[33][6] $abc$2770$new_n1298_ $abc$2770$new_n1534_ n1346
+-11 1
+1-0 1
+.names ram[33][7] $abc$2770$new_n1300_ $abc$2770$new_n1534_ n1351
+-01 1
+1-0 1
+.names ram[34][0] b_st1[0] a_st1[0] $abc$2770$new_n1543_ n1356
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[4] waddr_st1[3] waddr_st1[5] $abc$2770$new_n1303_ \
+ $abc$2770$new_n1543_
+0011 1
+.names ram[34][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1543_ \
+ n1361
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[34][2] $abc$2770$new_n1288_ $abc$2770$new_n1543_ n1366
+-11 1
+1-0 1
+.names ram[34][3] $abc$2770$new_n1290_ $abc$2770$new_n1543_ n1371
+-11 1
+1-0 1
+.names ram[34][4] $abc$2770$new_n1293_ $abc$2770$new_n1543_ n1376
+-11 1
+1-0 1
+.names ram[34][5] $abc$2770$new_n1295_ $abc$2770$new_n1543_ n1381
+-11 1
+1-0 1
+.names ram[34][6] $abc$2770$new_n1298_ $abc$2770$new_n1543_ n1386
+-11 1
+1-0 1
+.names ram[34][7] $abc$2770$new_n1300_ $abc$2770$new_n1543_ n1391
+-01 1
+1-0 1
+.names ram[35][0] b_st1[0] a_st1[0] $abc$2770$new_n1552_ n1396
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[4] waddr_st1[3] waddr_st1[5] $abc$2770$new_n1313_ \
+ $abc$2770$new_n1552_
+0011 1
+.names ram[35][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1552_ \
+ n1401
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[35][2] $abc$2770$new_n1288_ $abc$2770$new_n1552_ n1406
+-11 1
+1-0 1
+.names ram[35][3] $abc$2770$new_n1290_ $abc$2770$new_n1552_ n1411
+-11 1
+1-0 1
+.names ram[35][4] $abc$2770$new_n1293_ $abc$2770$new_n1552_ n1416
+-11 1
+1-0 1
+.names ram[35][5] $abc$2770$new_n1295_ $abc$2770$new_n1552_ n1421
+-11 1
+1-0 1
+.names ram[35][6] $abc$2770$new_n1298_ $abc$2770$new_n1552_ n1426
+-11 1
+1-0 1
+.names ram[35][7] $abc$2770$new_n1300_ $abc$2770$new_n1552_ n1431
+-01 1
+1-0 1
+.names ram[36][0] b_st1[0] a_st1[0] $abc$2770$new_n1561_ n1436
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[4] waddr_st1[3] waddr_st1[5] $abc$2770$new_n1323_ \
+ $abc$2770$new_n1561_
+0011 1
+.names ram[36][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1561_ \
+ n1441
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[36][2] $abc$2770$new_n1288_ $abc$2770$new_n1561_ n1446
+-11 1
+1-0 1
+.names ram[36][3] $abc$2770$new_n1290_ $abc$2770$new_n1561_ n1451
+-11 1
+1-0 1
+.names ram[36][4] $abc$2770$new_n1293_ $abc$2770$new_n1561_ n1456
+-11 1
+1-0 1
+.names ram[36][5] $abc$2770$new_n1295_ $abc$2770$new_n1561_ n1461
+-11 1
+1-0 1
+.names ram[36][6] $abc$2770$new_n1298_ $abc$2770$new_n1561_ n1466
+-11 1
+1-0 1
+.names ram[36][7] $abc$2770$new_n1300_ $abc$2770$new_n1561_ n1471
+-01 1
+1-0 1
+.names ram[37][0] b_st1[0] a_st1[0] $abc$2770$new_n1570_ n1476
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[4] waddr_st1[3] waddr_st1[5] $abc$2770$new_n1333_ \
+ $abc$2770$new_n1570_
+0011 1
+.names ram[37][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1570_ \
+ n1481
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[37][2] $abc$2770$new_n1288_ $abc$2770$new_n1570_ n1486
+-11 1
+1-0 1
+.names ram[37][3] $abc$2770$new_n1290_ $abc$2770$new_n1570_ n1491
+-11 1
+1-0 1
+.names ram[37][4] $abc$2770$new_n1293_ $abc$2770$new_n1570_ n1496
+-11 1
+1-0 1
+.names ram[37][5] $abc$2770$new_n1295_ $abc$2770$new_n1570_ n1501
+-11 1
+1-0 1
+.names ram[37][6] $abc$2770$new_n1298_ $abc$2770$new_n1570_ n1506
+-11 1
+1-0 1
+.names ram[37][7] $abc$2770$new_n1300_ $abc$2770$new_n1570_ n1511
+-01 1
+1-0 1
+.names ram[38][0] b_st1[0] a_st1[0] $abc$2770$new_n1579_ n1516
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[4] waddr_st1[3] waddr_st1[5] $abc$2770$new_n1343_ \
+ $abc$2770$new_n1579_
+0011 1
+.names ram[38][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1579_ \
+ n1521
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[38][2] $abc$2770$new_n1288_ $abc$2770$new_n1579_ n1526
+-11 1
+1-0 1
+.names ram[38][3] $abc$2770$new_n1290_ $abc$2770$new_n1579_ n1531
+-11 1
+1-0 1
+.names ram[38][4] $abc$2770$new_n1293_ $abc$2770$new_n1579_ n1536
+-11 1
+1-0 1
+.names ram[38][5] $abc$2770$new_n1295_ $abc$2770$new_n1579_ n1541
+-11 1
+1-0 1
+.names ram[38][6] $abc$2770$new_n1298_ $abc$2770$new_n1579_ n1546
+-11 1
+1-0 1
+.names ram[38][7] $abc$2770$new_n1300_ $abc$2770$new_n1579_ n1551
+-01 1
+1-0 1
+.names ram[39][0] b_st1[0] a_st1[0] $abc$2770$new_n1588_ n1556
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[4] waddr_st1[3] waddr_st1[5] $abc$2770$new_n1353_ \
+ $abc$2770$new_n1588_
+0011 1
+.names ram[39][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1588_ \
+ n1561
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[39][2] $abc$2770$new_n1288_ $abc$2770$new_n1588_ n1566
+-11 1
+1-0 1
+.names ram[39][3] $abc$2770$new_n1290_ $abc$2770$new_n1588_ n1571
+-11 1
+1-0 1
+.names ram[39][4] $abc$2770$new_n1293_ $abc$2770$new_n1588_ n1576
+-11 1
+1-0 1
+.names ram[39][5] $abc$2770$new_n1295_ $abc$2770$new_n1588_ n1581
+-11 1
+1-0 1
+.names ram[39][6] $abc$2770$new_n1298_ $abc$2770$new_n1588_ n1586
+-11 1
+1-0 1
+.names ram[39][7] $abc$2770$new_n1300_ $abc$2770$new_n1588_ n1591
+-01 1
+1-0 1
+.names ram[3][0] b_st1[0] a_st1[0] $abc$2770$new_n1597_ n1596
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[5] waddr_st1[4] waddr_st1[3] $abc$2770$new_n1313_ \
+ $abc$2770$new_n1597_
+0001 1
+.names ram[3][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1597_ \
+ n1601
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[3][2] $abc$2770$new_n1288_ $abc$2770$new_n1597_ n1606
+-11 1
+1-0 1
+.names ram[3][3] $abc$2770$new_n1290_ $abc$2770$new_n1597_ n1611
+-11 1
+1-0 1
+.names ram[3][4] $abc$2770$new_n1293_ $abc$2770$new_n1597_ n1616
+-11 1
+1-0 1
+.names ram[3][5] $abc$2770$new_n1295_ $abc$2770$new_n1597_ n1621
+-11 1
+1-0 1
+.names ram[3][6] $abc$2770$new_n1298_ $abc$2770$new_n1597_ n1626
+-11 1
+1-0 1
+.names ram[3][7] $abc$2770$new_n1300_ $abc$2770$new_n1597_ n1631
+-01 1
+1-0 1
+.names ram[40][0] b_st1[0] a_st1[0] $abc$2770$new_n1606_ n1636
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[4] $abc$2770$new_n1285_ waddr_st1[3] waddr_st1[5] \
+ $abc$2770$new_n1606_
+0111 1
+.names ram[40][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1606_ \
+ n1641
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[40][2] $abc$2770$new_n1288_ $abc$2770$new_n1606_ n1646
+-11 1
+1-0 1
+.names ram[40][3] $abc$2770$new_n1290_ $abc$2770$new_n1606_ n1651
+-11 1
+1-0 1
+.names ram[40][4] $abc$2770$new_n1293_ $abc$2770$new_n1606_ n1656
+-11 1
+1-0 1
+.names ram[40][5] $abc$2770$new_n1295_ $abc$2770$new_n1606_ n1661
+-11 1
+1-0 1
+.names ram[40][6] $abc$2770$new_n1298_ $abc$2770$new_n1606_ n1666
+-11 1
+1-0 1
+.names ram[40][7] $abc$2770$new_n1300_ $abc$2770$new_n1606_ n1671
+-01 1
+1-0 1
+.names ram[41][0] b_st1[0] a_st1[0] $abc$2770$new_n1615_ n1676
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[4] $abc$2770$new_n1372_ waddr_st1[3] waddr_st1[5] \
+ $abc$2770$new_n1615_
+0111 1
+.names ram[41][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1615_ \
+ n1681
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[41][2] $abc$2770$new_n1288_ $abc$2770$new_n1615_ n1686
+-11 1
+1-0 1
+.names ram[41][3] $abc$2770$new_n1290_ $abc$2770$new_n1615_ n1691
+-11 1
+1-0 1
+.names ram[41][4] $abc$2770$new_n1293_ $abc$2770$new_n1615_ n1696
+-11 1
+1-0 1
+.names ram[41][5] $abc$2770$new_n1295_ $abc$2770$new_n1615_ n1701
+-11 1
+1-0 1
+.names ram[41][6] $abc$2770$new_n1298_ $abc$2770$new_n1615_ n1706
+-11 1
+1-0 1
+.names ram[41][7] $abc$2770$new_n1300_ $abc$2770$new_n1615_ n1711
+-01 1
+1-0 1
+.names ram[42][0] b_st1[0] a_st1[0] $abc$2770$new_n1624_ n1716
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[4] $abc$2770$new_n1303_ waddr_st1[3] waddr_st1[5] \
+ $abc$2770$new_n1624_
+0111 1
+.names ram[42][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1624_ \
+ n1721
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[42][2] $abc$2770$new_n1288_ $abc$2770$new_n1624_ n1726
+-11 1
+1-0 1
+.names ram[42][3] $abc$2770$new_n1290_ $abc$2770$new_n1624_ n1731
+-11 1
+1-0 1
+.names ram[42][4] $abc$2770$new_n1293_ $abc$2770$new_n1624_ n1736
+-11 1
+1-0 1
+.names ram[42][5] $abc$2770$new_n1295_ $abc$2770$new_n1624_ n1741
+-11 1
+1-0 1
+.names ram[42][6] $abc$2770$new_n1298_ $abc$2770$new_n1624_ n1746
+-11 1
+1-0 1
+.names ram[42][7] $abc$2770$new_n1300_ $abc$2770$new_n1624_ n1751
+-01 1
+1-0 1
+.names ram[43][0] b_st1[0] a_st1[0] $abc$2770$new_n1633_ n1756
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[4] $abc$2770$new_n1313_ waddr_st1[3] waddr_st1[5] \
+ $abc$2770$new_n1633_
+0111 1
+.names ram[43][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1633_ \
+ n1761
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[43][2] $abc$2770$new_n1288_ $abc$2770$new_n1633_ n1766
+-11 1
+1-0 1
+.names ram[43][3] $abc$2770$new_n1290_ $abc$2770$new_n1633_ n1771
+-11 1
+1-0 1
+.names ram[43][4] $abc$2770$new_n1293_ $abc$2770$new_n1633_ n1776
+-11 1
+1-0 1
+.names ram[43][5] $abc$2770$new_n1295_ $abc$2770$new_n1633_ n1781
+-11 1
+1-0 1
+.names ram[43][6] $abc$2770$new_n1298_ $abc$2770$new_n1633_ n1786
+-11 1
+1-0 1
+.names ram[43][7] $abc$2770$new_n1300_ $abc$2770$new_n1633_ n1791
+-01 1
+1-0 1
+.names ram[44][0] b_st1[0] a_st1[0] $abc$2770$new_n1642_ n1796
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[4] $abc$2770$new_n1323_ waddr_st1[3] waddr_st1[5] \
+ $abc$2770$new_n1642_
+0111 1
+.names ram[44][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1642_ \
+ n1801
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[44][2] $abc$2770$new_n1288_ $abc$2770$new_n1642_ n1806
+-11 1
+1-0 1
+.names ram[44][3] $abc$2770$new_n1290_ $abc$2770$new_n1642_ n1811
+-11 1
+1-0 1
+.names ram[44][4] $abc$2770$new_n1293_ $abc$2770$new_n1642_ n1816
+-11 1
+1-0 1
+.names ram[44][5] $abc$2770$new_n1295_ $abc$2770$new_n1642_ n1821
+-11 1
+1-0 1
+.names ram[44][6] $abc$2770$new_n1298_ $abc$2770$new_n1642_ n1826
+-11 1
+1-0 1
+.names ram[44][7] $abc$2770$new_n1300_ $abc$2770$new_n1642_ n1831
+-01 1
+1-0 1
+.names ram[45][0] b_st1[0] a_st1[0] $abc$2770$new_n1651_ n1836
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[4] $abc$2770$new_n1333_ waddr_st1[3] waddr_st1[5] \
+ $abc$2770$new_n1651_
+0111 1
+.names ram[45][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1651_ \
+ n1841
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[45][2] $abc$2770$new_n1288_ $abc$2770$new_n1651_ n1846
+-11 1
+1-0 1
+.names ram[45][3] $abc$2770$new_n1290_ $abc$2770$new_n1651_ n1851
+-11 1
+1-0 1
+.names ram[45][4] $abc$2770$new_n1293_ $abc$2770$new_n1651_ n1856
+-11 1
+1-0 1
+.names ram[45][5] $abc$2770$new_n1295_ $abc$2770$new_n1651_ n1861
+-11 1
+1-0 1
+.names ram[45][6] $abc$2770$new_n1298_ $abc$2770$new_n1651_ n1866
+-11 1
+1-0 1
+.names ram[45][7] $abc$2770$new_n1300_ $abc$2770$new_n1651_ n1871
+-01 1
+1-0 1
+.names ram[46][0] b_st1[0] a_st1[0] $abc$2770$new_n1660_ n1876
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[4] $abc$2770$new_n1343_ waddr_st1[3] waddr_st1[5] \
+ $abc$2770$new_n1660_
+0111 1
+.names ram[46][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1660_ \
+ n1881
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[46][2] $abc$2770$new_n1288_ $abc$2770$new_n1660_ n1886
+-11 1
+1-0 1
+.names ram[46][3] $abc$2770$new_n1290_ $abc$2770$new_n1660_ n1891
+-11 1
+1-0 1
+.names ram[46][4] $abc$2770$new_n1293_ $abc$2770$new_n1660_ n1896
+-11 1
+1-0 1
+.names ram[46][5] $abc$2770$new_n1295_ $abc$2770$new_n1660_ n1901
+-11 1
+1-0 1
+.names ram[46][6] $abc$2770$new_n1298_ $abc$2770$new_n1660_ n1906
+-11 1
+1-0 1
+.names ram[46][7] $abc$2770$new_n1300_ $abc$2770$new_n1660_ n1911
+-01 1
+1-0 1
+.names ram[47][0] b_st1[0] a_st1[0] $abc$2770$new_n1669_ n1916
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[4] $abc$2770$new_n1353_ waddr_st1[3] waddr_st1[5] \
+ $abc$2770$new_n1669_
+0111 1
+.names ram[47][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1669_ \
+ n1921
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[47][2] $abc$2770$new_n1288_ $abc$2770$new_n1669_ n1926
+-11 1
+1-0 1
+.names ram[47][3] $abc$2770$new_n1290_ $abc$2770$new_n1669_ n1931
+-11 1
+1-0 1
+.names ram[47][4] $abc$2770$new_n1293_ $abc$2770$new_n1669_ n1936
+-11 1
+1-0 1
+.names ram[47][5] $abc$2770$new_n1295_ $abc$2770$new_n1669_ n1941
+-11 1
+1-0 1
+.names ram[47][6] $abc$2770$new_n1298_ $abc$2770$new_n1669_ n1946
+-11 1
+1-0 1
+.names ram[47][7] $abc$2770$new_n1300_ $abc$2770$new_n1669_ n1951
+-01 1
+1-0 1
+.names ram[48][0] b_st1[0] a_st1[0] $abc$2770$new_n1678_ n1956
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[3] waddr_st1[4] $abc$2770$new_n1285_ waddr_st1[5] \
+ $abc$2770$new_n1678_
+0111 1
+.names ram[48][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1678_ \
+ n1961
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[48][2] $abc$2770$new_n1288_ $abc$2770$new_n1678_ n1966
+-11 1
+1-0 1
+.names ram[48][3] $abc$2770$new_n1290_ $abc$2770$new_n1678_ n1971
+-11 1
+1-0 1
+.names ram[48][4] $abc$2770$new_n1293_ $abc$2770$new_n1678_ n1976
+-11 1
+1-0 1
+.names ram[48][5] $abc$2770$new_n1295_ $abc$2770$new_n1678_ n1981
+-11 1
+1-0 1
+.names ram[48][6] $abc$2770$new_n1298_ $abc$2770$new_n1678_ n1986
+-11 1
+1-0 1
+.names ram[48][7] $abc$2770$new_n1300_ $abc$2770$new_n1678_ n1991
+-01 1
+1-0 1
+.names ram[49][0] b_st1[0] a_st1[0] $abc$2770$new_n1687_ n1996
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[3] waddr_st1[4] $abc$2770$new_n1372_ waddr_st1[5] \
+ $abc$2770$new_n1687_
+0111 1
+.names ram[49][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1687_ \
+ n2001
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[49][2] $abc$2770$new_n1288_ $abc$2770$new_n1687_ n2006
+-11 1
+1-0 1
+.names ram[49][3] $abc$2770$new_n1290_ $abc$2770$new_n1687_ n2011
+-11 1
+1-0 1
+.names ram[49][4] $abc$2770$new_n1293_ $abc$2770$new_n1687_ n2016
+-11 1
+1-0 1
+.names ram[49][5] $abc$2770$new_n1295_ $abc$2770$new_n1687_ n2021
+-11 1
+1-0 1
+.names ram[49][6] $abc$2770$new_n1298_ $abc$2770$new_n1687_ n2026
+-11 1
+1-0 1
+.names ram[49][7] $abc$2770$new_n1300_ $abc$2770$new_n1687_ n2031
+-01 1
+1-0 1
+.names ram[4][0] b_st1[0] a_st1[0] $abc$2770$new_n1696_ n2036
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[5] waddr_st1[4] waddr_st1[3] $abc$2770$new_n1323_ \
+ $abc$2770$new_n1696_
+0001 1
+.names ram[4][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1696_ \
+ n2041
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[4][2] $abc$2770$new_n1288_ $abc$2770$new_n1696_ n2046
+-11 1
+1-0 1
+.names ram[4][3] $abc$2770$new_n1290_ $abc$2770$new_n1696_ n2051
+-11 1
+1-0 1
+.names ram[4][4] $abc$2770$new_n1293_ $abc$2770$new_n1696_ n2056
+-11 1
+1-0 1
+.names ram[4][5] $abc$2770$new_n1295_ $abc$2770$new_n1696_ n2061
+-11 1
+1-0 1
+.names ram[4][6] $abc$2770$new_n1298_ $abc$2770$new_n1696_ n2066
+-11 1
+1-0 1
+.names ram[4][7] $abc$2770$new_n1300_ $abc$2770$new_n1696_ n2071
+-01 1
+1-0 1
+.names ram[50][0] b_st1[0] a_st1[0] $abc$2770$new_n1705_ n2076
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[3] waddr_st1[4] $abc$2770$new_n1303_ waddr_st1[5] \
+ $abc$2770$new_n1705_
+0111 1
+.names ram[50][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1705_ \
+ n2081
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[50][2] $abc$2770$new_n1288_ $abc$2770$new_n1705_ n2086
+-11 1
+1-0 1
+.names ram[50][3] $abc$2770$new_n1290_ $abc$2770$new_n1705_ n2091
+-11 1
+1-0 1
+.names ram[50][4] $abc$2770$new_n1293_ $abc$2770$new_n1705_ n2096
+-11 1
+1-0 1
+.names ram[50][5] $abc$2770$new_n1295_ $abc$2770$new_n1705_ n2101
+-11 1
+1-0 1
+.names ram[50][6] $abc$2770$new_n1298_ $abc$2770$new_n1705_ n2106
+-11 1
+1-0 1
+.names ram[50][7] $abc$2770$new_n1300_ $abc$2770$new_n1705_ n2111
+-01 1
+1-0 1
+.names ram[51][0] b_st1[0] a_st1[0] $abc$2770$new_n1714_ n2116
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[3] waddr_st1[4] $abc$2770$new_n1313_ waddr_st1[5] \
+ $abc$2770$new_n1714_
+0111 1
+.names ram[51][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1714_ \
+ n2121
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[51][2] $abc$2770$new_n1288_ $abc$2770$new_n1714_ n2126
+-11 1
+1-0 1
+.names ram[51][3] $abc$2770$new_n1290_ $abc$2770$new_n1714_ n2131
+-11 1
+1-0 1
+.names ram[51][4] $abc$2770$new_n1293_ $abc$2770$new_n1714_ n2136
+-11 1
+1-0 1
+.names ram[51][5] $abc$2770$new_n1295_ $abc$2770$new_n1714_ n2141
+-11 1
+1-0 1
+.names ram[51][6] $abc$2770$new_n1298_ $abc$2770$new_n1714_ n2146
+-11 1
+1-0 1
+.names ram[51][7] $abc$2770$new_n1300_ $abc$2770$new_n1714_ n2151
+-01 1
+1-0 1
+.names ram[52][0] b_st1[0] a_st1[0] $abc$2770$new_n1723_ n2156
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[3] waddr_st1[4] $abc$2770$new_n1323_ waddr_st1[5] \
+ $abc$2770$new_n1723_
+0111 1
+.names ram[52][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1723_ \
+ n2161
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[52][2] $abc$2770$new_n1288_ $abc$2770$new_n1723_ n2166
+-11 1
+1-0 1
+.names ram[52][3] $abc$2770$new_n1290_ $abc$2770$new_n1723_ n2171
+-11 1
+1-0 1
+.names ram[52][4] $abc$2770$new_n1293_ $abc$2770$new_n1723_ n2176
+-11 1
+1-0 1
+.names ram[52][5] $abc$2770$new_n1295_ $abc$2770$new_n1723_ n2181
+-11 1
+1-0 1
+.names ram[52][6] $abc$2770$new_n1298_ $abc$2770$new_n1723_ n2186
+-11 1
+1-0 1
+.names ram[52][7] $abc$2770$new_n1300_ $abc$2770$new_n1723_ n2191
+-01 1
+1-0 1
+.names ram[53][0] b_st1[0] a_st1[0] $abc$2770$new_n1732_ n2196
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[3] waddr_st1[4] $abc$2770$new_n1333_ waddr_st1[5] \
+ $abc$2770$new_n1732_
+0111 1
+.names ram[53][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1732_ \
+ n2201
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[53][2] $abc$2770$new_n1288_ $abc$2770$new_n1732_ n2206
+-11 1
+1-0 1
+.names ram[53][3] $abc$2770$new_n1290_ $abc$2770$new_n1732_ n2211
+-11 1
+1-0 1
+.names ram[53][4] $abc$2770$new_n1293_ $abc$2770$new_n1732_ n2216
+-11 1
+1-0 1
+.names ram[53][5] $abc$2770$new_n1295_ $abc$2770$new_n1732_ n2221
+-11 1
+1-0 1
+.names ram[53][6] $abc$2770$new_n1298_ $abc$2770$new_n1732_ n2226
+-11 1
+1-0 1
+.names ram[53][7] $abc$2770$new_n1300_ $abc$2770$new_n1732_ n2231
+-01 1
+1-0 1
+.names ram[54][0] b_st1[0] a_st1[0] $abc$2770$new_n1741_ n2236
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[3] waddr_st1[4] $abc$2770$new_n1343_ waddr_st1[5] \
+ $abc$2770$new_n1741_
+0111 1
+.names ram[54][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1741_ \
+ n2241
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[54][2] $abc$2770$new_n1288_ $abc$2770$new_n1741_ n2246
+-11 1
+1-0 1
+.names ram[54][3] $abc$2770$new_n1290_ $abc$2770$new_n1741_ n2251
+-11 1
+1-0 1
+.names ram[54][4] $abc$2770$new_n1293_ $abc$2770$new_n1741_ n2256
+-11 1
+1-0 1
+.names ram[54][5] $abc$2770$new_n1295_ $abc$2770$new_n1741_ n2261
+-11 1
+1-0 1
+.names ram[54][6] $abc$2770$new_n1298_ $abc$2770$new_n1741_ n2266
+-11 1
+1-0 1
+.names ram[54][7] $abc$2770$new_n1300_ $abc$2770$new_n1741_ n2271
+-01 1
+1-0 1
+.names ram[55][0] b_st1[0] a_st1[0] $abc$2770$new_n1750_ n2276
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[3] waddr_st1[4] $abc$2770$new_n1353_ waddr_st1[5] \
+ $abc$2770$new_n1750_
+0111 1
+.names ram[55][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1750_ \
+ n2281
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[55][2] $abc$2770$new_n1288_ $abc$2770$new_n1750_ n2286
+-11 1
+1-0 1
+.names ram[55][3] $abc$2770$new_n1290_ $abc$2770$new_n1750_ n2291
+-11 1
+1-0 1
+.names ram[55][4] $abc$2770$new_n1293_ $abc$2770$new_n1750_ n2296
+-11 1
+1-0 1
+.names ram[55][5] $abc$2770$new_n1295_ $abc$2770$new_n1750_ n2301
+-11 1
+1-0 1
+.names ram[55][6] $abc$2770$new_n1298_ $abc$2770$new_n1750_ n2306
+-11 1
+1-0 1
+.names ram[55][7] $abc$2770$new_n1300_ $abc$2770$new_n1750_ n2311
+-01 1
+1-0 1
+.names ram[56][0] b_st1[0] a_st1[0] $abc$2770$new_n1759_ n2316
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[5] waddr_st1[4] waddr_st1[3] $abc$2770$new_n1285_ \
+ $abc$2770$new_n1759_
+1111 1
+.names ram[56][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1759_ \
+ n2321
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[56][2] $abc$2770$new_n1288_ $abc$2770$new_n1759_ n2326
+-11 1
+1-0 1
+.names ram[56][3] $abc$2770$new_n1290_ $abc$2770$new_n1759_ n2331
+-11 1
+1-0 1
+.names ram[56][4] $abc$2770$new_n1293_ $abc$2770$new_n1759_ n2336
+-11 1
+1-0 1
+.names ram[56][5] $abc$2770$new_n1295_ $abc$2770$new_n1759_ n2341
+-11 1
+1-0 1
+.names ram[56][6] $abc$2770$new_n1298_ $abc$2770$new_n1759_ n2346
+-11 1
+1-0 1
+.names ram[56][7] $abc$2770$new_n1300_ $abc$2770$new_n1759_ n2351
+-01 1
+1-0 1
+.names ram[57][0] b_st1[0] a_st1[0] $abc$2770$new_n1768_ n2356
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[5] waddr_st1[4] waddr_st1[3] $abc$2770$new_n1372_ \
+ $abc$2770$new_n1768_
+1111 1
+.names ram[57][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1768_ \
+ n2361
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[57][2] $abc$2770$new_n1288_ $abc$2770$new_n1768_ n2366
+-11 1
+1-0 1
+.names ram[57][3] $abc$2770$new_n1290_ $abc$2770$new_n1768_ n2371
+-11 1
+1-0 1
+.names ram[57][4] $abc$2770$new_n1293_ $abc$2770$new_n1768_ n2376
+-11 1
+1-0 1
+.names ram[57][5] $abc$2770$new_n1295_ $abc$2770$new_n1768_ n2381
+-11 1
+1-0 1
+.names ram[57][6] $abc$2770$new_n1298_ $abc$2770$new_n1768_ n2386
+-11 1
+1-0 1
+.names ram[57][7] $abc$2770$new_n1300_ $abc$2770$new_n1768_ n2391
+-01 1
+1-0 1
+.names ram[58][0] b_st1[0] a_st1[0] $abc$2770$new_n1777_ n2396
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[5] waddr_st1[4] waddr_st1[3] $abc$2770$new_n1303_ \
+ $abc$2770$new_n1777_
+1111 1
+.names ram[58][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1777_ \
+ n2401
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[58][2] $abc$2770$new_n1288_ $abc$2770$new_n1777_ n2406
+-11 1
+1-0 1
+.names ram[58][3] $abc$2770$new_n1290_ $abc$2770$new_n1777_ n2411
+-11 1
+1-0 1
+.names ram[58][4] $abc$2770$new_n1293_ $abc$2770$new_n1777_ n2416
+-11 1
+1-0 1
+.names ram[58][5] $abc$2770$new_n1295_ $abc$2770$new_n1777_ n2421
+-11 1
+1-0 1
+.names ram[58][6] $abc$2770$new_n1298_ $abc$2770$new_n1777_ n2426
+-11 1
+1-0 1
+.names ram[58][7] $abc$2770$new_n1300_ $abc$2770$new_n1777_ n2431
+-01 1
+1-0 1
+.names ram[59][0] b_st1[0] a_st1[0] $abc$2770$new_n1786_ n2436
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[5] waddr_st1[4] waddr_st1[3] $abc$2770$new_n1313_ \
+ $abc$2770$new_n1786_
+1111 1
+.names ram[59][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1786_ \
+ n2441
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[59][2] $abc$2770$new_n1288_ $abc$2770$new_n1786_ n2446
+-11 1
+1-0 1
+.names ram[59][3] $abc$2770$new_n1290_ $abc$2770$new_n1786_ n2451
+-11 1
+1-0 1
+.names ram[59][4] $abc$2770$new_n1293_ $abc$2770$new_n1786_ n2456
+-11 1
+1-0 1
+.names ram[59][5] $abc$2770$new_n1295_ $abc$2770$new_n1786_ n2461
+-11 1
+1-0 1
+.names ram[59][6] $abc$2770$new_n1298_ $abc$2770$new_n1786_ n2466
+-11 1
+1-0 1
+.names ram[59][7] $abc$2770$new_n1300_ $abc$2770$new_n1786_ n2471
+-01 1
+1-0 1
+.names ram[5][0] b_st1[0] a_st1[0] $abc$2770$new_n1795_ n2476
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[5] waddr_st1[4] waddr_st1[3] $abc$2770$new_n1333_ \
+ $abc$2770$new_n1795_
+0001 1
+.names ram[5][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1795_ \
+ n2481
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[5][2] $abc$2770$new_n1288_ $abc$2770$new_n1795_ n2486
+-11 1
+1-0 1
+.names ram[5][3] $abc$2770$new_n1290_ $abc$2770$new_n1795_ n2491
+-11 1
+1-0 1
+.names ram[5][4] $abc$2770$new_n1293_ $abc$2770$new_n1795_ n2496
+-11 1
+1-0 1
+.names ram[5][5] $abc$2770$new_n1295_ $abc$2770$new_n1795_ n2501
+-11 1
+1-0 1
+.names ram[5][6] $abc$2770$new_n1298_ $abc$2770$new_n1795_ n2506
+-11 1
+1-0 1
+.names ram[5][7] $abc$2770$new_n1300_ $abc$2770$new_n1795_ n2511
+-01 1
+1-0 1
+.names ram[60][0] b_st1[0] a_st1[0] $abc$2770$new_n1804_ n2516
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[5] waddr_st1[4] waddr_st1[3] $abc$2770$new_n1323_ \
+ $abc$2770$new_n1804_
+1111 1
+.names ram[60][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1804_ \
+ n2521
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[60][2] $abc$2770$new_n1288_ $abc$2770$new_n1804_ n2526
+-11 1
+1-0 1
+.names ram[60][3] $abc$2770$new_n1290_ $abc$2770$new_n1804_ n2531
+-11 1
+1-0 1
+.names ram[60][4] $abc$2770$new_n1293_ $abc$2770$new_n1804_ n2536
+-11 1
+1-0 1
+.names ram[60][5] $abc$2770$new_n1295_ $abc$2770$new_n1804_ n2541
+-11 1
+1-0 1
+.names ram[60][6] $abc$2770$new_n1298_ $abc$2770$new_n1804_ n2546
+-11 1
+1-0 1
+.names ram[60][7] $abc$2770$new_n1300_ $abc$2770$new_n1804_ n2551
+-01 1
+1-0 1
+.names ram[61][0] b_st1[0] a_st1[0] $abc$2770$new_n1813_ n2556
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[5] waddr_st1[4] waddr_st1[3] $abc$2770$new_n1333_ \
+ $abc$2770$new_n1813_
+1111 1
+.names ram[61][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1813_ \
+ n2561
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[61][2] $abc$2770$new_n1288_ $abc$2770$new_n1813_ n2566
+-11 1
+1-0 1
+.names ram[61][3] $abc$2770$new_n1290_ $abc$2770$new_n1813_ n2571
+-11 1
+1-0 1
+.names ram[61][4] $abc$2770$new_n1293_ $abc$2770$new_n1813_ n2576
+-11 1
+1-0 1
+.names ram[61][5] $abc$2770$new_n1295_ $abc$2770$new_n1813_ n2581
+-11 1
+1-0 1
+.names ram[61][6] $abc$2770$new_n1298_ $abc$2770$new_n1813_ n2586
+-11 1
+1-0 1
+.names ram[61][7] $abc$2770$new_n1300_ $abc$2770$new_n1813_ n2591
+-01 1
+1-0 1
+.names ram[62][0] b_st1[0] a_st1[0] $abc$2770$new_n1822_ n2596
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[5] waddr_st1[4] waddr_st1[3] $abc$2770$new_n1343_ \
+ $abc$2770$new_n1822_
+1111 1
+.names ram[62][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1822_ \
+ n2601
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[62][2] $abc$2770$new_n1288_ $abc$2770$new_n1822_ n2606
+-11 1
+1-0 1
+.names ram[62][3] $abc$2770$new_n1290_ $abc$2770$new_n1822_ n2611
+-11 1
+1-0 1
+.names ram[62][4] $abc$2770$new_n1293_ $abc$2770$new_n1822_ n2616
+-11 1
+1-0 1
+.names ram[62][5] $abc$2770$new_n1295_ $abc$2770$new_n1822_ n2621
+-11 1
+1-0 1
+.names ram[62][6] $abc$2770$new_n1298_ $abc$2770$new_n1822_ n2626
+-11 1
+1-0 1
+.names ram[62][7] $abc$2770$new_n1300_ $abc$2770$new_n1822_ n2631
+-01 1
+1-0 1
+.names ram[63][0] b_st1[0] a_st1[0] $abc$2770$new_n1831_ n2636
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[5] waddr_st1[4] waddr_st1[3] $abc$2770$new_n1353_ \
+ $abc$2770$new_n1831_
+1111 1
+.names ram[63][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1831_ \
+ n2641
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[63][2] $abc$2770$new_n1288_ $abc$2770$new_n1831_ n2646
+-11 1
+1-0 1
+.names ram[63][3] $abc$2770$new_n1290_ $abc$2770$new_n1831_ n2651
+-11 1
+1-0 1
+.names ram[63][4] $abc$2770$new_n1293_ $abc$2770$new_n1831_ n2656
+-11 1
+1-0 1
+.names ram[63][5] $abc$2770$new_n1295_ $abc$2770$new_n1831_ n2661
+-11 1
+1-0 1
+.names ram[63][6] $abc$2770$new_n1298_ $abc$2770$new_n1831_ n2666
+-11 1
+1-0 1
+.names ram[63][7] $abc$2770$new_n1300_ $abc$2770$new_n1831_ n2671
+-01 1
+1-0 1
+.names ram[6][0] b_st1[0] a_st1[0] $abc$2770$new_n1840_ n2676
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[5] waddr_st1[4] waddr_st1[3] $abc$2770$new_n1343_ \
+ $abc$2770$new_n1840_
+0001 1
+.names ram[6][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1840_ \
+ n2681
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[6][2] $abc$2770$new_n1288_ $abc$2770$new_n1840_ n2686
+-11 1
+1-0 1
+.names ram[6][3] $abc$2770$new_n1290_ $abc$2770$new_n1840_ n2691
+-11 1
+1-0 1
+.names ram[6][4] $abc$2770$new_n1293_ $abc$2770$new_n1840_ n2696
+-11 1
+1-0 1
+.names ram[6][5] $abc$2770$new_n1295_ $abc$2770$new_n1840_ n2701
+-11 1
+1-0 1
+.names ram[6][6] $abc$2770$new_n1298_ $abc$2770$new_n1840_ n2706
+-11 1
+1-0 1
+.names ram[6][7] $abc$2770$new_n1300_ $abc$2770$new_n1840_ n2711
+-01 1
+1-0 1
+.names ram[7][0] b_st1[0] a_st1[0] $abc$2770$new_n1849_ n2716
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[5] waddr_st1[4] waddr_st1[3] $abc$2770$new_n1353_ \
+ $abc$2770$new_n1849_
+0001 1
+.names ram[7][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1849_ \
+ n2721
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[7][2] $abc$2770$new_n1288_ $abc$2770$new_n1849_ n2726
+-11 1
+1-0 1
+.names ram[7][3] $abc$2770$new_n1290_ $abc$2770$new_n1849_ n2731
+-11 1
+1-0 1
+.names ram[7][4] $abc$2770$new_n1293_ $abc$2770$new_n1849_ n2736
+-11 1
+1-0 1
+.names ram[7][5] $abc$2770$new_n1295_ $abc$2770$new_n1849_ n2741
+-11 1
+1-0 1
+.names ram[7][6] $abc$2770$new_n1298_ $abc$2770$new_n1849_ n2746
+-11 1
+1-0 1
+.names ram[7][7] $abc$2770$new_n1300_ $abc$2770$new_n1849_ n2751
+-01 1
+1-0 1
+.names ram[8][0] b_st1[0] a_st1[0] $abc$2770$new_n1858_ n2756
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[5] waddr_st1[4] waddr_st1[3] $abc$2770$new_n1285_ \
+ $abc$2770$new_n1858_
+0011 1
+.names ram[8][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1858_ \
+ n2761
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[8][2] $abc$2770$new_n1288_ $abc$2770$new_n1858_ n2766
+-11 1
+1-0 1
+.names ram[8][3] $abc$2770$new_n1290_ $abc$2770$new_n1858_ n2771
+-11 1
+1-0 1
+.names ram[8][4] $abc$2770$new_n1293_ $abc$2770$new_n1858_ n2776
+-11 1
+1-0 1
+.names ram[8][5] $abc$2770$new_n1295_ $abc$2770$new_n1858_ n2781
+-11 1
+1-0 1
+.names ram[8][6] $abc$2770$new_n1298_ $abc$2770$new_n1858_ n2786
+-11 1
+1-0 1
+.names ram[8][7] $abc$2770$new_n1300_ $abc$2770$new_n1858_ n2791
+-01 1
+1-0 1
+.names ram[9][0] b_st1[0] a_st1[0] $abc$2770$new_n1867_ n2796
+-011 1
+-101 1
+1--0 1
+.names waddr_st1[5] waddr_st1[4] waddr_st1[3] $abc$2770$new_n1372_ \
+ $abc$2770$new_n1867_
+0011 1
+.names ram[9][1] b_st1[0] a_st1[0] b_st1[1] a_st1[1] $abc$2770$new_n1867_ \
+ n2801
+--0011 1
+--0101 1
+-0-011 1
+-0-101 1
+-11001 1
+-11111 1
+1----0 1
+.names ram[9][2] $abc$2770$new_n1288_ $abc$2770$new_n1867_ n2806
+-11 1
+1-0 1
+.names ram[9][3] $abc$2770$new_n1290_ $abc$2770$new_n1867_ n2811
+-11 1
+1-0 1
+.names ram[9][4] $abc$2770$new_n1293_ $abc$2770$new_n1867_ n2816
+-11 1
+1-0 1
+.names ram[9][5] $abc$2770$new_n1295_ $abc$2770$new_n1867_ n2821
+-11 1
+1-0 1
+.names ram[9][6] $abc$2770$new_n1298_ $abc$2770$new_n1867_ n2826
+-11 1
+1-0 1
+.names ram[9][7] $abc$2770$new_n1300_ $abc$2770$new_n1867_ n2831
+-01 1
+1-0 1
+.names $abc$2770$new_n1079_ $abc$2770$new_n1075_ $abc$2770$new_n1077_ \
+ $abc$2770$new_n1073_ raddr_1_ raddr_3_ $abc$2770$new_n1875_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names $abc$2770$new_n1091_ $abc$2770$new_n1088_ $abc$2770$new_n1092_ \
+ $abc$2770$new_n1089_ raddr_3_ raddr_4_ $abc$2770$new_n1878_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[24][0] ram[28][0] ram[25][0] ram[29][0] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1880_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names $abc$2770$new_n1103_ $abc$2770$new_n1106_ $abc$2770$new_n1104_ \
+ $abc$2770$new_n1107_ raddr_1_ raddr_3_ $abc$2770$new_n1883_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names $abc$2770$new_n1139_ $abc$2770$new_n1135_ $abc$2770$new_n1138_ \
+ $abc$2770$new_n1136_ raddr_1_ raddr_3_ $abc$2770$new_n1887_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names $abc$2770$new_n1170_ $abc$2770$new_n1167_ $abc$2770$new_n1171_ \
+ $abc$2770$new_n1168_ raddr_3_ raddr_4_ $abc$2770$new_n1890_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names q_3_ raddr_1_ $abc$2770$new_n1890_ raddr_5_ $abc$2770$new_n1929_ ren \
+ n256
+---111 1
+--1001 1
+-0-001 1
+-11-11 1
+1----0 1
+.names ram[24][3] ram[28][3] ram[25][3] ram[29][3] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1892_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names $abc$2770$new_n1202_ $abc$2770$new_n1205_ $abc$2770$new_n1203_ \
+ $abc$2770$new_n1204_ raddr_1_ raddr_3_ $abc$2770$new_n1895_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names ram[58][4] ram[62][4] ram[59][4] ram[63][4] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1897_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[50][4] ram[54][4] ram[51][4] ram[55][4] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1899_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[34][4] ram[38][4] ram[35][4] ram[39][4] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1901_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[42][4] ram[46][4] ram[43][4] ram[47][4] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1903_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[48][5] ram[52][5] ram[49][5] ram[53][5] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1905_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[50][5] ram[54][5] ram[51][5] ram[55][5] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1908_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names $abc$2770$new_n1231_ $abc$2770$new_n1232_ $abc$2770$new_n1228_ \
+ raddr_0_ raddr_4_ raddr_1_ $abc$2770$new_n1910_
+--1-00 0
+-0-101 0
+0--001 0
+.names $abc$2770$new_n1905_ $abc$2770$new_n1217_ $abc$2770$new_n1908_ \
+ $abc$2770$new_n1219_ raddr_1_ raddr_3_ $abc$2770$new_n1911_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names $abc$2770$new_n1222_ $abc$2770$new_n1911_ q_5_ raddr_4_ ren \
+ $abc$2770$new_n1912_
+--1-0 1
+-1-11 1
+0--01 1
+.names $abc$2770$new_n1233_ $abc$2770$new_n1910_ q_5_ $abc$2770$new_n1912_ \
+ ren raddr_5_ n264
+---1-1 1
+--1-00 1
+01--10 1
+.names $abc$2770$new_n1083_ $abc$2770$new_n1085_ $abc$2770$new_n1082_ \
+ $abc$2770$new_n1084_ raddr_1_ raddr_3_ $abc$2770$new_n1914_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names $abc$2770$new_n1094_ $abc$2770$new_n1097_ $abc$2770$new_n1095_ \
+ $abc$2770$new_n1880_ raddr_3_ raddr_4_ $abc$2770$new_n1916_
+---111 1
+--1-10 1
+-0--01 1
+1---00 1
+.names $abc$2770$new_n1123_ $abc$2770$new_n1116_ $abc$2770$new_n1122_ \
+ $abc$2770$new_n1117_ raddr_1_ raddr_4_ $abc$2770$new_n1918_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names $abc$2770$new_n1113_ $abc$2770$new_n1109_ $abc$2770$new_n1112_ \
+ $abc$2770$new_n1110_ raddr_1_ raddr_3_ $abc$2770$new_n1920_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names $abc$2770$new_n1920_ $abc$2770$new_n1883_ q_1_ raddr_5_ \
+ $abc$2770$new_n1944_ ren n248
+---001 1
+--1--0 1
+-0--01 1
+1--111 1
+.names $abc$2770$new_n1149_ $abc$2770$new_n1142_ $abc$2770$new_n1148_ \
+ $abc$2770$new_n1143_ raddr_1_ raddr_4_ $abc$2770$new_n1923_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names $abc$2770$new_n1152_ $abc$2770$new_n1146_ $abc$2770$new_n1151_ \
+ $abc$2770$new_n1145_ raddr_1_ raddr_4_ $abc$2770$new_n1925_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names $abc$2770$new_n1129_ $abc$2770$new_n1887_ $abc$2770$new_n1925_ \
+ raddr_4_ raddr_5_ $abc$2770$new_n1926_
+--1-0 1
+-1-11 1
+1--01 1
+.names q_2_ raddr_3_ $abc$2770$new_n1923_ raddr_5_ $abc$2770$new_n1926_ ren \
+ n252
+---101 1
+--1011 1
+-0-011 1
+-11-01 1
+1----0 1
+.names $abc$2770$new_n1173_ $abc$2770$new_n1176_ $abc$2770$new_n1174_ \
+ $abc$2770$new_n1892_ raddr_3_ raddr_4_ $abc$2770$new_n1928_
+---111 1
+--1-10 1
+-0--01 1
+1---00 1
+.names $abc$2770$new_n1155_ $abc$2770$new_n1160_ $abc$2770$new_n1928_ \
+ raddr_4_ raddr_5_ $abc$2770$new_n1929_
+--0-0 1
+-1-11 1
+1--01 1
+.names ram[56][4] ram[60][4] ram[57][4] ram[61][4] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1930_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[32][4] ram[36][4] ram[33][4] ram[37][4] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1932_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names ram[40][4] ram[44][4] ram[41][4] ram[45][4] raddr_0_ raddr_2_ \
+ $abc$2770$new_n1934_
+---011 1
+--0-10 1
+-0--01 1
+0---00 1
+.names $abc$2770$new_n1932_ $abc$2770$new_n1187_ $abc$2770$new_n1901_ \
+ $abc$2770$new_n1899_ raddr_1_ raddr_4_ $abc$2770$new_n1936_
+---111 1
+--1-10 1
+-0--01 1
+1---00 1
+.names $abc$2770$new_n1934_ $abc$2770$new_n1930_ $abc$2770$new_n1903_ \
+ $abc$2770$new_n1897_ raddr_1_ raddr_4_ $abc$2770$new_n1938_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names $abc$2770$new_n1936_ $abc$2770$new_n1938_ $abc$2770$new_n1895_ \
+ raddr_3_ raddr_5_ $abc$2770$new_n1939_
+--1-0 1
+-1-11 1
+1--01 1
+.names $abc$2770$new_n1207_ q_4_ $abc$2770$new_n1939_ raddr_4_ raddr_5_ ren \
+ n260
+--0-11 1
+--1001 1
+-1---0 1
+0--101 1
+.names $abc$2770$new_n1914_ $abc$2770$new_n1875_ $abc$2770$new_n1916_ \
+ raddr_4_ raddr_5_ $abc$2770$new_n1941_
+--1-0 1
+-1-11 1
+1--01 1
+.names q_0_ raddr_1_ $abc$2770$new_n1878_ raddr_5_ $abc$2770$new_n1941_ ren \
+ n244
+---101 1
+--1011 1
+-0-011 1
+-11-01 1
+1----0 1
+.names $abc$2770$new_n1126_ $abc$2770$new_n1120_ $abc$2770$new_n1125_ \
+ $abc$2770$new_n1119_ raddr_1_ raddr_4_ $abc$2770$new_n1943_
+---111 1
+--1-10 1
+-1--01 1
+1---00 1
+.names $abc$2770$new_n1918_ $abc$2770$new_n1943_ raddr_4_ raddr_5_ raddr_3_ \
+ $abc$2770$new_n1944_
+--11- 1
+-0000 1
+-11-0 1
+0--01 1
+.names waddr_0_ n75
+1 1
+.names waddr_1_ n79
+1 1
+.names waddr_2_ n83
+1 1
+.names waddr_3_ n87
+1 1
+.names waddr_4_ n91
+1 1
+.names waddr_5_ n95
+1 1
+.names a_0_ n99
+1 1
+.names a_1_ n103
+1 1
+.names a_2_ n107
+1 1
+.names a_3_ n111
+1 1
+.names a_4_ n115
+1 1
+.names a_5_ n119
+1 1
+.names a_6_ n123
+1 1
+.names a_st0[0] n127
+1 1
+.names a_st0[1] n131
+1 1
+.names a_st0[2] n135
+1 1
+.names a_st0[3] n139
+1 1
+.names a_st0[4] n143
+1 1
+.names a_st0[5] n147
+1 1
+.names a_st0[6] n151
+1 1
+.names b_0_ n155
+1 1
+.names b_1_ n159
+1 1
+.names b_2_ n163
+1 1
+.names b_3_ n167
+1 1
+.names b_4_ n171
+1 1
+.names b_5_ n175
+1 1
+.names b_6_ n179
+1 1
+.names b_st0[0] n183
+1 1
+.names b_st0[1] n187
+1 1
+.names b_st0[2] n191
+1 1
+.names b_st0[3] n195
+1 1
+.names b_st0[4] n199
+1 1
+.names b_st0[5] n203
+1 1
+.names b_st0[6] n207
+1 1
+.names waddr_st0[0] n211
+1 1
+.names waddr_st0[1] n215
+1 1
+.names waddr_st0[2] n219
+1 1
+.names waddr_st0[3] n223
+1 1
+.names waddr_st0[4] n227
+1 1
+.names waddr_st0[5] n231
+1 1
+.names wen n235
+1 1
+.names wen_st0 n239
+1 1
+.end
