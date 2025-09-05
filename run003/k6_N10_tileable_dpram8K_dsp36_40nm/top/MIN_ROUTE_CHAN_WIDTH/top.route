@@ -1,0 +1,39 @@
+Placement_File: top.place Placement_ID: SHA256:9a8307ab5f1c255ffab3392880ffcffecaf4b7edb5dc3c9d71eccc84a96baef0
+Array size: 3 x 3 logic blocks.
+
+Routing:
+
+Net 0 (in)
+
+Node:	7	SOURCE (1,0)  Pad: 15  Switch: 0
+Node:	23	  OPIN (1,0)  Pad: 15  Switch: 2
+Node:	285	 CHANX (1,0)  Track: 70  Switch: 1
+Node:	135	  IPIN (1,1)  Pin: 25   clb.I[25] Switch: 0
+Node:	85	  SINK (1,1)  Class: 0  Switch: -1 Net_pin_index: 1
+
+
+Net 1 (out)
+
+Node:	73	SOURCE (1,1)  Class: 11  Switch: 0
+Node:	97	  OPIN (1,1)  Pin: 50   clb.O[9] Switch: 2
+Node:	796	 CHANY (1,1)  Track: 71  Switch: 2
+Node:	316	 CHANX (1,0)  Track: 101  Switch: 2
+Node:	653	 CHANY (0,1)  Track: 98  Switch: 2
+Node:	453	 CHANX (1,1)  Track: 68  Switch: 2
+Node:	792	 CHANY (1,1)  Track: 67  Switch: 2
+Node:	320	 CHANX (1,0)  Track: 105  Switch: 1
+Node:	26	  IPIN (1,0)  Pad: 4  Switch: 0
+Node:	10	  SINK (1,0)  Pad: 4  Switch: -1 Net_pin_index: 1
+
+
+Net 2 (clock)
+
+Node:	39	SOURCE (0,1)  Pad: 15  Switch: 0
+Node:	55	  OPIN (0,1)  Pad: 15  Switch: 2
+Node:	623	 CHANY (0,1)  Track: 68  Switch: 2
+Node:	483	 CHANX (1,1)  Track: 98  Switch: 2
+Node:	822	 CHANY (1,1)  Track: 97  Switch: 2
+Node:	290	 CHANX (1,0)  Track: 75  Switch: 2
+Node:	627	 CHANY (0,1)  Track: 72  Switch: 1
+Node:	150	  IPIN (1,1)  Pin: 62   clb.clk[0] Switch: 0
+Node:	87	  SINK (1,1)  Class: 23  Switch: -1 Net_pin_index: 1
