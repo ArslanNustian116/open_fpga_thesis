@@ -1,0 +1,15 @@
+Netlist_File: counter.net Netlist_ID: SHA256:f2650310ec5613f6c28c68464a1c39f5d3d81515caa1ebf071403209ae9d19fd
+Array size: 3 x 3 logic blocks
+
+#block name	x	y	subblk	block number
+#----------	--	--	------	------------
+n42		1	1	0	#0
+out:result[0]	0	1	7	#1
+out:result[1]	1	2	6	#2
+out:result[2]	1	0	4	#3
+out:result[3]	1	0	0	#4
+out:result[4]	1	2	1	#5
+out:result[5]	2	1	3	#6
+out:result[6]	0	1	4	#7
+out:result[7]	1	0	1	#8
+clk		2	1	5	#9

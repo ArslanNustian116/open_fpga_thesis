@@ -1,0 +1,33 @@
+<!-- Netlist naming fix-up report --> 
+<netlist>
+	<blocks>
+		<block previous="out:result[0]" current="out_result_0_"/>
+		<block previous="out:result[1]" current="out_result_1_"/>
+		<block previous="out:result[2]" current="out_result_2_"/>
+		<block previous="out:result[3]" current="out_result_3_"/>
+		<block previous="out:result[4]" current="out_result_4_"/>
+		<block previous="out:result[5]" current="out_result_5_"/>
+		<block previous="out:result[6]" current="out_result_6_"/>
+		<block previous="out:result[7]" current="out_result_7_"/>
+		<block previous="result[0]" current="result_0_"/>
+		<block previous="result[1]" current="result_1_"/>
+		<block previous="result[2]" current="result_2_"/>
+		<block previous="result[3]" current="result_3_"/>
+		<block previous="result[4]" current="result_4_"/>
+		<block previous="result[5]" current="result_5_"/>
+		<block previous="result[6]" current="result_6_"/>
+		<block previous="result[7]" current="result_7_"/>
+		<block previous="$abc$209$new_n24_" current="_abc_209_new_n24_"/>
+	</blocks>
+	<nets>
+		<net previous="result[0]" current="result_0_"/>
+		<net previous="result[1]" current="result_1_"/>
+		<net previous="result[2]" current="result_2_"/>
+		<net previous="result[3]" current="result_3_"/>
+		<net previous="result[4]" current="result_4_"/>
+		<net previous="result[5]" current="result_5_"/>
+		<net previous="result[6]" current="result_6_"/>
+		<net previous="result[7]" current="result_7_"/>
+		<net previous="$abc$209$new_n24_" current="_abc_209_new_n24_"/>
+	</nets>
+</netlist>

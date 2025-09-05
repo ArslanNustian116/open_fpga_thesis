@@ -1,0 +1,692 @@
+<?xml version="1.0"?>
+<block name="counter.net" instance="FPGA_packed_netlist[0]" architecture_id="SHA256:ae7eba06eaf4982d7278a430e69491f59227a3211ca4485d5699b62577b71cc0" atom_netlist_id="SHA256:d1d9fc598f3acaea32586b42694be45b6d147fb9b032ce3f7fe6b0704ec5ed87">
+	<inputs>clk</inputs>
+	<outputs>out:result[0] out:result[1] out:result[2] out:result[3] out:result[4] out:result[5] out:result[6] out:result[7]</outputs>
+	<clocks>clk</clocks>
+	<block name="n42" instance="clb[0]" mode="default">
+		<inputs>
+			<port name="I">open open open open open open open open open open open open open open open open open open open open open open open open open open open open open open open open open open open open open open open open</port>
+			<port name="cin">open</port>
+		</inputs>
+		<outputs>
+			<port name="O">open fle[1].out[0]-&gt;clbouts1 fle[2].out[0]-&gt;clbouts1 open fle[4].out[0]-&gt;clbouts1 fle[5].out[0]-&gt;clbouts1 fle[6].out[0]-&gt;clbouts1 fle[7].out[0]-&gt;clbouts1 fle[8].out[0]-&gt;clbouts1 fle[9].out[0]-&gt;clbouts1 open open open open open open open open open open</port>
+			<port name="cout">open</port>
+		</outputs>
+		<clocks>
+			<port name="clk">clk</port>
+		</clocks>
+		<block name="open" instance="fle[0]" />
+		<block name="n50" instance="fle[1]" mode="n1_lut6">
+			<inputs>
+				<port name="in">fle[3].out[0]-&gt;crossbar fle[2].out[0]-&gt;crossbar open open fle[1].out[0]-&gt;crossbar open</port>
+				<port name="cin">open</port>
+			</inputs>
+			<outputs>
+				<port name="out">ble6[0].out[0]-&gt;direct2 open</port>
+				<port name="cout">open</port>
+			</outputs>
+			<clocks>
+				<port name="clk">clb.clk[0]-&gt;clks</port>
+			</clocks>
+			<block name="n50" instance="ble6[0]" mode="default">
+				<inputs>
+					<port name="in">fle.in[0]-&gt;direct1 fle.in[1]-&gt;direct1 open open fle.in[4]-&gt;direct1 open</port>
+				</inputs>
+				<outputs>
+					<port name="out">ff[0].Q[0]-&gt;mux1</port>
+				</outputs>
+				<clocks>
+					<port name="clk">fle.clk[0]-&gt;direct3</port>
+				</clocks>
+				<block name="n50" instance="lut6[0]" mode="lut6">
+					<inputs>
+						<port name="in">ble6.in[0]-&gt;direct1 ble6.in[1]-&gt;direct1 open open ble6.in[4]-&gt;direct1 open</port>
+					</inputs>
+					<outputs>
+						<port name="out">lut[0].out[0]-&gt;direct:lut6</port>
+					</outputs>
+					<clocks />
+					<block name="n50" instance="lut[0]">
+						<attributes />
+						<parameters />
+						<inputs>
+							<port name="in">lut6.in[0]-&gt;direct:lut6 lut6.in[1]-&gt;direct:lut6 open open lut6.in[4]-&gt;direct:lut6 open</port>
+							<port_rotation_map name="in">1 0 open open 2 open</port_rotation_map>
+						</inputs>
+						<outputs>
+							<port name="out">n50</port>
+						</outputs>
+						<clocks />
+					</block>
+				</block>
+				<block name="result[7]" instance="ff[0]">
+					<attributes />
+					<parameters />
+					<inputs>
+						<port name="D">lut6[0].out[0]-&gt;direct2</port>
+					</inputs>
+					<outputs>
+						<port name="Q">result[7]</port>
+					</outputs>
+					<clocks>
+						<port name="clk">ble6.clk[0]-&gt;direct3</port>
+					</clocks>
+				</block>
+			</block>
+		</block>
+		<block name="n46" instance="fle[2]" mode="n1_lut6">
+			<inputs>
+				<port name="in">fle[2].out[0]-&gt;crossbar open open open open fle[3].out[0]-&gt;crossbar</port>
+				<port name="cin">open</port>
+			</inputs>
+			<outputs>
+				<port name="out">ble6[0].out[0]-&gt;direct2 open</port>
+				<port name="cout">open</port>
+			</outputs>
+			<clocks>
+				<port name="clk">clb.clk[0]-&gt;clks</port>
+			</clocks>
+			<block name="n46" instance="ble6[0]" mode="default">
+				<inputs>
+					<port name="in">fle.in[0]-&gt;direct1 open open open open fle.in[5]-&gt;direct1</port>
+				</inputs>
+				<outputs>
+					<port name="out">ff[0].Q[0]-&gt;mux1</port>
+				</outputs>
+				<clocks>
+					<port name="clk">fle.clk[0]-&gt;direct3</port>
+				</clocks>
+				<block name="n46" instance="lut6[0]" mode="lut6">
+					<inputs>
+						<port name="in">ble6.in[0]-&gt;direct1 open open open open ble6.in[5]-&gt;direct1</port>
+					</inputs>
+					<outputs>
+						<port name="out">lut[0].out[0]-&gt;direct:lut6</port>
+					</outputs>
+					<clocks />
+					<block name="n46" instance="lut[0]">
+						<attributes />
+						<parameters />
+						<inputs>
+							<port name="in">lut6.in[0]-&gt;direct:lut6 open open open open lut6.in[5]-&gt;direct:lut6</port>
+							<port_rotation_map name="in">0 open open open open 1</port_rotation_map>
+						</inputs>
+						<outputs>
+							<port name="out">n46</port>
+						</outputs>
+						<clocks />
+					</block>
+				</block>
+				<block name="result[6]" instance="ff[0]">
+					<attributes />
+					<parameters />
+					<inputs>
+						<port name="D">lut6[0].out[0]-&gt;direct2</port>
+					</inputs>
+					<outputs>
+						<port name="Q">result[6]</port>
+					</outputs>
+					<clocks>
+						<port name="clk">ble6.clk[0]-&gt;direct3</port>
+					</clocks>
+				</block>
+			</block>
+		</block>
+		<block name="$abc$209$new_n24_" instance="fle[3]" mode="n1_lut6">
+			<inputs>
+				<port name="in">fle[8].out[0]-&gt;crossbar fle[7].out[0]-&gt;crossbar fle[5].out[0]-&gt;crossbar fle[6].out[0]-&gt;crossbar fle[9].out[0]-&gt;crossbar fle[4].out[0]-&gt;crossbar</port>
+				<port name="cin">open</port>
+			</inputs>
+			<outputs>
+				<port name="out">ble6[0].out[0]-&gt;direct2 open</port>
+				<port name="cout">open</port>
+			</outputs>
+			<clocks>
+				<port name="clk">open</port>
+			</clocks>
+			<block name="$abc$209$new_n24_" instance="ble6[0]" mode="default">
+				<inputs>
+					<port name="in">fle.in[0]-&gt;direct1 fle.in[1]-&gt;direct1 fle.in[2]-&gt;direct1 fle.in[3]-&gt;direct1 fle.in[4]-&gt;direct1 fle.in[5]-&gt;direct1</port>
+				</inputs>
+				<outputs>
+					<port name="out">lut6[0].out[0]-&gt;mux1</port>
+				</outputs>
+				<clocks>
+					<port name="clk">open</port>
+				</clocks>
+				<block name="$abc$209$new_n24_" instance="lut6[0]" mode="lut6">
+					<inputs>
+						<port name="in">ble6.in[0]-&gt;direct1 ble6.in[1]-&gt;direct1 ble6.in[2]-&gt;direct1 ble6.in[3]-&gt;direct1 ble6.in[4]-&gt;direct1 ble6.in[5]-&gt;direct1</port>
+					</inputs>
+					<outputs>
+						<port name="out">lut[0].out[0]-&gt;direct:lut6</port>
+					</outputs>
+					<clocks />
+					<block name="$abc$209$new_n24_" instance="lut[0]">
+						<attributes />
+						<parameters />
+						<inputs>
+							<port name="in">lut6.in[0]-&gt;direct:lut6 lut6.in[1]-&gt;direct:lut6 lut6.in[2]-&gt;direct:lut6 lut6.in[3]-&gt;direct:lut6 lut6.in[4]-&gt;direct:lut6 lut6.in[5]-&gt;direct:lut6</port>
+							<port_rotation_map name="in">1 2 4 3 0 5</port_rotation_map>
+						</inputs>
+						<outputs>
+							<port name="out">$abc$209$new_n24_</port>
+						</outputs>
+						<clocks />
+					</block>
+				</block>
+				<block name="open" instance="ff[0]" />
+			</block>
+		</block>
+		<block name="n22" instance="fle[4]" mode="n1_lut6">
+			<inputs>
+				<port name="in">open open open fle[4].out[0]-&gt;crossbar open open</port>
+				<port name="cin">open</port>
+			</inputs>
+			<outputs>
+				<port name="out">ble6[0].out[0]-&gt;direct2 open</port>
+				<port name="cout">open</port>
+			</outputs>
+			<clocks>
+				<port name="clk">clb.clk[0]-&gt;clks</port>
+			</clocks>
+			<block name="n22" instance="ble6[0]" mode="default">
+				<inputs>
+					<port name="in">open open open fle.in[3]-&gt;direct1 open open</port>
+				</inputs>
+				<outputs>
+					<port name="out">ff[0].Q[0]-&gt;mux1</port>
+				</outputs>
+				<clocks>
+					<port name="clk">fle.clk[0]-&gt;direct3</port>
+				</clocks>
+				<block name="n22" instance="lut6[0]" mode="lut6">
+					<inputs>
+						<port name="in">open open open ble6.in[3]-&gt;direct1 open open</port>
+					</inputs>
+					<outputs>
+						<port name="out">lut[0].out[0]-&gt;direct:lut6</port>
+					</outputs>
+					<clocks />
+					<block name="n22" instance="lut[0]">
+						<attributes />
+						<parameters />
+						<inputs>
+							<port name="in">open open open lut6.in[3]-&gt;direct:lut6 open open</port>
+							<port_rotation_map name="in">open open open 0 open open</port_rotation_map>
+						</inputs>
+						<outputs>
+							<port name="out">n22</port>
+						</outputs>
+						<clocks />
+					</block>
+				</block>
+				<block name="result[0]" instance="ff[0]">
+					<attributes />
+					<parameters />
+					<inputs>
+						<port name="D">lut6[0].out[0]-&gt;direct2</port>
+					</inputs>
+					<outputs>
+						<port name="Q">result[0]</port>
+					</outputs>
+					<clocks>
+						<port name="clk">ble6.clk[0]-&gt;direct3</port>
+					</clocks>
+				</block>
+			</block>
+		</block>
+		<block name="n26" instance="fle[5]" mode="n1_lut6">
+			<inputs>
+				<port name="in">open open open fle[5].out[0]-&gt;crossbar open fle[4].out[0]-&gt;crossbar</port>
+				<port name="cin">open</port>
+			</inputs>
+			<outputs>
+				<port name="out">ble6[0].out[0]-&gt;direct2 open</port>
+				<port name="cout">open</port>
+			</outputs>
+			<clocks>
+				<port name="clk">clb.clk[0]-&gt;clks</port>
+			</clocks>
+			<block name="n26" instance="ble6[0]" mode="default">
+				<inputs>
+					<port name="in">open open open fle.in[3]-&gt;direct1 open fle.in[5]-&gt;direct1</port>
+				</inputs>
+				<outputs>
+					<port name="out">ff[0].Q[0]-&gt;mux1</port>
+				</outputs>
+				<clocks>
+					<port name="clk">fle.clk[0]-&gt;direct3</port>
+				</clocks>
+				<block name="n26" instance="lut6[0]" mode="lut6">
+					<inputs>
+						<port name="in">open open open ble6.in[3]-&gt;direct1 open ble6.in[5]-&gt;direct1</port>
+					</inputs>
+					<outputs>
+						<port name="out">lut[0].out[0]-&gt;direct:lut6</port>
+					</outputs>
+					<clocks />
+					<block name="n26" instance="lut[0]">
+						<attributes />
+						<parameters />
+						<inputs>
+							<port name="in">open open open lut6.in[3]-&gt;direct:lut6 open lut6.in[5]-&gt;direct:lut6</port>
+							<port_rotation_map name="in">open open open 0 open 1</port_rotation_map>
+						</inputs>
+						<outputs>
+							<port name="out">n26</port>
+						</outputs>
+						<clocks />
+					</block>
+				</block>
+				<block name="result[1]" instance="ff[0]">
+					<attributes />
+					<parameters />
+					<inputs>
+						<port name="D">lut6[0].out[0]-&gt;direct2</port>
+					</inputs>
+					<outputs>
+						<port name="Q">result[1]</port>
+					</outputs>
+					<clocks>
+						<port name="clk">ble6.clk[0]-&gt;direct3</port>
+					</clocks>
+				</block>
+			</block>
+		</block>
+		<block name="n30" instance="fle[6]" mode="n1_lut6">
+			<inputs>
+				<port name="in">fle[5].out[0]-&gt;crossbar open open fle[6].out[0]-&gt;crossbar fle[4].out[0]-&gt;crossbar open</port>
+				<port name="cin">open</port>
+			</inputs>
+			<outputs>
+				<port name="out">ble6[0].out[0]-&gt;direct2 open</port>
+				<port name="cout">open</port>
+			</outputs>
+			<clocks>
+				<port name="clk">clb.clk[0]-&gt;clks</port>
+			</clocks>
+			<block name="n30" instance="ble6[0]" mode="default">
+				<inputs>
+					<port name="in">fle.in[0]-&gt;direct1 open open fle.in[3]-&gt;direct1 fle.in[4]-&gt;direct1 open</port>
+				</inputs>
+				<outputs>
+					<port name="out">ff[0].Q[0]-&gt;mux1</port>
+				</outputs>
+				<clocks>
+					<port name="clk">fle.clk[0]-&gt;direct3</port>
+				</clocks>
+				<block name="n30" instance="lut6[0]" mode="lut6">
+					<inputs>
+						<port name="in">ble6.in[0]-&gt;direct1 open open ble6.in[3]-&gt;direct1 ble6.in[4]-&gt;direct1 open</port>
+					</inputs>
+					<outputs>
+						<port name="out">lut[0].out[0]-&gt;direct:lut6</port>
+					</outputs>
+					<clocks />
+					<block name="n30" instance="lut[0]">
+						<attributes />
+						<parameters />
+						<inputs>
+							<port name="in">lut6.in[0]-&gt;direct:lut6 open open lut6.in[3]-&gt;direct:lut6 lut6.in[4]-&gt;direct:lut6 open</port>
+							<port_rotation_map name="in">0 open open 2 1 open</port_rotation_map>
+						</inputs>
+						<outputs>
+							<port name="out">n30</port>
+						</outputs>
+						<clocks />
+					</block>
+				</block>
+				<block name="result[2]" instance="ff[0]">
+					<attributes />
+					<parameters />
+					<inputs>
+						<port name="D">lut6[0].out[0]-&gt;direct2</port>
+					</inputs>
+					<outputs>
+						<port name="Q">result[2]</port>
+					</outputs>
+					<clocks>
+						<port name="clk">ble6.clk[0]-&gt;direct3</port>
+					</clocks>
+				</block>
+			</block>
+		</block>
+		<block name="n34" instance="fle[7]" mode="n1_lut6">
+			<inputs>
+				<port name="in">open fle[4].out[0]-&gt;crossbar open fle[5].out[0]-&gt;crossbar fle[6].out[0]-&gt;crossbar fle[7].out[0]-&gt;crossbar</port>
+				<port name="cin">open</port>
+			</inputs>
+			<outputs>
+				<port name="out">ble6[0].out[0]-&gt;direct2 open</port>
+				<port name="cout">open</port>
+			</outputs>
+			<clocks>
+				<port name="clk">clb.clk[0]-&gt;clks</port>
+			</clocks>
+			<block name="n34" instance="ble6[0]" mode="default">
+				<inputs>
+					<port name="in">open fle.in[1]-&gt;direct1 open fle.in[3]-&gt;direct1 fle.in[4]-&gt;direct1 fle.in[5]-&gt;direct1</port>
+				</inputs>
+				<outputs>
+					<port name="out">ff[0].Q[0]-&gt;mux1</port>
+				</outputs>
+				<clocks>
+					<port name="clk">fle.clk[0]-&gt;direct3</port>
+				</clocks>
+				<block name="n34" instance="lut6[0]" mode="lut6">
+					<inputs>
+						<port name="in">open ble6.in[1]-&gt;direct1 open ble6.in[3]-&gt;direct1 ble6.in[4]-&gt;direct1 ble6.in[5]-&gt;direct1</port>
+					</inputs>
+					<outputs>
+						<port name="out">lut[0].out[0]-&gt;direct:lut6</port>
+					</outputs>
+					<clocks />
+					<block name="n34" instance="lut[0]">
+						<attributes />
+						<parameters />
+						<inputs>
+							<port name="in">open lut6.in[1]-&gt;direct:lut6 open lut6.in[3]-&gt;direct:lut6 lut6.in[4]-&gt;direct:lut6 lut6.in[5]-&gt;direct:lut6</port>
+							<port_rotation_map name="in">open 2 open 1 0 3</port_rotation_map>
+						</inputs>
+						<outputs>
+							<port name="out">n34</port>
+						</outputs>
+						<clocks />
+					</block>
+				</block>
+				<block name="result[3]" instance="ff[0]">
+					<attributes />
+					<parameters />
+					<inputs>
+						<port name="D">lut6[0].out[0]-&gt;direct2</port>
+					</inputs>
+					<outputs>
+						<port name="Q">result[3]</port>
+					</outputs>
+					<clocks>
+						<port name="clk">ble6.clk[0]-&gt;direct3</port>
+					</clocks>
+				</block>
+			</block>
+		</block>
+		<block name="n38" instance="fle[8]" mode="n1_lut6">
+			<inputs>
+				<port name="in">fle[6].out[0]-&gt;crossbar fle[8].out[0]-&gt;crossbar open fle[4].out[0]-&gt;crossbar fle[7].out[0]-&gt;crossbar fle[5].out[0]-&gt;crossbar</port>
+				<port name="cin">open</port>
+			</inputs>
+			<outputs>
+				<port name="out">ble6[0].out[0]-&gt;direct2 open</port>
+				<port name="cout">open</port>
+			</outputs>
+			<clocks>
+				<port name="clk">clb.clk[0]-&gt;clks</port>
+			</clocks>
+			<block name="n38" instance="ble6[0]" mode="default">
+				<inputs>
+					<port name="in">fle.in[0]-&gt;direct1 fle.in[1]-&gt;direct1 open fle.in[3]-&gt;direct1 fle.in[4]-&gt;direct1 fle.in[5]-&gt;direct1</port>
+				</inputs>
+				<outputs>
+					<port name="out">ff[0].Q[0]-&gt;mux1</port>
+				</outputs>
+				<clocks>
+					<port name="clk">fle.clk[0]-&gt;direct3</port>
+				</clocks>
+				<block name="n38" instance="lut6[0]" mode="lut6">
+					<inputs>
+						<port name="in">ble6.in[0]-&gt;direct1 ble6.in[1]-&gt;direct1 open ble6.in[3]-&gt;direct1 ble6.in[4]-&gt;direct1 ble6.in[5]-&gt;direct1</port>
+					</inputs>
+					<outputs>
+						<port name="out">lut[0].out[0]-&gt;direct:lut6</port>
+					</outputs>
+					<clocks />
+					<block name="n38" instance="lut[0]">
+						<attributes />
+						<parameters />
+						<inputs>
+							<port name="in">lut6.in[0]-&gt;direct:lut6 lut6.in[1]-&gt;direct:lut6 open lut6.in[3]-&gt;direct:lut6 lut6.in[4]-&gt;direct:lut6 lut6.in[5]-&gt;direct:lut6</port>
+							<port_rotation_map name="in">1 4 open 3 0 2</port_rotation_map>
+						</inputs>
+						<outputs>
+							<port name="out">n38</port>
+						</outputs>
+						<clocks />
+					</block>
+				</block>
+				<block name="result[4]" instance="ff[0]">
+					<attributes />
+					<parameters />
+					<inputs>
+						<port name="D">lut6[0].out[0]-&gt;direct2</port>
+					</inputs>
+					<outputs>
+						<port name="Q">result[4]</port>
+					</outputs>
+					<clocks>
+						<port name="clk">ble6.clk[0]-&gt;direct3</port>
+					</clocks>
+				</block>
+			</block>
+		</block>
+		<block name="n42" instance="fle[9]" mode="n1_lut6">
+			<inputs>
+				<port name="in">fle[7].out[0]-&gt;crossbar fle[4].out[0]-&gt;crossbar fle[8].out[0]-&gt;crossbar fle[5].out[0]-&gt;crossbar fle[9].out[0]-&gt;crossbar fle[6].out[0]-&gt;crossbar</port>
+				<port name="cin">open</port>
+			</inputs>
+			<outputs>
+				<port name="out">ble6[0].out[0]-&gt;direct2 open</port>
+				<port name="cout">open</port>
+			</outputs>
+			<clocks>
+				<port name="clk">clb.clk[0]-&gt;clks</port>
+			</clocks>
+			<block name="n42" instance="ble6[0]" mode="default">
+				<inputs>
+					<port name="in">fle.in[0]-&gt;direct1 fle.in[1]-&gt;direct1 fle.in[2]-&gt;direct1 fle.in[3]-&gt;direct1 fle.in[4]-&gt;direct1 fle.in[5]-&gt;direct1</port>
+				</inputs>
+				<outputs>
+					<port name="out">ff[0].Q[0]-&gt;mux1</port>
+				</outputs>
+				<clocks>
+					<port name="clk">fle.clk[0]-&gt;direct3</port>
+				</clocks>
+				<block name="n42" instance="lut6[0]" mode="lut6">
+					<inputs>
+						<port name="in">ble6.in[0]-&gt;direct1 ble6.in[1]-&gt;direct1 ble6.in[2]-&gt;direct1 ble6.in[3]-&gt;direct1 ble6.in[4]-&gt;direct1 ble6.in[5]-&gt;direct1</port>
+					</inputs>
+					<outputs>
+						<port name="out">lut[0].out[0]-&gt;direct:lut6</port>
+					</outputs>
+					<clocks />
+					<block name="n42" instance="lut[0]">
+						<attributes />
+						<parameters />
+						<inputs>
+							<port name="in">lut6.in[0]-&gt;direct:lut6 lut6.in[1]-&gt;direct:lut6 lut6.in[2]-&gt;direct:lut6 lut6.in[3]-&gt;direct:lut6 lut6.in[4]-&gt;direct:lut6 lut6.in[5]-&gt;direct:lut6</port>
+							<port_rotation_map name="in">1 4 0 3 5 2</port_rotation_map>
+						</inputs>
+						<outputs>
+							<port name="out">n42</port>
+						</outputs>
+						<clocks />
+					</block>
+				</block>
+				<block name="result[5]" instance="ff[0]">
+					<attributes />
+					<parameters />
+					<inputs>
+						<port name="D">lut6[0].out[0]-&gt;direct2</port>
+					</inputs>
+					<outputs>
+						<port name="Q">result[5]</port>
+					</outputs>
+					<clocks>
+						<port name="clk">ble6.clk[0]-&gt;direct3</port>
+					</clocks>
+				</block>
+			</block>
+		</block>
+	</block>
+	<block name="out:result[0]" instance="io[1]" mode="outpad">
+		<inputs>
+			<port name="outpad">result[0]</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">open</port>
+		</outputs>
+		<clocks />
+		<block name="out:result[0]" instance="outpad[0]">
+			<attributes />
+			<parameters />
+			<inputs>
+				<port name="outpad">io.outpad[0]-&gt;outpad</port>
+			</inputs>
+			<outputs />
+			<clocks />
+		</block>
+	</block>
+	<block name="out:result[1]" instance="io[2]" mode="outpad">
+		<inputs>
+			<port name="outpad">result[1]</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">open</port>
+		</outputs>
+		<clocks />
+		<block name="out:result[1]" instance="outpad[0]">
+			<attributes />
+			<parameters />
+			<inputs>
+				<port name="outpad">io.outpad[0]-&gt;outpad</port>
+			</inputs>
+			<outputs />
+			<clocks />
+		</block>
+	</block>
+	<block name="out:result[2]" instance="io[3]" mode="outpad">
+		<inputs>
+			<port name="outpad">result[2]</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">open</port>
+		</outputs>
+		<clocks />
+		<block name="out:result[2]" instance="outpad[0]">
+			<attributes />
+			<parameters />
+			<inputs>
+				<port name="outpad">io.outpad[0]-&gt;outpad</port>
+			</inputs>
+			<outputs />
+			<clocks />
+		</block>
+	</block>
+	<block name="out:result[3]" instance="io[4]" mode="outpad">
+		<inputs>
+			<port name="outpad">result[3]</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">open</port>
+		</outputs>
+		<clocks />
+		<block name="out:result[3]" instance="outpad[0]">
+			<attributes />
+			<parameters />
+			<inputs>
+				<port name="outpad">io.outpad[0]-&gt;outpad</port>
+			</inputs>
+			<outputs />
+			<clocks />
+		</block>
+	</block>
+	<block name="out:result[4]" instance="io[5]" mode="outpad">
+		<inputs>
+			<port name="outpad">result[4]</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">open</port>
+		</outputs>
+		<clocks />
+		<block name="out:result[4]" instance="outpad[0]">
+			<attributes />
+			<parameters />
+			<inputs>
+				<port name="outpad">io.outpad[0]-&gt;outpad</port>
+			</inputs>
+			<outputs />
+			<clocks />
+		</block>
+	</block>
+	<block name="out:result[5]" instance="io[6]" mode="outpad">
+		<inputs>
+			<port name="outpad">result[5]</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">open</port>
+		</outputs>
+		<clocks />
+		<block name="out:result[5]" instance="outpad[0]">
+			<attributes />
+			<parameters />
+			<inputs>
+				<port name="outpad">io.outpad[0]-&gt;outpad</port>
+			</inputs>
+			<outputs />
+			<clocks />
+		</block>
+	</block>
+	<block name="out:result[6]" instance="io[7]" mode="outpad">
+		<inputs>
+			<port name="outpad">result[6]</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">open</port>
+		</outputs>
+		<clocks />
+		<block name="out:result[6]" instance="outpad[0]">
+			<attributes />
+			<parameters />
+			<inputs>
+				<port name="outpad">io.outpad[0]-&gt;outpad</port>
+			</inputs>
+			<outputs />
+			<clocks />
+		</block>
+	</block>
+	<block name="out:result[7]" instance="io[8]" mode="outpad">
+		<inputs>
+			<port name="outpad">result[7]</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">open</port>
+		</outputs>
+		<clocks />
+		<block name="out:result[7]" instance="outpad[0]">
+			<attributes />
+			<parameters />
+			<inputs>
+				<port name="outpad">io.outpad[0]-&gt;outpad</port>
+			</inputs>
+			<outputs />
+			<clocks />
+		</block>
+	</block>
+	<block name="clk" instance="io[9]" mode="inpad">
+		<inputs>
+			<port name="outpad">open</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">inpad[0].inpad[0]-&gt;inpad</port>
+		</outputs>
+		<clocks />
+		<block name="clk" instance="inpad[0]">
+			<attributes />
+			<parameters />
+			<inputs />
+			<outputs>
+				<port name="inpad">clk</port>
+			</outputs>
+			<clocks />
+		</block>
+	</block>
+</block>

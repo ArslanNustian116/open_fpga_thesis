@@ -1,0 +1,44 @@
+# Benchmark "counter_4bit_2clock" written by ABC on Fri Sep  5 11:54:23 2025
+.model counter_4bit_2clock
+.inputs clk0 rst clk1 
+.outputs q0[0] q0[1] q0[2] q0[3] q1[0] q1[1] \
+q1[2] q1[3] 
+
+.latch n24 q1[0] re clk1 0
+.latch n28 q1[1] re clk1 0
+.latch n32 q1[2] re clk1 0
+.latch n36 q1[3] re clk1 0
+.latch n40 q0[0] re clk1 0
+.latch n44 q0[1] re clk1 0
+.latch n48 q0[2] re clk1 0
+.latch n52 q0[3] re clk1 0
+
+.names rst q0[0] n40
+00 1
+.names rst q0[1] q0[0] n44
+001 1
+010 1
+.names q0[1] q0[0] rst q0[2] n48
+-001 1
+0-01 1
+1100 1
+.names q0[2] q0[1] q0[0] rst q0[3] n52
+--001 1
+-0-01 1
+0--01 1
+11100 1
+.names rst q1[0] n24
+00 1
+.names rst q1[1] q1[0] n28
+001 1
+010 1
+.names q1[1] q1[0] rst q1[2] n32
+-001 1
+0-01 1
+1100 1
+.names q1[2] q1[1] q1[0] rst q1[3] n36
+--001 1
+-0-01 1
+0--01 1
+11100 1
+.end

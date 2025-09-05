@@ -1,0 +1,42 @@
+<!-- Netlist naming fix-up report --> 
+<netlist>
+	<blocks>
+		<block previous="a[0]" current="a_0_"/>
+		<block previous="a[1]" current="a_1_"/>
+		<block previous="a[2]" current="a_2_"/>
+		<block previous="a[3]" current="a_3_"/>
+		<block previous="b[0]" current="b_0_"/>
+		<block previous="b[1]" current="b_1_"/>
+		<block previous="b[2]" current="b_2_"/>
+		<block previous="b[3]" current="b_3_"/>
+		<block previous="out:cout" current="out_cout"/>
+		<block previous="out:sum[0]" current="out_sum_0_"/>
+		<block previous="out:sum[1]" current="out_sum_1_"/>
+		<block previous="out:sum[2]" current="out_sum_2_"/>
+		<block previous="out:sum[3]" current="out_sum_3_"/>
+		<block previous="sum[1]" current="sum_1_"/>
+		<block previous="sum[2]" current="sum_2_"/>
+		<block previous="$abc$196$new_n18_" current="_abc_196_new_n18_"/>
+		<block previous="$abc$196$new_n19_" current="_abc_196_new_n19_"/>
+		<block previous="sum[3]" current="sum_3_"/>
+		<block previous="$abc$196$new_n21_" current="_abc_196_new_n21_"/>
+		<block previous="sum[0]" current="sum_0_"/>
+	</blocks>
+	<nets>
+		<net previous="a[0]" current="a_0_"/>
+		<net previous="a[1]" current="a_1_"/>
+		<net previous="a[2]" current="a_2_"/>
+		<net previous="a[3]" current="a_3_"/>
+		<net previous="b[0]" current="b_0_"/>
+		<net previous="b[1]" current="b_1_"/>
+		<net previous="b[2]" current="b_2_"/>
+		<net previous="b[3]" current="b_3_"/>
+		<net previous="sum[0]" current="sum_0_"/>
+		<net previous="sum[1]" current="sum_1_"/>
+		<net previous="sum[2]" current="sum_2_"/>
+		<net previous="sum[3]" current="sum_3_"/>
+		<net previous="$abc$196$new_n19_" current="_abc_196_new_n19_"/>
+		<net previous="$abc$196$new_n18_" current="_abc_196_new_n18_"/>
+		<net previous="$abc$196$new_n21_" current="_abc_196_new_n21_"/>
+	</nets>
+</netlist>

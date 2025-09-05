@@ -1,0 +1,31 @@
+<!-- Netlist naming fix-up report --> 
+<netlist>
+	<blocks>
+		<block previous="out:q0[0]" current="out_q0_0_"/>
+		<block previous="out:q0[1]" current="out_q0_1_"/>
+		<block previous="out:q0[2]" current="out_q0_2_"/>
+		<block previous="out:q0[3]" current="out_q0_3_"/>
+		<block previous="out:q1[0]" current="out_q1_0_"/>
+		<block previous="out:q1[1]" current="out_q1_1_"/>
+		<block previous="out:q1[2]" current="out_q1_2_"/>
+		<block previous="out:q1[3]" current="out_q1_3_"/>
+		<block previous="q1[0]" current="q1_0_"/>
+		<block previous="q1[1]" current="q1_1_"/>
+		<block previous="q1[2]" current="q1_2_"/>
+		<block previous="q1[3]" current="q1_3_"/>
+		<block previous="q0[0]" current="q0_0_"/>
+		<block previous="q0[1]" current="q0_1_"/>
+		<block previous="q0[2]" current="q0_2_"/>
+		<block previous="q0[3]" current="q0_3_"/>
+	</blocks>
+	<nets>
+		<net previous="q0[0]" current="q0_0_"/>
+		<net previous="q0[1]" current="q0_1_"/>
+		<net previous="q0[2]" current="q0_2_"/>
+		<net previous="q0[3]" current="q0_3_"/>
+		<net previous="q1[0]" current="q1_0_"/>
+		<net previous="q1[1]" current="q1_1_"/>
+		<net previous="q1[2]" current="q1_2_"/>
+		<net previous="q1[3]" current="q1_3_"/>
+	</nets>
+</netlist>

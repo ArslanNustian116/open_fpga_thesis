@@ -1,0 +1,27 @@
+Netlist_File: adder_6.net Netlist_ID: SHA256:8ee01741d5da64773d49b6b30de651888c79838c5407952a5c19f398d09fc882
+Array size: 4 x 4 logic blocks
+
+#block name	x	y	subblk	block number
+#----------	--	--	------	------------
+$abc$239$new_n25_	1	2	0	#0
+sum[3]		1	1	0	#1
+out:cout	1	3	6	#2
+out:sum[5]	1	3	3	#3
+out:sum[2]	1	3	5	#4
+out:sum[3]	1	0	2	#5
+out:sum[4]	0	2	2	#6
+out:sum[0]	1	0	1	#7
+out:sum[1]	1	0	6	#8
+a[0]		0	1	6	#9
+a[1]		0	1	2	#10
+a[2]		1	3	0	#11
+a[3]		0	2	3	#12
+a[4]		1	3	1	#13
+a[5]		0	2	5	#14
+b[0]		0	1	0	#15
+b[1]		0	1	4	#16
+b[2]		0	1	3	#17
+b[3]		0	1	5	#18
+b[4]		1	3	7	#19
+b[5]		1	3	2	#20
+cin		0	2	1	#21
